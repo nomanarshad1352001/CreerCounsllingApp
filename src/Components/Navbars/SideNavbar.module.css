@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+.SideNavbar{
+    height: 800px;
+    background-color: rgb(73, 66, 66);
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    
+}
+.SideNavbar ul{
+    color: rgb(31, 205, 0);
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.SideNavbar ul li{
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+}
+.menue{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    background-color: rgb(255, 203, 203);
+   
+}
