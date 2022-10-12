@@ -5,15 +5,18 @@
     outline: 0;
 }
 .SideNavbar{
-    height: 800px;
-    background-color: rgb(73, 66, 66);
-    color: white;
+    height: 760px;
+    background-color: rgb(209, 88, 28);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     position: fixed;
-    
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25)
 }
 .SideNavbar ul{
-    color: rgb(31, 205, 0);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     list-style-type: none;
     display: flex;
@@ -26,9 +29,13 @@
     font-size: 20px;
 }
 .menue{
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 35px;
-    background-color: rgb(255, 203, 203);
-   
+    background-color: bisque;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+    font-size: 25px;
+}
+@media (max-width: 1000px) {
+
 }

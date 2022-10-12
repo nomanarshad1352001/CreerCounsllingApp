@@ -4,9 +4,10 @@ import classes from "./Header.module.css";
 export default function Header() {
   return (
     <Fragment>
-      <div className={classes.header}>
-        <div className={classes.title}> Career and Degree Counsling </div>
-      </div>
+      <header className={classes.header}>
+        <h1 className={classes.title}> Career and Degree Counsling </h1>
+      <h4 className={classes.login}>Login</h4>
+      </header>
     </Fragment>
   );
 }

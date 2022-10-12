@@ -1,17 +1,22 @@
-.header {
+  .header {
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 4rem;
-    background-color: #8a2b06;
+    height: 5rem;
+    background-color: rgb(209, 88, 28);
     color: white;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 0 10%;
+    padding-left: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    z-index: 10;
+  }
+  .login{
+    grid-column: 2;
+  font-size: 20px;
+  justify-self: end;
+padding-right: 50px;
   }
   .main-image {
     width: 100%;
@@ -24,7 +29,7 @@
     width: 110%;
     height: 100%;
     object-fit: cover;
-    transform: rotateZ(-4deg) translateY(-3rem) translateX(-3rem);
+    
   }
   .title{
     font-size: 20px;
