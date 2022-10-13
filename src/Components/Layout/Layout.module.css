@@ -1,23 +1,8 @@
-* {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-}
-html{
-  height: 100%;
-}
-body{
-  height: 100%;
-}
 .container {
   display: grid;
-  grid-template-columns: 180px 1fr 1fr;
-  grid-template-rows: 65px 800px 65px;
-  background-color: rgb(231, 135, 87);
+  grid-template-columns: 0.9fr 3fr 3fr;
+  grid-template-rows: 65px auto 65px;
   grid-gap: 1em;
-  width: 100%;
 }
 .item1 {
   grid-row: 1;
@@ -28,18 +13,11 @@ body{
   grid-row: 2;
 }
 .item3 {
-    grid-column: 2;
-    justify-self: center;
-   padding-right: 45px;
-}
-.item4{
-  grid-column: 3;
+  grid-column: 2;
   justify-self: center;
 }
-.item5{
-  grid-row: 3;
-  grid-column: 1/-1;
-  background-color: aqua;
-  border: 5px solid black;
+.item4 {
+  grid-column: 3;
+  justify-self: center;
 }
 

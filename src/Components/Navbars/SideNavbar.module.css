@@ -5,7 +5,6 @@
     outline: 0;
 }
 .SideNavbar{
-    height: 760px;
     background-color: rgb(209, 88, 28);
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -13,7 +12,18 @@
     border-radius: 20px;
     margin: 10px;
     padding: 10px;
-    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25)
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+    display: grid !important;
+    grid-template-rows: repeat( 2, minmax(250px, 1fr) ) !important;
+    justify-items: center !important;
+}
+.item1{
+    grid-row: 1;
+    align-self: start;
+}
+.item2{
+    grid-row: 2;
+    align-self: end;
 }
 .SideNavbar ul{
     color: rgb(0, 0, 0);
@@ -29,6 +39,7 @@
     font-size: 20px;
 }
 .menue{
+    text-align: center;
     background-color: bisque;
     border-radius: 20px;
     margin: 10px;
@@ -36,6 +47,8 @@
     box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
     font-size: 25px;
 }
+
+
 @media (max-width: 1000px) {
 
 }

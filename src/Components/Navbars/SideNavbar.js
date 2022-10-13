@@ -6,10 +6,10 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 export default function SideNavbar() {
   return (
-    <nav>
-      <div className={clasess.SideNavbar}>
-          {" "}
-          <div className={clasess.menue}>Menue</div>
+    <div className={clasess.SideNavbar}>
+      {" "}
+      <div className={clasess.item1}>
+        <div className={clasess.menue}>Menue</div>
         <ul>
           <li>
             {" "}
@@ -27,6 +27,9 @@ export default function SideNavbar() {
           </li>
         </ul>
       </div>
-    </nav>
+      <div className={clasess.item2}>
+        <h3>Nouman</h3>
+      </div>
+    </div>
   );
 }

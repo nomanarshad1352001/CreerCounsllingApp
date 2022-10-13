@@ -1,0 +1,34 @@
+.summary {
+  text-align: center;
+  background-color: #4f4f4f;
+  color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+  margin: 40px;
+}
+
+.summary h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+  padding: 8px;
+}
+.summary p{
+  font-size: 18px;
+  padding: 8px;
+}
+.header1 {
+  width: 100%;
+  left: 0;
+  height: 4rem;
+  background-color: rgb(209, 88, 28);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10%;
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  border-radius: 10px;
+  font-size: 20px;
+}

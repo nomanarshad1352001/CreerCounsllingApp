@@ -1,22 +1,11 @@
 import React from "react";
-import {
-Box,
-Container,
-Row,
-Column,
-FooterLink,
-Heading,
-} from "./FooterStyle";
-
+import classes from "./Footer.module.css";
 const Footer = () => {
-return (
-	<Box>
-	<h1 style={{ color: "green",
-				textAlign: "center",
-				marginTop: "-50px" }}>
-		GeeksforGeeks: A Computer Science Portal for Geeks
-	</h1>
-	</Box>
-);
+  return (
+    <div className={classes.footer}>
+      <div className={classes.Item1}>Nouman Arshad</div>{" "}
+	<div className={classes.Item2}>All Right  Reserveds</div>
+    </div>
+  );
 };
 export default Footer;
