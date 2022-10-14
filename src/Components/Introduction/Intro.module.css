@@ -5,7 +5,17 @@
   border-radius: 14px;
   padding: 1rem;
   box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
-  margin: 40px;
+ margin-top: 40px;
+ margin-right: 60px;
+ margin-left: 40px;
+ margin-bottom: 40px;
+ 
+ 
+}
+.summary:hover{
+  transition: 0.45s;
+  color: rgb(229, 102, 22);
+  transform: translateY(-10px);
 }
 
 .summary h2 {
@@ -17,18 +27,29 @@
   font-size: 18px;
   padding: 8px;
 }
-.header1 {
-  width: 100%;
-  left: 0;
-  height: 4rem;
-  background-color: rgb(209, 88, 28);
-  color: white;
+.header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 10%;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  box-shadow: 0 2px 30px rgba(255, 123, 0, 0.25);
   border-radius: 10px;
-  font-size: 20px;
+  
+}
+.title{
+  background-color: rgb(209, 88, 28);
+  color: white;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+width: 100%;
+}
+@media screen and (min-width: 530px) {
+  .title{
+    font-size: 1rem;
+  }
 }

@@ -1,14 +1,18 @@
 import classes from "./Intro.module.css";
 import React from "react";
-import MyCard from '../UI/MyCard.js'
+import MyCard from "../UI/MyCard.js";
 const Intro = () => {
   return (
     <section className={classes.summary}>
       <MyCard>
-      <div className={classes.header1}>
-        <h1>Introduction</h1>
-      </div>
-      <h2 className={classes.degname}>Matric</h2>
+        <div className={classes.header}>
+          <div className={classes.degname}>
+            <h2>Matric</h2>
+          </div>
+          <div className={classes.title}>
+            <h1>Introduction</h1>
+          </div>
+        </div>
       </MyCard>
 
       <h2>Delicious Food, Delivered To You</h2>
