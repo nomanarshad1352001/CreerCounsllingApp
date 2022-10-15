@@ -1,20 +1,17 @@
 .summary {
+  background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
   text-align: center;
-  background-color: #4f4f4f;
-  color: white;
+  color: rgb(94, 94, 94);
   border-radius: 14px;
   padding: 1rem;
-  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
- margin-top: 40px;
- margin-right: 60px;
- margin-left: 40px;
- margin-bottom: 40px;
- 
- 
+  box-shadow: 0 5px 15px rgba(212, 212, 212, 0.25);
+ margin: 20px 40px 5px 20px;
 }
 .summary:hover{
   transition: 0.45s;
-  color: rgb(229, 102, 22);
+  color: rgb(0, 0, 0);
 }
 
 .summary h2 {
@@ -32,13 +29,13 @@
   align-items: center;
   flex-direction: column;
   padding: 0 10%;
-  box-shadow: 0 2px 30px rgba(255, 123, 0, 0.25);
-  border-radius: 10px;
+  /* box-shadow: 0 2px 30px rgba(95, 95, 95, 0.25); */
+  border-radius: 5px;
   
 }
 .title{
-  background-color: rgb(209, 88, 28);
-  color: white;
+  background-color: rgb(202, 202, 202);
+  color: rgb(94, 94, 94);
   border-radius: 10px;
   font-size: 0.7rem;
   text-align: center;
