@@ -15,7 +15,6 @@
 .summary:hover{
   transition: 0.45s;
   color: rgb(229, 102, 22);
-  transform: translateY(-10px);
 }
 
 .summary h2 {

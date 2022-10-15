@@ -8,7 +8,6 @@ export default function Admin() {
     <div className={
       clasess.container
     }>
-      <User/>
       <Intro/>
       <Intro/>
       <Intro/>

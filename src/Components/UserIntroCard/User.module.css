@@ -1,73 +1,66 @@
-:root {
-    --clr-primary: #651fff;
-    --clr-gray: #37474f;
-    --clr-gray-light: #b0bec5;
-  }  
-  * {
-    box-sizing: border-box;
-    font-family: "Open Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    margin: 2rem;
-    color: var(--clr-gray);
-  }
-  .wrapperGrid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 20rem);
-    justify-content: center;
-  }
-  
-  /*profile card container */
-  .container {
-    overflow: hidden;
-    box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
-    background-color: white;
-    text-align: center;
-    border-radius: 1rem;
-    position: relative;
-  }
-  
-  /*background image in card */
-  .bannerImg {
-    position: absolute;
-    background-image: url(https://images.unsplash.com/photo-1582727657635-c771002bdada?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
-    height: 10rem;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  /*circle profile image on top */
-  .profileImg {
-    width: 8rem;
-    clip-path: circle(60px at center);
-    margin-top: 4.5rem;
-  }
-  
-  /*name */
-  .name {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  
-  /*paragraph description */
-  .description {
-    margin: 1rem 2rem;
-    font-size: 0.9rem;
-  }
-  
-  /*primary button at bottom */
-  .btn {
-    width: 100%;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    padding: 1rem;
-    background-color: var(--clr-primary);
-  }
-  
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.imagecontent,
+.cardcontent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.imagecontent{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070F4;
+  border-radius: 25px 25px 0 25px;
+}
+.cardimage{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.cardimage .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4070F4;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 16px;
+  background-color: #4070F4;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #265DF2;
+}
