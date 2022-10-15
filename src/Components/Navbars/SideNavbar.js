@@ -37,7 +37,7 @@
 //   );
 // }
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import {AiFillProfile,AiFillHome,AiFillContacts} from "react-icons/ai";
 
 import './SideNavbar.css';
@@ -75,18 +75,18 @@ export default function SideNavbar() {
             <i className='bx bx-menu' id="btn" ></i>
         </div>
         <ul className="nav-list">
-          <li>
+          <li><a href="Admin">
               <i className='bx bx-search' ><AiFillHome/>
-              <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}} ></Link>
               </i>
+              </a>
              <input type="text" placeholder="Home"/>
              <span className="tooltip">Home</span>
           </li>
-          <li>
-            <a href="/">
-              <i className='bx bx-grid-alt'><AiFillProfile/></i>
-              <span className="links_name">About</span>
-            </a>
+          <li><a href="About">
+              <i className='bx bx-search' ><AiFillProfile/>
+              </i>
+              </a>
+             <input type="text" placeholder="About"/>
              <span className="tooltip">About</span>
           </li>
           <li>
