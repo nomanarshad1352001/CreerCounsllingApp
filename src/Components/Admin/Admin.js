@@ -1,6 +1,6 @@
 import React from 'react'
 import Intro from '../Introduction/Intro'
-import User from '../UserIntroCard/User'
+// import User from '../UserIntroCard/User'
 import clasess from './Admin.module.css'
 
 export default function Admin() {

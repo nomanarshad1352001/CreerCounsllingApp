@@ -3,20 +3,39 @@
     width: 100%;
     top: 0;
     left: 0;
-    height: 5rem;
-    background-color: rgb(209, 88, 28);
-    color: white;
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    
+    text-decoration: none;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    transition: all 0.3s ease-in-out;
+    color: rgb(131, 131, 131);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding-left: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 8px rgba(212, 212, 212, 0.25);
+    z-index: 200;
   }
   .login{
     grid-column: 2;
-  font-size: 20px;
-  justify-self: end;
-padding-right: 50px;
+    justify-self: end;
+    text-align: center;
+    background-color: #dddddd;
+    border-radius: .3rem;
+    margin: 0 2rem 00;
+    padding: .5rem 2rem .5rem 2rem;
+    font-size: 1rem;
+  }
+  .login:hover{
+    color: black;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 30px rgba(201, 201, 201, 0.5);
   }
   .main-image {
     width: 100%;
