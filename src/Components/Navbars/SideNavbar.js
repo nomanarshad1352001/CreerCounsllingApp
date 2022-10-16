@@ -1,45 +1,7 @@
-
-// export default function SideNavbar() {
-//   return (
-//     <React.Fragment>
-//       <div className={clasess.SideNavbar}>
-//         {" "}
-//         <div className={clasess.item1}>
-//           <div className={clasess.menue}>Menue</div>
-//           <ul>
-//             <li>
-//               {" "}
-//               <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}} >
-//                 <HomeIcon /> Home
-//               </Link>
-//             </li>
-//             <li>
-//               <Link to="about" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-//                 <SupervisorAccountIcon /> About Us
-//               </Link>
-//             </li>
-//             <li>
-//               {" "}
-//               <Link to="admin" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-//                 <AdminPanelSettingsIcon /> Admin
-//               </Link>
-//             </li>
-//             <li>
-//               <ContactsIcon /> Contact Us
-//             </li>
-//           </ul>
-//         </div>
-//         <div className={clasess.item2}>
-//           <h3>Nouman</h3>
-//         </div>
-//       </div>
-//     </React.Fragment>
-//   );
-// }
 import React from "react";
 import { Link } from "react-router-dom";
 import {AiFillProfile,AiFillHome,AiFillContacts} from "react-icons/ai";
-
+import { MdAdminPanelSettings } from "react-icons/md";
 import './SideNavbar.css';
 
 export default function SideNavbar() {
@@ -69,53 +31,42 @@ export default function SideNavbar() {
     <div>
       <div className="sidebar">
         <div className="logo-details">
-          <i className='bx bxl-c-plus-plus icon'></i>
+          <i className='bx bxl-c-plus-plus icon'> <AiFillHome/></i>
+          
             <div className="logo_name">
               <h4> CodingLab </h4></div>
             <i className='bx bx-menu' id="btn" ></i>
         </div>
         <ul className="nav-list">
-          <li>
-              <i className='bx bx-search' ><AiFillHome/>
-              <Link to="/" style={{ color: 'inherit', textDecoration: 'inherit'}} ></Link>
-              </i>
-             <input type="text" placeholder="Home"/>
+        <li>
+            <Link to="/">
+              <i className='bx'><AiFillHome/></i>
+            </Link>
              <span className="tooltip">Home</span>
           </li>
           <li>
-            <a href="/">
-              <i className='bx bx-grid-alt'><AiFillProfile/></i>
-              <span className="links_name">About</span>
-            </a>
+            <Link to="about">
+              <i className='bx'><AiFillProfile/></i>
+            </Link>
              <span className="tooltip">About</span>
           </li>
           <li>
-           <a href="/">
+           <Link to="contact">
              <i className='bx'><AiFillContacts/></i>
-             <span className="links_name">Contact</span>
-           </a>
+            </Link>
            <span className="tooltip">Contact</span>
          </li>
          <li>
-           <a href="/">
-             <i className='bx bx-chat' ></i>
-             <span className="links_name">Messages</span>
-           </a>
-           <span className="tooltip">Messages</span>
+           <Link to="admin">
+             <i className='bx' ><MdAdminPanelSettings/></i>
+             </Link>
+           <span className="tooltip">Admin</span>
          </li>
          <li>
-           <a href="/">
-             <i className='bx bx-pie-chart-alt-2' ></i>
-             <span className="links_name">Analytics</span>
-           </a>
+           <Link to="">
+             <i className='bx' ></i>
+             </Link>
            <span className="tooltip">Analytics</span>
-         </li>
-         <li>
-           <a href="/">
-             <i className='bx bx-folder' ></i>
-             <span className="links_name">File Manager</span>
-           </a>
-           <span className="tooltip">Files</span>
          </li>
         </ul>
       </div>

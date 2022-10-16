@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Button from "../UI/Button";
 import classes from "./Header.module.css";
 
 export default function Header() {
@@ -6,7 +7,9 @@ export default function Header() {
     <Fragment>
       <header className={classes.header}>
         <h1 className={classes.title}> Career and Degree Counsling </h1>
-        <h4 className={classes.login}>Login</h4>
+        <div className={classes.login}>
+          <Button/>
+        </div>
       </header>
     </Fragment>
   );

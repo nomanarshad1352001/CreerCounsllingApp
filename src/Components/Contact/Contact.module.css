@@ -1,0 +1,136 @@
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid blueviolet; /* Gray border */
+  border-radius: 15px; /* Rounded borders */
+  /* box-sizing: border-box; Make sure that padding and width stays in place */
+  margin-top: 14px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+.option {
+  background: blueviolet;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: blueviolet;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #ffffff;
+  color: black;
+}
+label {
+  background-color: blueviolet;
+  padding: 3px;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  margin-right: 15px;
+  align-items: center;
+}
+.formContainer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+.msg {
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.title {
+  font-size: 20px;
+  background-color: blueviolet;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.content {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+}
+.topTitle,
+.bottomTitle {
+  text-align: center;
+  font-size: 25px;
+  margin: 20px 0px 0px 0px;
+  background-color: blueviolet;
+  padding: 6px;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+}
+@media screen and (max-width: 870px) {
+  .formContainer {
+    width: 65%;
+  }
+  .msg {
+    width: 30%px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .formContainer {
+    width: 70%;
+  }
+  .msg {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .topTitle,
+  .bottomTitle {
+    font-size: 22px;
+  }
+  .content {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .formContainer {
+    width: 100%;
+  }
+  .msg {
+    width: 90%;
+  }
+  .topTitle,
+  .bottomTitle {
+    font-size: 20px;
+  }
+}

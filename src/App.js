@@ -3,6 +3,8 @@ import Home from "./Components/Home/Home.js";
 import About from "./Components/About/About.js";
 import Admin from "./Components/Admin/Admin.js";
 import Header from "./Components/Navbars/Header.js";
+import Contact from './Components/Contact/Contact.js'
+import Footer from './Components/Footer.js'
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SideNavbar from "./Components/Navbars/SideNavbar.js";
@@ -22,10 +24,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
           </div>
-          <div className={clasess.item4}></div>
         </div>
+        <Footer/>
         
       </BrowserRouter>
     </React.Fragment>

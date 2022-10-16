@@ -1,18 +1,19 @@
 .summary {
-  background: rgba(255, 255, 255, 0.25);
+  background-color: whitesmoke;
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 3px solid rgba(255, 255, 255, 0.25);
   text-align: center;
-  color: rgb(94, 94, 94);
+  color: rgb(0, 0, 0);
   border-radius: 14px;
   padding: 1rem;
   box-shadow: 0 5px 15px rgba(212, 212, 212, 0.25);
- margin: 20px 40px 5px 20px;
+ margin: 20px 20px 5px 8px;
 }
-.summary:hover{
-  transition: 0.45s;
-  color: rgb(0, 0, 0);
-}
+/* .summary:hover{
+  transition: 0.2s;
+  color: white;
+  background: blueviolet;
+} */
 
 .summary h2 {
   font-size: 1.5rem;
@@ -28,14 +29,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0 10%;
-  /* box-shadow: 0 2px 30px rgba(95, 95, 95, 0.25); */
   border-radius: 5px;
   
 }
 .title{
-  background-color: rgb(202, 202, 202);
-  color: rgb(94, 94, 94);
+  background: blueviolet;
+  color: white;
   border-radius: 10px;
   font-size: 0.7rem;
   text-align: center;
@@ -44,8 +43,8 @@
   margin-bottom: 10px;
 width: 100%;
 }
-@media screen and (min-width: 530px) {
+@media screen and (max-width: 350px) {
   .title{
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
