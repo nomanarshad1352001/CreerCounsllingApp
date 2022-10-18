@@ -22,7 +22,7 @@
   position: relative;
   color: white;
   flex-direction: column;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 .sidebar .logo-details .icon{
@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 75px;
+  margin-bottom: 25px;
 }
 .sidebar li{
   position: relative;
@@ -127,8 +127,13 @@
   font-size: 30px;
   border-radius: 12px;
 }
-@media (max-width: 420px) {
-  .sidebar li .tooltip{
+@media (max-width: 340px) {
+  .sidebar li .tooltip, .sidebar {
     display: none;
+  }
+}
+@media (max-width: 550px) {
+  .sidebar{
+   width: 70px;
   }
 }

@@ -38,6 +38,11 @@ body{
     grid-template-rows: 65px auto 100px;
   }
 }
+@media (max-width: 340px) {
+  .container {
+    grid-template-columns: 25px repeat(2, 3fr);
+  }
+}
 
 
 

@@ -20,9 +20,7 @@ function App(props) {
   
   return (
     <React.Fragment>
-     { FormIsShown && <UserInputForm onClose={HideFormFun}/>}
       <BrowserRouter>
-
         <div className={clasess.container}>
           <div className={clasess.item1}>
             <Header />
@@ -31,6 +29,7 @@ function App(props) {
             <SideNavbar />
           </div>
           <div className={clasess.item3}>
+          { FormIsShown && <UserInputForm onClose={HideFormFun}/>}
           <Routes>
           <Route path="/" element={<Home OnClick={ShowFormFun}/>} />
           <Route path="/admin" element={<Admin />} />
@@ -40,7 +39,6 @@ function App(props) {
           </div>
         </div>
         {/* <Footer/> */}
-        
       </BrowserRouter>
     </React.Fragment>
   );

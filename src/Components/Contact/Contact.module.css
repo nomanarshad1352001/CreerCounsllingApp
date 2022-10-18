@@ -3,15 +3,18 @@ select,
 textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */
-  border: 1px solid blueviolet; /* Gray border */
-  border-radius: 15px; /* Rounded borders */
+  border: 2px solid blueviolet; /* Gray border */
+  border-radius: 20px; /* Rounded borders */
   /* box-sizing: border-box; Make sure that padding and width stays in place */
   margin-top: 14px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-.option {
-  background: blueviolet;
+option {
+  background: rgb(172, 84, 255);
+  border-radius: 10%;
+ font-weight: 800;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Style the submit button with a specific background color etc */

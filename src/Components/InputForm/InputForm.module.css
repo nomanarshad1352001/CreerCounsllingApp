@@ -3,14 +3,14 @@ select {
   border: 2px solid blueviolet; /* Gray border */
   border-radius: 5px; /* Rounded borders */
   /* box-sizing: border-box; Make sure that padding and width stays in place */
-  margin-top: 14px; /* Add a top margin */
+  margin-top: 12px; /* Add a top margin */
   margin-bottom: 16px; /* Bottom margin */
   font-size: 18px;
   font-weight: 600;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
+  padding: 6px; /* Some padding */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
 }
 label {
@@ -27,7 +27,7 @@ label {
 .heading {
   text-align: center;
   padding: 10px;
-  margin: 10px 10px 25px 10px;
+  margin: 10px 10px 15px 10px;
   background: blueviolet;
   border-radius: 15px;
   color: whitesmoke;

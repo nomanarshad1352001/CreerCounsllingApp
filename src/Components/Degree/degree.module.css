@@ -1,4 +1,16 @@
 .container{
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
 }
+
+@media (max-width: 460px) {
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
+    }
+  }
+  @media (max-width: 400px) {
+    .container{
+        grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+    }
+  }
