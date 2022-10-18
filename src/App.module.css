@@ -1,3 +1,6 @@
+*{
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+}
 .container {
   display: grid;
   grid-template-columns: 90px repeat(2, 3fr);
@@ -15,6 +18,8 @@
 .item3 {
   grid-column: 2/-1;
   justify-self: center;
+  margin-right: 20px;
+  width: 80%;
 }
 .item4{
   grid-row: 3;
