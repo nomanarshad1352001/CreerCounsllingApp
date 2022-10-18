@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import {AiFillProfile,AiFillHome,AiFillContacts} from "react-icons/ai";
 import { MdAdminPanelSettings } from "react-icons/md";
+// import { HiOfficeBuilding } from "react-icons/Hi";
 import './SideNavbar.css';
 
 export default function SideNavbar() {
@@ -63,10 +64,10 @@ export default function SideNavbar() {
            <span className="tooltip">Admin</span>
          </li>
          <li>
-           <Link to="">
+           <Link to="colleges">
              <i className='bx' ></i>
              </Link>
-           <span className="tooltip">Analytics</span>
+           <span className="tooltip">Colleges</span>
          </li>
         </ul>
       </div>
