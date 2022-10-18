@@ -11,6 +11,9 @@ export default function Admin() {
       <Intro/>
       <Intro/>
       <Intro/>
+      <Intro/>
+      <Intro/>
+
     </div>
   )
 }
