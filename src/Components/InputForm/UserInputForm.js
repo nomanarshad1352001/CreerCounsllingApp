@@ -32,13 +32,9 @@ export default function UserInputForm(props) {
   //   setMarks(event.target.value);
   // };
   const [userData, setuserData] = useState(initialState);
-  const [User, setUser] = useState();
   const [Edit, setEdit] = useState(false);
   const inputHandler = (event) => {
     const { name, value } = event.target;
-
-    console.log( "-------------", event.target)
-
     setuserData({
       ...userData,
       [name]: value,
@@ -46,13 +42,11 @@ export default function UserInputForm(props) {
   };
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(userData);
     if (Edit === true) {
-      setUser(userData);
+      props.setUser(userData);
       setEdit(false);
-      console.log(userData);
     } else {
-      setUser(userData);
+      props.setUser(userData);
     }
     setuserData({
       Name: "",
@@ -64,11 +58,12 @@ export default function UserInputForm(props) {
     event.preventDefault();
     setEdit(true);
     setuserData({
-      Name: User.Name,
-      PassedDegree: User.PassedDegree,
-      Marks: User.Marks,
+      Name: props.User.Name,
+      PassedDegree: props.User.PassedDegree,
+      Marks: props.User.Marks,
     });
   };
+  console.log(props.User);
   return (
     <Modal onClickFunc={props.onClose}>
       <div className={classes.heading}>
