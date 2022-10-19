@@ -1,7 +1,6 @@
 import React from "react";
 import Intro from "../Introduction/Intro.js";
 import clasess from "./Home.module.css";
-import Degree from '../Degree/Degree.js'
 import interimg from '../Material/Inter.jpg'
 import Bsimg from '../Material/Bs.jpg'
 export default function Home(props) {
@@ -29,7 +28,6 @@ export default function Home(props) {
         />
       </div>
     </div>
-    <Degree/>
   </React.Fragment>
   );
 }

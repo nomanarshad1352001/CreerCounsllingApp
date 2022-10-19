@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {AiFillProfile,AiFillHome,AiFillContacts} from "react-icons/ai";
-import { MdAdminPanelSettings } from "react-icons/md";
-// import { HiOfficeBuilding } from "react-icons/Hi";
+import { MdAdminPanelSettings,MdOutlineDocumentScanner } from "react-icons/md";
+import { HiOfficeBuilding } from "react-icons/hi";
 import './SideNavbar.css';
 
 export default function SideNavbar() {
@@ -65,9 +65,15 @@ export default function SideNavbar() {
          </li>
          <li>
            <Link to="colleges">
-             <i className='bx' ></i>
+             <i className='bx' ><HiOfficeBuilding/></i>
              </Link>
            <span className="tooltip">Colleges</span>
+         </li>
+         <li>
+           <Link to="degree">
+             <i className='bx' ><MdOutlineDocumentScanner/></i>
+             </Link>
+           <span className="tooltip">Degrees</span>
          </li>
         </ul>
       </div>

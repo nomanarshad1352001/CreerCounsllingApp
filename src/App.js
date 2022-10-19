@@ -9,6 +9,8 @@ import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SideNavbar from "./Components/Navbars/SideNavbar.js";
 import UserInputForm from "./Components/InputForm/UserInputForm";
+import Degree from "./Components/Degree/Degree";
+import Colleges from "./Components/Colleges/Colleges";
 function App(props) {
   const [FormIsShown, setFormIsShown] = useState(false)
   const ShowFormFun=()=>{
@@ -35,6 +37,8 @@ function App(props) {
           <Route path="/admin" element={<Admin />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/colleges" element={<Colleges/>} />
+          <Route path="/degree" element={<Degree/>} />
         </Routes>
           </div>
         </div>
