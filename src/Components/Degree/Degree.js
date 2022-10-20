@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import DataContext from "../../Store/data-context.js";
 import Intro from "../Introduction/Intro.js";
-import UserDegrees from "../UserDegrees/UserDegrees.js";
 import classes from "./degree.module.css";
 export default function Degree() {
   const ctx = useContext(DataContext);
@@ -10,6 +9,7 @@ export default function Degree() {
       {ctx.MatricDegrees.map((matric) => {
         return (
           <Intro
+          btnTitle="See More"
             key={matric.id}
             image={matric.img}
             Title={matric.name}
@@ -22,6 +22,7 @@ export default function Degree() {
       {ctx.InterDegrees.map((inter) => {
         return (
           <Intro
+          btnTitle="See More"
             key={inter.id}
             image={inter.img}
             Title={inter.name}
@@ -30,7 +31,6 @@ export default function Degree() {
           />
         );
       })}
-      <UserDegrees/>
     </div>
   );
 }

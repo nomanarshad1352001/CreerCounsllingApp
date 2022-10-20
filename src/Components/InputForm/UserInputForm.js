@@ -2,7 +2,9 @@ import classes from "./InputForm.module.css";
 import React, { useState } from "react";
 import Modal from "../UI/Modal";
 import Button from "../UI/Button.js";
+import { useNavigate } from "react-router-dom";
 export default function UserInputForm(props) {
+  const navigate =useNavigate();
   const options = [
     "Matric Science(com)",
     "Matric Science(bio)",
@@ -16,21 +18,9 @@ export default function UserInputForm(props) {
   ];
   const initialState = {
     Name: "",
-    PassedDegree: "",
+    PassedDegree:  "Matric Science(com)",
     Marks: "",
   };
-  // const [name, setName] = useState("");
-  // const [passedDegree, setpassedDegree] = useState("Matric Science(com)");
-  // const [marks, setMarks] = useState("");
-  // const inputNameHandler = (event) => {
-  //   setName(event.target.value);
-  // };
-  // const inputpassedDegreeHandler = (event) => {
-  //   setpassedDegree(event.target.value);
-  // };
-  // const inputMarksHandler = (event) => {
-  //   setMarks(event.target.value);
-  // };
   const [userData, setuserData] = useState(initialState);
   const [Edit, setEdit] = useState(false);
   const inputHandler = (event) => {
@@ -53,6 +43,7 @@ export default function UserInputForm(props) {
       PassedDegree: "",
       Marks: "",
     });
+    navigate('/Fdegree')
   };
   const OnEdit = (event) => {
     event.preventDefault();
@@ -63,7 +54,7 @@ export default function UserInputForm(props) {
       Marks: props.User.Marks,
     });
   };
-  console.log(props.User);
+  console.log(props.User,"InputForm");
   return (
     <Modal onClickFunc={props.onClose}>
       <div className={classes.heading}>
@@ -83,7 +74,7 @@ export default function UserInputForm(props) {
           {options.map((option, index) => {
             return (
               <option
-                defaultValue="Matric Science(com)"
+                defaultValue=""
                 value={options.value}
                 key={index}
               >

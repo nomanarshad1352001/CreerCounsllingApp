@@ -3,7 +3,6 @@
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
 }
-
 @media (max-width: 460px) {
     .container{
         grid-template-columns: repeat(auto-fit, minmax(18rem, auto));

@@ -11,9 +11,14 @@ import Colleges from "../Colleges/Colleges";
 import Degree from "../Degree/Degree";
 import Admin from "../Admin/Admin";
 import DataContext from "../../Store/data-context";
+import FilteredDegrees from "../Degree/FilteredDegrees";
 export default function Controls(props) {
   const [FormIsShown, setFormIsShown] = useState(false);
-  const [User, setUser] = useState();
+  const [User, setUser] = useState({
+    Name:"",
+    PassedDegree:'',
+    Marks:""
+  });
   const ShowFormFun = () => {
     setFormIsShown(true);
   };
@@ -28,7 +33,7 @@ export default function Controls(props) {
       subName: "Faculty of O level education",
       description:
         "Metriculation in Computer Science helps learners develop an interest in computational thinking and an understanding of the principles of problem-solving using computers.",
-      img: "engineering.jpg",
+      img: "engineering.jpg"
     },
     {
       id: 1,
@@ -136,6 +141,7 @@ export default function Controls(props) {
               <Route path="/colleges" element={<Colleges />} />
               <Route path="/degree" element={<Degree />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/Fdegree" element={<FilteredDegrees OnClick={ShowFormFun}/>} />
             </Routes>
           </div>
         </div>
