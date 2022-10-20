@@ -54,7 +54,6 @@ export default function UserInputForm(props) {
       Marks: props.User.Marks,
     });
   };
-  console.log(props.User,"InputForm");
   return (
     <Modal onClickFunc={props.onClose}>
       <div className={classes.heading}>
