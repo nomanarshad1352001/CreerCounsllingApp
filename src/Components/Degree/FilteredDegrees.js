@@ -5,6 +5,9 @@ import classes from './Filter.module.css'
 import Button from "../UI/Button";
 export default function FilteredDegrees(props) {
   const ctx = useContext(DataContext);
+  const availableCLG=()=>{
+console.log("nouman");
+  }
   var element;
   if (ctx.UserData.PassedDegree === "Matric Science(com)") {
     element = (<UserDegrees
@@ -20,6 +23,7 @@ export default function FilteredDegrees(props) {
         "ICS (Economics)",
         "ICom",
       ]}
+      onClickCLG={availableCLG}
     />)
   } else if (ctx.UserData.PassedDegree === "Matric Science(bio)") {
     element = (<UserDegrees
@@ -35,6 +39,7 @@ export default function FilteredDegrees(props) {
         "ICS (Economics)",
         "ICom",
       ]}
+      onClickCLG={availableCLG}
     />)
   } else if (ctx.UserData.PassedDegree === "Matric Arts") {
     element = (<UserDegrees
@@ -50,6 +55,7 @@ export default function FilteredDegrees(props) {
         "ICS (Economics)",
         "ICom",
       ]}
+      onClickCLG={availableCLG}
     />)
   }
   const Check = element === undefined ? true : false;
