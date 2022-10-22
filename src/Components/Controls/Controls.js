@@ -13,6 +13,7 @@ import Admin from "../Admin/Admin";
 import DataContext from "../../Store/data-context";
 import FilteredDegrees from "../Degree/FilteredDegrees";
 import FilteredColleges from "../Colleges/FilteredColleges";
+import Footer from "../Footer";
 export default function Controls(props) {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [User, setUser] = useState({
@@ -273,7 +274,7 @@ export default function Controls(props) {
             </Routes>
           </div>
         </div>
-        {/* <Footer/> */}
+        <Footer/>
       </BrowserRouter>
     </DataContext.Provider>
   );

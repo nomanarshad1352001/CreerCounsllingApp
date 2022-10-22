@@ -6,14 +6,16 @@
 	box-sizing: border-box;
   }
 .footer{
+	position: fixed;
+    bottom: 0px;
+	left: 0;
+	right: 0;
 	backdrop-filter: blur(8px);
 	background: rgba(251, 251, 251, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.25);
-	padding: 15px 0;
+	padding-top: 40px;
 	bottom: 0;
-	height: 125px;
-	border-radius: 1px 1px 0px 0px;
-	/* position: fixed; */
+	height: auto;
 	width: 100%;
 }
 .footer .social {
