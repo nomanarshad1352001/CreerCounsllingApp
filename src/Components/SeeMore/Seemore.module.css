@@ -1,0 +1,46 @@
+.seemore {
+  background-color: whitesmoke;
+  backdrop-filter: blur(4px);
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 5px 15px rgba(212, 212, 212, 0.25);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 20px;
+  display: flex;
+}
+.mainImage {
+  width: 15rem;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.mainImage img {
+  width: 25rem;
+  height: 100%;
+  object-fit: cover;
+}
+.text {
+  padding: 10px;
+  margin: 10px 10px;
+  width: auto;
+}
+.text .title {
+  margin: 5px 5px;
+}
+.text h3{
+  font-weight: 500;
+  margin: 5px 5px;
+}
+.text p{
+  margin: 5px 5px;
+}
+@media screen and (max-width: 350px) {
+  .subtitle {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .mainImage {
+    width: 90%;
+  }
+}
