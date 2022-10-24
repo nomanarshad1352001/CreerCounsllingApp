@@ -12,13 +12,12 @@ import Degree from "../Degree/Degree";
 import Admin from "../Admin/Admin";
 import DataContext from "../../Store/data-context";
 import FilteredDegrees from "../Degree/FilteredDegrees";
+import FilteredColleges from "../Colleges/FilteredColleges";
+import LoginMain from "../Login/LoginMain.js";
+import Footer from "../Footer.js";
 export default function Controls(props) {
   const [FormIsShown, setFormIsShown] = useState(false);
-  const [User, setUser] = useState({
-    Name:"",
-    PassedDegree:'',
-    Marks:""
-  });
+  const [User, setUser] = useState({});
   const ShowFormFun = () => {
     setFormIsShown(true);
   };
@@ -33,7 +32,7 @@ export default function Controls(props) {
       subName: "Faculty of O level education",
       description:
         "Metriculation in Computer Science helps learners develop an interest in computational thinking and an understanding of the principles of problem-solving using computers.",
-      img: "engineering.jpg"
+      img: "engineering.jpg",
     },
     {
       id: 1,
@@ -110,12 +109,135 @@ export default function Controls(props) {
       img: "engineering.jpg",
     },
   ];
+  let colleges = [
+    {
+      id: "GGCS",
+      Title: "Govt Graduate College Of Science",
+      subTitle: "A Intermediate and Bs Level institute",
+      description:
+        "Secondary education is an important segment in every person's life.  raise a person's economic status and reduce infant mortality rates as these listed facts will showSecondary education is an important",
+      btnTitle: "See More",
+      degreeAvailable: [
+        "FSC(Pre-Engineering)",
+        "FSC(Pre-Medical)",
+        "ICS(Physics)",
+        "ICS (Statistics)",
+        "ICS (Economics)",
+        "ICom",
+      ],
+      lastYearMerit: {
+        FSCpe: 850,
+        FSCpm: 950,
+        ICSp: 1050,
+        ICSs: 750,
+        ICSe: 650,
+        ICOM: 700,
+      },
+    },
+    {
+      id: "GGTC",
+      Title: "Govt Graduate Township College",
+      subTitle: "A Intermediate and Bs Level institute",
+      description:
+        "Secondary education is an important segment in every person's life. facts will show",
+      btnTitle: "See More",
+      degreeAvailable: [
+        "FSC(Pre-Engineering)",
+        "FSC(Pre-Medical)",
+        "ICS(Physics)",
+        "ICS (Statistics)",
+        "ICS (Economics)",
+        "ICom",
+      ],
+      lastYearMerit: {
+        FSCpe: 896,
+        FSCpm: 920,
+        ICSp: 846,
+        ICSs: 652,
+        ICSe: 750,
+        ICOM: 500,
+      },
+    },
+    {
+      id: "GGMAOC",
+      Title: "Govt graduate MAO College",
+      subTitle: "A Intermediate and Bs Level institute",
+      description:
+        "Secondary education is an important segment in every person's life.  raise a person's economic status and reduce infant mortality rates as these listed facts will showSecondary",
+      btnTitle: "See More",
+      degreeAvailable: [
+        "FSC(Pre-Engineering)",
+        "FSC(Pre-Medical)",
+        "ICS(Physics)",
+        "ICS (Statistics)",
+        "ICS (Economics)",
+        "ICom",
+      ],
+      lastYearMerit: {
+        FSCpe: 896,
+        FSCpm: 920,
+        ICSp: 846,
+        ICSs: 652,
+        ICSe: 750,
+        ICOM: 500,
+      },
+    },
+    {
+      id: "GGCLC",
+      Title: "Govt graduate civil-line College",
+      subTitle: "A Intermediate and Bs Level institute",
+      description:
+        "Secondary education is an important segment in every person's life. facts will show",
+      btnTitle: "See More",
+      degreeAvailable: [
+        "FSC(Pre-Engineering)",
+        "FSC(Pre-Medical)",
+        "ICS(Physics)",
+        "ICS (Statistics)",
+        "ICS (Economics)",
+        "ICom",
+      ],
+      lastYearMerit: {
+        FSCpe: 896,
+        FSCpm: 920,
+        ICSp: 846,
+        ICSs: 652,
+        ICSe: 750,
+        ICOM: 500,
+      },
+    },
+    {
+      id: "GGCC",
+      Title: "Govt graduate Commerec College",
+      subTitle: "A Intermediate and Bs Level institute",
+      description:
+        "Secondary education is an important segment in every person's life. facts will show",
+      btnTitle: "See More",
+      degreeAvailable: [
+        "FSC(Pre-Engineering)",
+        "FSC(Pre-Medical)",
+        "ICS(Physics)",
+        "ICS (Statistics)",
+        "ICS (Economics)",
+        "ICom",
+      ],
+      lastYearMerit: {
+        FSCpe: 896,
+        FSCpm: 920,
+        ICSp: 846,
+        ICSs: 652,
+        ICSe: 750,
+        ICOM: 500,
+      },
+    },
+  ];
   return (
     <DataContext.Provider
       value={{
         MatricDegrees: matricDegrees,
         InterDegrees: interDegrees,
-        UserData:User,
+        UserData: User,
+        Colleges: colleges,
       }}
     >
       <BrowserRouter>
@@ -127,25 +249,32 @@ export default function Controls(props) {
             <SideNavbar />
           </div>
           <div className={clasess.item3}>
-            {FormIsShown && 
-            <UserInputForm 
-            User={User} 
-            setUser={setUser} 
-            onClose={HideFormFun}
-             />
-             }
+            {FormIsShown && (
+              <UserInputForm
+                User={User}
+                setUser={setUser}
+                onClose={HideFormFun}
+              />
+            )}
             <Routes>
-              <Route path="/" element={<Home OnClick={ShowFormFun} />}/>
+              <Route path="/" element={<Home OnClick={ShowFormFun} />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/colleges" element={<Colleges />} />
               <Route path="/degree" element={<Degree />} />
               <Route path="/admin" element={<Admin />} />
-              <Route path="/Fdegree" element={<FilteredDegrees OnClick={ShowFormFun}/>} />
+              <Route path="/Fclg" element={<FilteredColleges />} />
+              <Route path="/login" element={<LoginMain />} />
+              <Route
+                path="/Fdegree"
+                element={<FilteredDegrees OnClick={ShowFormFun} />}
+              />
             </Routes>
           </div>
         </div>
-        {/* <Footer/> */}
+        <div className={clasess.footerContiner}>
+          <Footer />
+        </div>
       </BrowserRouter>
     </DataContext.Provider>
   );

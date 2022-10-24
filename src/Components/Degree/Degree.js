@@ -5,24 +5,27 @@ import classes from "./degree.module.css";
 export default function Degree() {
   const ctx = useContext(DataContext);
   return (
-    <div className={classes.container}>
-      {ctx.MatricDegrees.map((matric) => {
+    <React.Fragment>
+      <div  className={classes.title}>Matric Degrees</div>
+      <div className={classes.container}>
+        {ctx.MatricDegrees.map((matric) => {
+          return (
+            <Intro
+              btnTitle="See More"
+              key={matric.id}
+              image={matric.img}
+              Title={matric.name}
+              subTitle={matric.subName}
+              description={matric.description}
+            />
+          );
+        })}
+      </div>
+      <div className={classes.title}>Inter Degrees</div>
+      <div className={classes.container}> {ctx.InterDegrees.map((inter) => {
         return (
           <Intro
-          btnTitle="See More"
-            key={matric.id}
-            image={matric.img}
-            Title={matric.name}
-            subTitle={matric.subName}
-            description={matric.description}
-          />
-        );
-      })}
-      <div>Inter Degrees</div>
-      {ctx.InterDegrees.map((inter) => {
-        return (
-          <Intro
-          btnTitle="See More"
+            btnTitle="See More"
             key={inter.id}
             image={inter.img}
             Title={inter.name}
@@ -31,6 +34,7 @@ export default function Degree() {
           />
         );
       })}
-    </div>
+      </div>
+    </React.Fragment>
   );
 }

@@ -12,3 +12,8 @@
     padding: 10px;
     margin: 10px;
 }
+@media (max-width: 460px) {
+    .title {
+      font-size: 1rem;
+    }
+  }

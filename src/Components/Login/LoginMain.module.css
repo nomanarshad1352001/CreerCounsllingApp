@@ -1,0 +1,53 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .form{
+      background-color: white;
+      padding: 0px 60px;
+      border-radius: 15px;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+    width: 44rem;
+  }
+  
+  .H1{
+      color: blueviolet;
+      text-align: center;
+      padding: 15px;
+  }
+  .loginBtn{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  @media screen and (max-width: 650px) {
+    .form{
+    width: 30rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .form{
+  width: 20rem;
+}
+.H1{
+ font-size: 20px;
+}
+}
+@media screen and (max-width: 410px) {
+  .form{
+  width: 15rem;
+}
+.H1{
+ font-size: 20px;
+}
+}

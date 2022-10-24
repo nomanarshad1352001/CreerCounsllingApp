@@ -1,15 +1,27 @@
-.container{
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, auto));
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+}
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px;
+  background-color: blueviolet;
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  margin: 15px 10px 10px 10px;
 }
 @media (max-width: 460px) {
-    .container{
-        grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
-    }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
   }
-  @media (max-width: 400px) {
-    .container{
-        grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
-    }
+  .title {
+    font-size: 1rem;
   }
+}
+@media (max-width: 400px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+  }
+}

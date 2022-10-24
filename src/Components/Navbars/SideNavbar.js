@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {AiFillProfile,AiFillHome,AiFillContacts} from "react-icons/ai";
-import { MdAdminPanelSettings,MdOutlineDocumentScanner } from "react-icons/md";
-import { HiOfficeBuilding } from "react-icons/hi";
+import {AiFillHome} from "react-icons/ai";
+import { MdAdminPanelSettings,MdContactMail } from "react-icons/md";
+import { IoIosSchool } from "react-icons/io";
+import { FaUniversity,FaUserFriends } from "react-icons/fa";
 import './SideNavbar.css';
 
 export default function SideNavbar() {
@@ -45,15 +46,27 @@ export default function SideNavbar() {
             </Link>
              <span className="tooltip">Home</span>
           </li>
+         <li>
+           <Link to="degree">
+             <i className='bx' ><IoIosSchool/></i>
+             </Link>
+           <span className="tooltip">Degrees</span>
+         </li>
+         <li>
+           <Link to="colleges">
+             <i className='bx' ><FaUniversity/></i>
+             </Link>
+           <span className="tooltip">Colleges</span>
+         </li>
           <li>
             <Link to="about">
-              <i className='bx'><AiFillProfile/></i>
+              <i className='bx'><FaUserFriends/></i>
             </Link>
-             <span className="tooltip">About</span>
+             <span className="tooltip">About Us</span>
           </li>
           <li>
            <Link to="contact">
-             <i className='bx'><AiFillContacts/></i>
+             <i className='bx'><MdContactMail/></i>
             </Link>
            <span className="tooltip">Contact</span>
          </li>
@@ -62,18 +75,6 @@ export default function SideNavbar() {
              <i className='bx' ><MdAdminPanelSettings/></i>
              </Link>
            <span className="tooltip">Admin</span>
-         </li>
-         <li>
-           <Link to="colleges">
-             <i className='bx' ><HiOfficeBuilding/></i>
-             </Link>
-           <span className="tooltip">Colleges</span>
-         </li>
-         <li>
-           <Link to="degree">
-             <i className='bx' ><MdOutlineDocumentScanner/></i>
-             </Link>
-           <span className="tooltip">Degrees</span>
          </li>
         </ul>
       </div>

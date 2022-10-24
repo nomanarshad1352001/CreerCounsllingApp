@@ -17,7 +17,7 @@ const Intro = (props) => {
       <p>
         {props.description}
       </p>
-      <Button btnTitle={props.btnTitle} onClickFunc={props.onClickFunc}/>
+      <Button btnTitle={props.btnTitle} btnIcon={props.btnIcon} onClickFunc={props.onClickFunc}/>
     </section>
   );
 };

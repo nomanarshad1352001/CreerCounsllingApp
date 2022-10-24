@@ -3,6 +3,7 @@ import React from "react";
 const DataContext = React.createContext({
   MatricDegrees: [],
   InterDegrees: [],
-  UserData:{}
+  UserData:{},
+  colleges:[]
 });
 export default DataContext;
