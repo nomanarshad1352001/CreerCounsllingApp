@@ -13,6 +13,7 @@ import Admin from "../Admin/Admin";
 import DataContext from "../../Store/data-context";
 import FilteredDegrees from "../Degree/FilteredDegrees";
 import FilteredColleges from "../Colleges/FilteredColleges";
+import LoginMain from "../Login/LoginMain";
 export default function Controls(props) {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [User, setUser] = useState({
@@ -265,9 +266,9 @@ export default function Controls(props) {
               <Route path="/admin" element={<Admin />} />
               <Route path="/Fclg" element={<FilteredColleges/>} />
               <Route
-                path="/Fdegree"
-                element={<FilteredDegrees OnClick={ShowFormFun} />}
+                path="/Fdegree" element={<FilteredDegrees OnClick={ShowFormFun} />}
               />
+              <Route path="/login" element={<LoginMain/> } />
             </Routes>
           </div>
         </div>

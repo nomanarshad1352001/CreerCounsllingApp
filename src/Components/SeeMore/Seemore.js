@@ -1,7 +1,8 @@
 import classes from "./Seemore.module.css";
-// import interimg from '../Material/Inter.jpg'
-
 import React from "react";
+
+// This is template for see more section
+
 const Seemore = (props) => {
   return (
     <section className={classes.seemore}>
