@@ -12,6 +12,7 @@ const Seemore = (props) => {
   const Location = useLocation();
   return (
     <Fragment>
+      <h1>{Location.state.selectedclgId}</h1>
       <h1>{Location.state.selectedDegId}</h1>
       <h1>{Location.state.selectedDegTitle}</h1>
     <section className={classes.seemore}>

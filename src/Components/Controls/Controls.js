@@ -15,7 +15,7 @@ import FilteredDegrees from "../Degree/FilteredDegrees";
 import FilteredColleges from "../Colleges/FilteredColleges";
 import LoginMain from "../Login/LoginMain";
 import Seemore from '../SeeMore/Seemore.js';
-// import FilterDegree from "../Degree/FilterDegree";
+
 export default function Controls(props) {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [User, setUser] = useState({
@@ -234,6 +234,7 @@ export default function Controls(props) {
       },
     },
   ];
+
   return (
     <DataContext.Provider
       value={{
