@@ -22,10 +22,11 @@ export default function Colleges() {
           onClickFunc={() =>
             navigate("/seemore", {
               state: {
-                selectedclgId: clg.id,
-                selectedclgTitle: clg.Title,
-                selectedclgsubTitle: clg.subTitle,
-                selectedclgDescription: clg.description,
+                selected_Id: clg.id,
+                selected_Title: clg.Title,
+                selected_subTitle: clg.subTitle,
+                selected_Description: clg.description,
+                selected_Image: clg.img
               },
             })
           }

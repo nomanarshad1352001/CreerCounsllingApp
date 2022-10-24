@@ -8,7 +8,7 @@ export default function FilteredColleges() {
     const navigate = useNavigate();
     const Location = useLocation();
     const ctx = useContext(DataContext);
-    const FilteredClg = ctx.Colleges.filter((clg, index) => clg.degreeAvailable.includes(Location.state.selectedDegName));
+    const FilteredClg = ctx.Colleges.filter((clg, index) => clg.degreeAvailable.includes(Location.state.selected_Title));
 
     return (
         <React.Fragment>
@@ -27,7 +27,11 @@ export default function FilteredColleges() {
                             onClickFunc={() =>
                                 navigate("/seemore", {
                                     state: {
-                                        selectedclgId: clg.id,
+                                        selected_Id: clg.id,
+                                        selected_Title: clg.Title,
+                                        selected_subTitle: clg.subTitle,
+                                        selected_Description: clg.description,
+                                        selected_Image: clg.img
                                     },
                                 })
                             }

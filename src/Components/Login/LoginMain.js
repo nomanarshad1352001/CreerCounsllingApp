@@ -71,7 +71,6 @@ const App = () => {
         setUserLoginData(values);
         console.log(UserLoginData);
     };
-console.log(values);
     return (
         <div className={classes.login}>
             <form className={classes.form} >

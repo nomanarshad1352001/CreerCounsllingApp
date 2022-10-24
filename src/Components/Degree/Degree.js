@@ -19,7 +19,11 @@ export default function Degree() {
               onClickFunc={() =>
                 navigate("/seemore", {
                   state: {
-                    selectedDegId: matric.id,
+                    selected_Id: matric.id,
+                selected_Title: matric.name,
+                selected_subTitle: matric.subName,
+                selected_Description: matric.description,
+                selected_Image: matric.img
                   },
                 })
               }
@@ -44,8 +48,11 @@ export default function Degree() {
               onClickFunc={() =>
                 navigate("/seemore", {
                   state: {
-                    selectedDegId: inter.id,
-                    selectedDegTitle: inter.name,
+                    selected_Id: inter.id,
+                selected_Title: inter.name,
+                selected_subTitle: inter.subName,
+                selected_Description: inter.description,
+                selected_Image: inter.img
                   },
                 })
               }
