@@ -1,19 +1,14 @@
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .sidebar{
   position: fixed;
   left: 0;
-  width: 85px;
+  width: 80px;
   background-color: blueviolet;
   padding: 6px 8px;
-  z-index: 99;
+  z-index: 100;
   transition: all 0.5s ease;
-  border-radius: 10px 10px 10px 10px;
-  margin-top: 20px;
+  border-radius: 0 10px 10px  0;
+  margin-top: 0.05rem;
+  height: 100%;
 }
 .sidebar .logo-details{
   height: 60px;
@@ -22,16 +17,17 @@
   position: relative;
   color: white;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   justify-content: center;
 }
 .sidebar .logo-details .icon{
+  margin-top: 10px;
   /* opacity: 0; */
   transition: all 0.5s ease;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .sidebar .logo-details .logo_name{
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.5s ease;
@@ -47,7 +43,6 @@
   transform: translateY(-50%);
   font-size: 22px;
   transition: all 0.4s ease;
-  font-size: 23px;
   text-align: center;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -83,15 +78,16 @@
   left: calc(100% + 15px);
   z-index: 3;
   background-color: blueviolet;
+  color: #FFF;
   box-shadow: 10px 5px 10px rgba(0, 0, 0, 0.3);
   padding: 6px 12px;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-size: 15px;
   font-weight: 400;
   opacity: 0;
   white-space: nowrap;
   pointer-events: none;
- transition: 0s;
+  transition: 0s;
  
 }
 .sidebar li:hover .tooltip{

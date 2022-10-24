@@ -40,7 +40,6 @@ export default function Degree() {
         <h2 className={classes.title}>Inter Degrees</h2>
       </div>
       <div className={classes.container}>
-        {" "}
         {ctx.InterDegrees.map((inter) => {
           return (
             <Intro
@@ -61,6 +60,34 @@ export default function Degree() {
               Title={inter.name}
               subTitle={inter.subName}
               description={inter.description}
+            />
+          );
+        })}
+      </div>
+      <div className={classes.mainHeading}>
+        <h2 className={classes.title}>Bachelor Studies Degrees</h2>
+      </div>
+      <div className={classes.container}>
+        {ctx.BsDegrees.map((bsDegrees) => {
+          return (
+            <Intro
+              btnTitle="See More"
+              onClickFunc={() =>
+                navigate("/seemore", {
+                  state: {
+                    selected_Id: bsDegrees.id,
+                    selected_Title: bsDegrees.name,
+                    selected_subTitle: bsDegrees.subName,
+                    selected_Description: bsDegrees.description,
+                    selected_Image: bsDegrees.img
+                  },
+                })
+              }
+              key={bsDegrees.id}
+              image={bsDegrees.img}
+              Title={bsDegrees.name}
+              subTitle={bsDegrees.subName}
+              description={bsDegrees.description}
             />
           );
         })}

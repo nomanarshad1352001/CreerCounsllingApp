@@ -11,11 +11,11 @@ const Seemore = (props) => {
   const Location = useLocation();
   return (
     <Fragment>
-      <h1>{Location.state.selected_Id}</h1>
+      {/* <h1>{Location.state.selected_Id}</h1>
       <h1>{Location.state.selected_Title}</h1>
       <h1>{Location.state.selected_subTitle}</h1>
       <h1>{Location.state.selected_Description}</h1>
-      <h1>{Location.state.selected_Image}</h1>
+      <h1>{Location.state.selected_Image}</h1> */}
       <section className={classes.seemore}>
         <div className={classes.header}>
           <div className={classes.mainImage}>
