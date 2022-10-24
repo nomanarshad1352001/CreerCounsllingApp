@@ -14,6 +14,8 @@ import DataContext from "../../Store/data-context";
 import FilteredDegrees from "../Degree/FilteredDegrees";
 import FilteredColleges from "../Colleges/FilteredColleges";
 import LoginMain from "../Login/LoginMain";
+import Seemore from '../SeeMore/Seemore.js';
+// import FilterDegree from "../Degree/FilterDegree";
 export default function Controls(props) {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [User, setUser] = useState({
@@ -29,7 +31,7 @@ export default function Controls(props) {
   };
   let matricDegrees = [
     {
-      id: 0,
+      id: "MScom",
       name: "Matric Science(com)",
       degType: "Metriculation",
       subName: "Faculty of O level education",
@@ -38,7 +40,7 @@ export default function Controls(props) {
       img: "engineering.jpg",
     },
     {
-      id: 1,
+      id: "MSbio",
       name: "Matric Science(bio)",
       degType: "Metriculation",
       subName: "Faculty of O level education",
@@ -47,7 +49,7 @@ export default function Controls(props) {
       img: "engineering.jpg",
     },
     {
-      id: 2,
+      id: "MArt",
       name: "Matric Arts",
       degType: "Metriculation",
       subName: "Faculty of O level education",
@@ -58,7 +60,7 @@ export default function Controls(props) {
   ];
   let interDegrees = [
     {
-      id: 0,
+      id: "FSCpe",
       name: "FSC(Pre-Engineering)",
       degType: "Intermediate",
       subName: "Faculty of Science in Pre Enginering.",
@@ -67,7 +69,7 @@ export default function Controls(props) {
       img: "./Material/engineering.jpg",
     },
     {
-      id: 1,
+      id: "FSCpm",
       name: "FSC(Pre-Medical)",
       degType: "Intermediate",
       subName: "Faculty of Science in Pre Medical.",
@@ -76,7 +78,7 @@ export default function Controls(props) {
       img: "Material/engineering.jpg",
     },
     {
-      id: 2,
+      id: "ICSp",
       name: "ICS(Physics)",
       degType: "Intermediate",
       subName: "Intermediate in computer sciences.",
@@ -85,7 +87,7 @@ export default function Controls(props) {
       img: "Material/engineering.jpg",
     },
     {
-      id: 3,
+      id: "ICSs",
       name: "ICS (Statistics)",
       degType: "Intermediate",
       subName: "Faculty of Arts in colleges",
@@ -94,7 +96,7 @@ export default function Controls(props) {
       img: "engineering.jpg",
     },
     {
-      id: 4,
+      id: "ICSe",
       name: "ICS (Economics)",
       degType: "Intermediate",
       subName: "Faculty of arts in colleges",
@@ -103,7 +105,7 @@ export default function Controls(props) {
       img: "engineering.jpg",
     },
     {
-      id: 5,
+      id: "Icom",
       name: "ICom",
       degType: "Intermediate",
       subName: "Faculty of commerce in colleges",
@@ -238,7 +240,7 @@ export default function Controls(props) {
         MatricDegrees: matricDegrees,
         InterDegrees: interDegrees,
         UserData: User,
-        colleges:colleges
+        Colleges:colleges
       }}
     >
       <BrowserRouter>
@@ -265,9 +267,11 @@ export default function Controls(props) {
               <Route path="/degree" element={<Degree />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/Fclg" element={<FilteredColleges/>} />
+              <Route path="/seemore" element={<Seemore/>} />
               <Route
                 path="/Fdegree" element={<FilteredDegrees OnClick={ShowFormFun} />}
               />
+              {/* <Route path="/Fdegree" element={<FilterDegree/>} /> */}
               <Route path="/login" element={<LoginMain/> } />
             </Routes>
           </div>

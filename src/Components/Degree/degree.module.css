@@ -11,6 +11,11 @@
   color: rgb(255, 255, 255);
   border-radius: 15px;
   margin: 15px 10px 10px 10px;
+  width: 70%;
+}
+.mainHeading{
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 460px) {
   .container {
