@@ -45,6 +45,7 @@ export default function Degree() {
                 navigate("/seemore", {
                   state: {
                     selectedDegId: inter.id,
+                    selectedDegTitle: inter.name,
                   },
                 })
               }
