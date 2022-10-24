@@ -1,25 +1,3 @@
-input[type="text"],
-select {
-  border: 2px solid blueviolet; /* Gray border */
-  border-radius: 5px; /* Rounded borders */
-  /* box-sizing: border-box; Make sure that padding and width stays in place */
-  margin-top: 12px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  font-size: 18px;
-  font-weight: 600;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  width: 100%; /* Full width */
-  padding: 6px; /* Some padding */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-}
-label {
-  background-color: rgb(168, 92, 239);
-  padding: 7px;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-}
 .btnContainer {
   display: flex;
   gap: 10px;
@@ -31,4 +9,10 @@ label {
   background: blueviolet;
   border-radius: 15px;
   color: whitesmoke;
+}
+.errormsg{
+  font-size: 12px;
+  padding: 3px;
+  color: red;
+  display: block;
 }

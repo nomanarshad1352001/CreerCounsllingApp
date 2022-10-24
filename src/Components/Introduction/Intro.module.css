@@ -24,6 +24,7 @@
   font-size: 18px;
   padding: 8px;
   height: 100%;
+  word-wrap: break-word;
 }
 .header {
   display: flex;
