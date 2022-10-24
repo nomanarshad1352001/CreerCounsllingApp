@@ -4,7 +4,6 @@ import classes from "./Seemore.module.css";
 import React from "react";
 const Seemore = (props) => {
   return (
-    
     <section className={classes.seemore}>
         <div className={classes.header}>
           <div className={classes.mainImage}>
