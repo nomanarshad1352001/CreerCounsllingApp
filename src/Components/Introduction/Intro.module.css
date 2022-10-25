@@ -57,6 +57,11 @@
   height: 100%;
   object-fit: cover;
 }
+.btnContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
 @media screen and (max-width: 350px) {
   .title {
     font-size: 0.5rem;

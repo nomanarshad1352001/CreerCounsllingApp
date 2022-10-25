@@ -5,18 +5,44 @@ import { useNavigate } from "react-router-dom";
 
 export default function UserDegrees(props) {
   const navigate = useNavigate();
-
+  const Length = props.Degrees.filter((deg) =>
+    props.Condition.includes(deg.name)
+  ).length;
   return (
     <React.Fragment>
-      <h4 className={classes.title}> {props.Title}</h4>
+      <div className={classes.mainHeading}>
+        <h2 className={classes.title}>{props.Title}</h2>
+        <h3 className={classes.length}>Total Degrees: {Length}</h3>
+      </div>
       <div className={classes.container}>
-        {props.Degrees.filter((i) => props.Condition.includes(i.name)).map(
+        {props.Degrees.filter((deg) => props.Condition.includes(deg.name)).map(
           (Deg) => {
             return (
               <Intro
-                btnTitle={"See Colleges"}
+                Check={true}
+                btnTitle={"Colleges"}
                 onClickFunc={() =>
                   navigate("/Fclg", {
+                    state: {
+                      selected_Title: Deg.name,
+                    },
+                  })
+                }
+                btnTitle1="More"
+                onClickFunc1={() =>
+                  navigate("/seemore", {
+                    state: {
+                      selected_Id: Deg.id,
+                      selected_Title: Deg.name,
+                      selected_subTitle: Deg.subName,
+                      selected_Description: Deg.description,
+                      selected_Image: Deg.img,
+                    },
+                  })
+                }
+                btnTitle2="Jobs"
+                onClickFunc2={() =>
+                  navigate("/Jobs", {
                     state: {
                       selected_Id: Deg.id,
                       selected_Title: Deg.name,

@@ -11,7 +11,23 @@
   color: rgb(255, 255, 255);
   border-radius: 15px;
   margin: 15px 10px 10px 10px;
-  width: 70%;
+  width: 50%;
+}
+.mainHeading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.length{
+  width: 20%;
+  background-color: rgb(175, 0, 137);
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
+  margin: 15px 10px 10px 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 6px;
 }
 .mainHeading{
   display: flex;

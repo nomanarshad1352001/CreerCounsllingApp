@@ -1,9 +1,7 @@
 import React from "react";
 
 const DataContext = React.createContext({
-  MatricDegrees: [],
-  InterDegrees: [],
-  BsDegrees: [],
+  Degrees: [],
   UserData:{},
   colleges:[],
   IsLoggedIn:false,

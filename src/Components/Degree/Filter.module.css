@@ -7,6 +7,10 @@
     border-radius: 15px;
     margin: 15px 10px 10px 10px;
 }
+.mainHeading{
+  display: flex;
+  justify-content: center;
+}
 .btn{
     text-align: center;
     padding: 10px;

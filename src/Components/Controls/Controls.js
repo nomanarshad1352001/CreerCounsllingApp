@@ -16,6 +16,7 @@ import FilteredColleges from "../Colleges/FilteredColleges";
 import MainPage from "../Main/MainPage";
 import Seemore from "../SeeMore/Seemore.js";
 import ProtectedRoutes from "../ProtectedRoutes";
+import Jobs from "../Jobs/Jobs";
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [LoginIsShown, setLoginIsShown] = useState(false);
@@ -38,7 +39,7 @@ export default function Controls() {
   const HideLoginFormFun = () => {
     setLoginIsShown(false);
   };
-  let matricDegrees = [
+  let Degrees = [
     {
       id: "MScom",
       name: "Matric Science(com)",
@@ -66,8 +67,6 @@ export default function Controls() {
         "All those students who choose arts subjects have vast options for further studies. .",
       img: "engineering.jpg",
     },
-  ];
-  let interDegrees = [
     {
       id: "FSCpe",
       name: "FSC(Pre-Engineering)",
@@ -122,9 +121,6 @@ export default function Controls() {
         "I.COM program is particularly designed for Commerce degree. Basic concepts of commerce are induced in students who adopt the subject.",
       img: "engineering.jpg",
     },
-  ];
-
-  let bsDegrees = [
     {
       id: "bsbba",
       name: "BS (BBA)",
@@ -144,7 +140,7 @@ export default function Controls() {
       img: "./Material/botany.jpg",
     },
     {
-      id: "bschemM",
+      id: "bschemPM",
       name: "BS Chemistry (Pre-Medical)",
       degType: "Graduation",
       subName: "Faculty of Chemistry.",
@@ -153,7 +149,7 @@ export default function Controls() {
       img: "./Material/botany.jpg",
     },
     {
-      id: "bschemE",
+      id: "bschemPE",
       name: "BS Chemistry (Pre-Engineering)",
       degType: "Graduation",
       subName: "Faculty of Chemistry.",
@@ -279,7 +275,7 @@ export default function Controls() {
       img: "./Material/botany.jpg",
     },
     {
-      id: "bsgeog",
+      id: "bsgeo",
       name: "BS Geography",
       degType: "Graduation",
       subName: "Faculty of Geography",
@@ -491,9 +487,7 @@ export default function Controls() {
   return (
     <DataContext.Provider
       value={{
-        MatricDegrees: matricDegrees,
-        InterDegrees: interDegrees,
-        BsDegrees: bsDegrees,
+        Degrees: Degrees,
         UserData: User,
         Colleges: colleges,
         IsLoggedIn: IsLoggedIn,
@@ -505,7 +499,11 @@ export default function Controls() {
           <div className={clasess.item1}>
             <Header setIsLoggedIn={setIsLoggedIn} />
           </div>
-          <div className={clasess.item2}>{IsLoggedIn && <SideNavbar />}</div>
+          {IsLoggedIn && (
+            <div className={clasess.item2}>
+              <SideNavbar />
+            </div>
+          )}
           <div className={clasess.item3}>
             {FormIsShown && (
               <UserInputForm
@@ -524,6 +522,7 @@ export default function Controls() {
                 <Route path="/admin" element={<Admin />} />
                 <Route path="/Fclg" element={<FilteredColleges />} />
                 <Route path="/seemore" element={<Seemore />} />
+                <Route path="/Jobs" element={<Jobs/>} />
                 <Route
                   path="/Fdegree"
                   element={<FilteredDegrees OnClick={ShowInputFormFun} />}

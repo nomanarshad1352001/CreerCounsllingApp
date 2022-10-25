@@ -17,7 +17,11 @@ const Intro = (props) => {
       <p>
         {props.description}
       </p>
-      <Button btnTitle={props.btnTitle} btnIcon={props.btnIcon} onClickFunc={props.onClickFunc}/>
+      <div className={classes.btnContainer}>
+      <Button btnTitle={props.btnTitle}  onClickFunc={props.onClickFunc}/>
+     {props.Check && <Button btnTitle={props.btnTitle1}  onClickFunc={props.onClickFunc1}/>}
+     {props.Check && <Button btnTitle={props.btnTitle2}  onClickFunc={props.onClickFunc2}/>}
+      </div>
     </section>
   );
 };
