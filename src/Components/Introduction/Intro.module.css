@@ -1,4 +1,4 @@
-.summary {
+.Card {
   background-color: whitesmoke;
   backdrop-filter: blur(4px);
   border: 3px solid rgba(255, 255, 255, 0.25);
@@ -11,20 +11,9 @@
   display: flex;
   flex-direction: column;
 }
-.summary:hover {
+.Card:hover {
   transition: 0.2s;
   box-shadow: 0 20px 20px rgba(201, 201, 201, 0.5);
-}
-.summary h2 {
-  font-size: 1.5rem;
-  margin-top: 0;
-  padding: 8px;
-}
-.summary p {
-  font-size: 18px;
-  padding: 8px;
-  height: 100%;
-  word-wrap: break-word;
 }
 .header {
   display: flex;
@@ -44,6 +33,15 @@
   margin-bottom: 10px;
   width: 100%;
 }
+.Subtitle{
+  font-size: 16px;
+}
+.description{
+  font-size: 18px;
+  padding: 8px;
+  height: 100%;
+  word-wrap: break-word;
+}
 .mainImage {
   width: 100%;
   height: 10rem;
@@ -59,16 +57,41 @@
 }
 .btnContainer {
   display: flex;
-  gap: 10px;
   justify-content: center;
 }
 @media screen and (max-width: 350px) {
   .title {
-    font-size: 0.5rem;
+    font-size: 0.55rem;
+  }
+  .Subtitle{
+    font-size: 0.55rem;
+  }
+  .description{
+    font-size: 0.7rem;
   }
 }
 @media screen and (max-width: 400px) {
   .mainImage {
     width: 90%;
+  }
+  .title {
+    font-size: 0.65rem;
+  }
+  .Subtitle{
+    font-size: 0.6rem;
+  }
+  .description{
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 0.7rem;
+  }
+  .Subtitle{
+    font-size: 0.75rem;
+  }
+  .description{
+    font-size: 1rem;
   }
 }

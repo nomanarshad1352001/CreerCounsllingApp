@@ -3,12 +3,28 @@
     border-radius: 0.3rem;
     font-size: 1rem;
     color: rgb(255, 255, 255);
-    padding: 8px 15px;
+    padding: 4px 7px;
+      margin: 2px;
     cursor: pointer;
-    margin: 5px;
   }
   .btn:hover{
     color: rgb(0, 0, 0);
     font-size: 1.1rem;
     box-shadow: 0 2px 10px rgba(28, 28, 28, 0.5);
   }
+  @media screen and (max-width: 350px) {
+    .btn{
+      font-size: 0.8rem;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    .btn{
+      font-size: 0.9rem;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .btn{
+      font-size: 0.95rem;
+    }
+  }
+ 

@@ -2,43 +2,100 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
     justify-items: center;
-}
-.title{
-    font-size: 1.3rem;
-    text-align: center;
-    padding: 10px;
-    background-color:blueviolet;
-    color: rgb(255, 255, 255);
-    border-radius: 15px;
-    margin: 15px 10px 10px 10px;
-    width: 70%;
-}
-.mainHeading{
-    display: flex;
-    justify-content: center;
-}
-@media screen and (max-width: 760px) {
+  }
+  .title{
+      font-size: 1.3rem;
+      text-align: center;
+      padding: 10px;
+      background-color:rgb(119, 55, 178);
+      color: rgb(255, 255, 255);
+      border-radius: 15px;
+      margin: 15px 10px 10px 10px;
+      width: 70%;
+  }
+  .mainHeading{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .length{
+      width: 20%;
+      background-color: rgb(175, 0, 137);
+      color: rgb(255, 255, 255);
+      border-radius: 15px;
+      margin: 15px 10px 10px 10px;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 6px;
+    }
+    .btnContainer{
+  text-align: center;
+    }
+    @media screen and (max-width: 890px) {
+        .container {
+            grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+        }
+    }
+    @media screen and (max-width: 760px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(14rem, auto));
+      }
+  }
+  @media screen and (max-width: 650px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+      }
+      .length{
+          font-size: 0.8rem;
+        }
+  }
+  @media screen and (max-width: 450px) {
+      .container {  
+        grid-template-columns: repeat(auto-fit, minmax(14rem, auto));
+      }
+      .title {
+          font-size: 1rem;
+        }
+      .length{
+          font-size: 0.6rem;
+        }
+  }
+  @media screen and (max-width: 405px) {
     .container {
-        grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
+      grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
+    }
+    .title {
+        font-size: 0.9rem;
     }
 }
-@media screen and (max-width: 650px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
-    }
-}
-@media screen and (max-width: 450px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
-    }
-}
-@media screen and (max-width: 350px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
-    }
-}
-@media screen and (max-width: 250px) {
-    .container {
-        grid-template-columns: repeat(auto-fit, minmax(5rem, auto));
-    }
-}
+  @media screen and (max-width: 350px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
+      }
+      .title {
+          font-size: 0.8rem;
+        }
+      .length{
+          font-size: 0.5rem;
+        }
+  }
+  @media screen and (max-width: 250px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(5rem, auto));
+      }
+      .title {
+          font-size: 0.6rem;
+        }
+      .length{
+          font-size: 0.3rem;
+        }
+  }
+  @media screen and (max-width: 249px) {
+      .container {
+          grid-template-columns: repeat(auto-fit, minmax(6rem, auto));
+      }
+      .length{
+          font-size: 0.3rem;
+        }
+  }

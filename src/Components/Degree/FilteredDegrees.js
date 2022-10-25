@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import DataContext from "../../Store/data-context";
 import UserDegrees from "./UserDegrees";
-import classes from "./Filter.module.css";
+import classes from "./degree.module.css";
 import Button from "../UI/Button";
 
 export default function FilteredDegrees(props) {

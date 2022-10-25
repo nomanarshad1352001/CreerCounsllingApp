@@ -1,25 +1,24 @@
 import React, {useContext} from "react";
 import Intro from "../Introduction/Intro";
 import DataContext from "../../Store/data-context";
-import classes from "./FilterClg.module.css";
+import classes from "./Colleges.module.css";
 import {useLocation, useNavigate} from "react-router-dom";
+import Button from "../UI/Button";
 
 export default function FilteredColleges() {
     const navigate = useNavigate();
     const Location = useLocation();
     const ctx = useContext(DataContext);
     const FilteredClg = ctx.Colleges.filter((clg, index) => clg.degreeAvailable.includes(Location.state.selected_Title));
-
+const goBack=()=>{
+    navigate("/Fdegree")
+}
     return (
-        <React.Fragment>
-            <div className={classes.mainHeading}>
-                <h4 className={classes.title}>
-                    {" "}
-                    Available Colleges for your Selected Degree
-                </h4>
-            </div>
-
-            <div className={classes.container}>
+        <React.Fragment><div className={classes.mainHeading}>
+        <h2 className={classes.title}> Available Colleges for your Selected Degree</h2>
+        <h3 className={classes.length}>Total Colleges: {FilteredClg.length}</h3>
+      </div>
+           <div className={classes.container}>
                 {FilteredClg.map((clg) => {
                     return (
                         <Intro
@@ -43,6 +42,9 @@ export default function FilteredColleges() {
                         />
                     );
                 })}
+            </div>
+            <div className={classes.btnContainer}>
+            <Button btnTitle="Go Back" onClickFunc={goBack}/>
             </div>
         </React.Fragment>
     );
