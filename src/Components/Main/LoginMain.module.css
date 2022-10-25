@@ -1,0 +1,53 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form {
+  padding: 0px 50px;
+  border-radius: 10px;
+  margin-top: 2.5rem;
+  width: 44rem;
+}
+
+.H1 {
+  color: blueviolet;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 15px;
+}
+.form input {
+  border-radius: 0.5rem;
+}
+.loginBtn {
+  display: flex;
+  justify-content:flex-end;
+  padding: 15px;
+
+}
+@media screen and (max-width: 650px) {
+  .form {
+    width: 25rem;
+    padding: 0px 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .form {
+    width: 25rem;
+    padding: 0px 30px;
+  }
+  .H1 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .form {
+    width: 15rem;
+    padding: 0px 20px;
+  }
+  .H1 {
+    font-size: 20px;
+  }
+}

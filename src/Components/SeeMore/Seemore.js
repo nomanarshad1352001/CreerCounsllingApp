@@ -1,13 +1,8 @@
 import classes from "./Seemore.module.css";
-import React, { Fragment, useContext } from "react";
+import React, { Fragment} from "react";
 import { useLocation } from "react-router-dom";
-import DataContext from "../../Store/data-context";
 import interimg from "../Material/Inter.jpg";
-
-// This is template for see more section
-
 const Seemore = (props) => {
-  const ctx = useContext(DataContext);
   const Location = useLocation();
   return (
     <Fragment>

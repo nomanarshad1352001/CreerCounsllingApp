@@ -13,21 +13,30 @@ import Admin from "../Admin/Admin";
 import DataContext from "../../Store/data-context";
 import FilteredDegrees from "../Degree/FilteredDegrees";
 import FilteredColleges from "../Colleges/FilteredColleges";
-import LoginMain from "../Login/LoginMain";
-import Seemore from '../SeeMore/Seemore.js';
-
-export default function Controls(props) {
+import MainPage from "../Main/MainPage";
+import Seemore from "../SeeMore/Seemore.js";
+import ProtectedRoutes from "../ProtectedRoutes";
+export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
+  const [LoginIsShown, setLoginIsShown] = useState(false);
+  const [UserLoginData, setUserLoginData] = useState({});
+  const [IsLoggedIn, setIsLoggedIn] = useState(false);
   const [User, setUser] = useState({
     Name: "",
     PassedDegree: "",
     Marks: "",
   });
-  const ShowFormFun = () => {
+  const ShowInputFormFun = () => {
     setFormIsShown(true);
   };
-  const HideFormFun = () => {
+  const HideInputFormFun = () => {
     setFormIsShown(false);
+  };
+  const ShowLoginFormFun = () => {
+    setLoginIsShown(true);
+  };
+  const HideLoginFormFun = () => {
+    setLoginIsShown(false);
   };
   let matricDegrees = [
     {
@@ -114,6 +123,7 @@ export default function Controls(props) {
       img: "engineering.jpg",
     },
   ];
+
   let bsDegrees = [
     {
       id: "bsbba",
@@ -277,7 +287,7 @@ export default function Controls(props) {
         "With the B.S. in Geography, you can focus on specific areas such as climate change, fire history, biogeography, arid lands, or other topics that bridge the physical sciences. You'll learn to analyze data, use cartographic and geographic information systems, and work in the field and in remote-sensing laboratories.",
       img: "./Material/botany.jpg",
     },
-  ]
+  ];
   let colleges = [
     {
       id: "GGCS",
@@ -293,6 +303,22 @@ export default function Controls(props) {
         "ICS (Statistics)",
         "ICS (Economics)",
         "ICom",
+        "BS (BBA)",
+        "BS (Botany)",
+        "BS Chemistry (Pre-Medical)",
+        "BS Chemistry (Pre-Engineering)",
+        "BS Mass Communication",
+        "BS English",
+        "BS Economics",
+        "BS Education",
+        "BS Computer Science",
+        "BS Mathematics",
+        "BS Political Science",
+        "BS Sociology",
+        "BS Statistics",
+        "BS Urdu",
+        "BS Zology",
+        "BS Geography",
       ],
       lastYearMerit: {
         FSCpe: 850,
@@ -317,6 +343,22 @@ export default function Controls(props) {
         "ICS (Statistics)",
         "ICS (Economics)",
         "ICom",
+        "BS (BBA)",
+        "BS (Botany)",
+        "BS Chemistry (Pre-Medical)",
+        "BS Chemistry (Pre-Engineering)",
+        "BS Mass Communication",
+        "BS English",
+        "BS Economics",
+        "BS Education",
+        "BS Computer Science",
+        "BS Mathematics",
+        "BS Political Science",
+        "BS Sociology",
+        "BS Statistics",
+        "BS Urdu",
+        "BS Zology",
+        "BS Geography",
       ],
       lastYearMerit: {
         FSCpe: 896,
@@ -340,6 +382,22 @@ export default function Controls(props) {
         "ICS(Physics)",
         "ICS (Statistics)",
         "ICS (Economics)",
+        "BS (BBA)",
+        "BS (Botany)",
+        "BS Chemistry (Pre-Medical)",
+        "BS Chemistry (Pre-Engineering)",
+        "BS Mass Communication",
+        "BS English",
+        "BS Economics",
+        "BS Education",
+        "BS Computer Science",
+        "BS Mathematics",
+        "BS Political Science",
+        "BS Sociology",
+        "BS Statistics",
+        "BS Urdu",
+        "BS Zology",
+        "BS Geography",
       ],
       lastYearMerit: {
         FSCpe: 896,
@@ -363,6 +421,22 @@ export default function Controls(props) {
         "ICS (Statistics)",
         "ICS (Economics)",
         "ICom",
+        "BS (BBA)",
+        "BS (Botany)",
+        "BS Chemistry (Pre-Medical)",
+        "BS Chemistry (Pre-Engineering)",
+        "BS Mass Communication",
+        "BS English",
+        "BS Economics",
+        "BS Education",
+        "BS Computer Science",
+        "BS Mathematics",
+        "BS Political Science",
+        "BS Sociology",
+        "BS Statistics",
+        "BS Urdu",
+        "BS Zology",
+        "BS Geography",
       ],
       lastYearMerit: {
         FSCpe: 896,
@@ -387,6 +461,22 @@ export default function Controls(props) {
         "ICS (Statistics)",
         "ICS (Economics)",
         "ICom",
+        "BS (BBA)",
+        "BS (Botany)",
+        "BS Chemistry (Pre-Medical)",
+        "BS Chemistry (Pre-Engineering)",
+        "BS Mass Communication",
+        "BS English",
+        "BS Economics",
+        "BS Education",
+        "BS Computer Science",
+        "BS Mathematics",
+        "BS Political Science",
+        "BS Sociology",
+        "BS Statistics",
+        "BS Urdu",
+        "BS Zology",
+        "BS Geography",
       ],
       lastYearMerit: {
         FSCpe: 896,
@@ -398,47 +488,59 @@ export default function Controls(props) {
       },
     },
   ];
-
   return (
     <DataContext.Provider
       value={{
         MatricDegrees: matricDegrees,
         InterDegrees: interDegrees,
-        BsDegrees: bsDegrees, 
+        BsDegrees: bsDegrees,
         UserData: User,
-        Colleges:colleges
+        Colleges: colleges,
+        IsLoggedIn: IsLoggedIn,
+        UserLoginData: UserLoginData,
       }}
     >
       <BrowserRouter>
         <div className={clasess.container}>
           <div className={clasess.item1}>
-            <Header />
+            <Header setIsLoggedIn={setIsLoggedIn} />
           </div>
-          <div className={clasess.item2}>
-            <SideNavbar />
-          </div>
+          <div className={clasess.item2}>{IsLoggedIn && <SideNavbar />}</div>
           <div className={clasess.item3}>
             {FormIsShown && (
               <UserInputForm
                 User={User}
                 setUser={setUser}
-                onClose={HideFormFun}
+                onClose={HideInputFormFun}
               />
             )}
             <Routes>
-              <Route path="/" element={<Home OnClick={ShowFormFun} />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/colleges" element={<Colleges />} />
-              <Route path="/degree" element={<Degree />} />
-              <Route path="/admin" element={<Admin />} />
-              <Route path="/Fclg" element={<FilteredColleges/>} />
-              <Route path="/seemore" element={<Seemore/>} />
+              <Route element={<ProtectedRoutes />}>
+                <Route path="/" element={<Home OnClick={ShowInputFormFun} />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/colleges" element={<Colleges />} />
+                <Route path="/degree" element={<Degree />} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/Fclg" element={<FilteredColleges />} />
+                <Route path="/seemore" element={<Seemore />} />
+                <Route
+                  path="/Fdegree"
+                  element={<FilteredDegrees OnClick={ShowInputFormFun} />}
+                />
+              </Route>
               <Route
-                path="/Fdegree" element={<FilteredDegrees OnClick={ShowFormFun} />}
+                path="/mainPage"
+                element={
+                  <MainPage
+                    LoginIsShown={LoginIsShown}
+                    OnShow={ShowLoginFormFun}
+                    onClose={HideLoginFormFun}
+                    setIsLoggedIn={setIsLoggedIn}
+                    setUserLoginData={setUserLoginData}
+                  />
+                }
               />
-              {/* <Route path="/Fdegree" element={<FilterDegree/>} /> */}
-              <Route path="/login" element={<LoginMain/> } />
             </Routes>
           </div>
         </div>

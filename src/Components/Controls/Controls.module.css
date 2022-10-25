@@ -11,6 +11,7 @@
   grid-column: 1;
   grid-row: 2;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .item3 {
   grid-column: 2/-1;

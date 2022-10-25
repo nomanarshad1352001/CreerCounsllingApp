@@ -1,5 +1,5 @@
 import classes from "./InputForm.module.css";
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Modal from "../UI/Modal";
 import Button from "../UI/Button.js";
 import {useNavigate} from "react-router-dom";
@@ -52,6 +52,7 @@ export default function UserInputForm(props) {
             Marks: "",
         });
         navigate('/Fdegree');
+        props.onClose();
     };
     const Validate = (values) => {
 
