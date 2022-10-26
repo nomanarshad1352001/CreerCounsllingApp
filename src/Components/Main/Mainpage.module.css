@@ -7,47 +7,16 @@
 }
 .Title {
   text-align: center;
-  padding: 20px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 20px;
 }
-/* .sides {
-  width: 350px;
-  height: 350px;
-  border-radius: 20rem;
-  background-color: blueviolet;
-  z-index: 0;
-  color: rgb(2, 2, 2);
-  text-align: right;
-} */
-/* .side1 {
-  position: fixed;
-  left: -12%;
-  top: 5rem;
-}
-.side2 {
-  position: fixed;
-  right: -12%;
-  top: 10rem;
-  text-align: left;
-}
-.side3 {
-  position: fixed;
-  left: -12%;
-  top: 32rem;
-}
-.side4 {
-    position: fixed;
-    right: -12%;
-    top: 35rem;
-    text-align: left;
-  } */
 .container {
-  width: 70%;
-  font-size: 22px;
-  padding: 25px;
-  color: rgb(0, 0, 0);
+  width: 80%;
+  font-size: 20px;
+  padding: 20px;
+  color: rgb(53, 44, 44);
   border-radius: 20px;
-  margin: 25px 5px 20px 5px;
+  margin: 5px 5px 20px 5px;
   word-wrap: break-word;
   box-shadow: 0px 10px 10px 0px rgb(208, 208, 208);
 }
@@ -55,7 +24,7 @@
   padding: 5px;
   margin: 10px;
 }
-.container h2 {
+.container h3 {
   background-color: blueviolet;
   color: whitesmoke;
   border-radius: 20px;
@@ -65,59 +34,37 @@
   padding: 5px;
   margin: 5px;
 }
-/* @media screen and (max-width: 1560px) {
-  .side1 {
-    left: -14%;
+@media screen and (max-width: 900px) {
+  .Title {
+    font-size: 20px;
   }
-  .side2 {
-    right: -14%;
-  }
-  .side3 {
-    left: -14%;
-  }
-  .side4 {
-      right: -14%;
-    }
+  .container {
+    font-size: 18px;
+  } 
 }
-@media screen and (max-width: 1560px) {
-  .side1 {
-    left: -17%;
+@media screen and (max-width: 705px) {
+  .Title {
+    font-size: 16px;
   }
-  .side2 {
-    right: -17%;
-  }
-  .side3 {
-    left: -17%;
-  }
-  .side4 {
-      right: -17%;
-    }
+  .container {
+    font-size: 17px;
+  } 
 }
-@media screen and (max-width: 1065px) {
-  .side1 {
-    left: -20%;
+@media screen and (max-width: 500px) {
+  .Title {
+    font-size: 14px;
   }
-  .side2 {
-    right: -20%;
-  }
-  .side3 {
-    left: -20%;
-  }
-  .side4 {
-      right: -20%;
-    }
+  .container {
+    font-size: 16px;
+  } 
 }
-@media screen and (max-width: 960px) {
-  .side1 {
-    left: -25%;
+@media screen and (max-width: 300px) {
+  .Title {
+    font-size: 12px;
+    padding: 10px;
   }
-  .side2 {
-    right: -25%;
-  }
-  .side3 {
-    left: -25%;
-  }
-  .side4 {
-      right: -25%;
-    }
-} */
+  .container {
+    font-size: 14px;
+    padding: 15px;
+  } 
+}

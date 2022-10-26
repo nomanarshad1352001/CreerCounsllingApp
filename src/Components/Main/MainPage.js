@@ -9,14 +9,10 @@ export default function MainPage(props) {
     <Fragment>
       <div className={clasess.Maincontainer}>
         <div className={clasess.Title}>
-          <h1>Welcome to our Career and Degree Counslling App </h1>
+          <h2>Welcome to our Career and Degree Counslling App </h2>
         </div>
-        {/* <div className={`${clasess.sides} ${clasess.side1}`}>1</div>
-        <div className={`${clasess.sides} ${clasess.side2}`}>2</div>
-        <div className={`${clasess.sides} ${clasess.side3}`}>3</div>
-        <div className={`${clasess.sides} ${clasess.side4}`}>4</div> */}
-        <div className={clasess.container}>
-          <h2>What Is Career Counselling?</h2>
+       <div className={clasess.container}>
+          <h3>What Is Career Counselling?</h3>
           <p>
             Career Counselling is the process of giving advice, support and
             guidance for selecting the right stream after class 10th, and the
@@ -26,7 +22,7 @@ export default function MainPage(props) {
           </p>
         </div>
         <div className={clasess.container}>
-          <h2>Why Do I Need Career Counselling?</h2>
+          <h3>Why Do I Need Career Counselling?</h3>
           <div>
             <p>
               All of us require career guidance at some point in our life. It
@@ -93,7 +89,7 @@ export default function MainPage(props) {
           </div>
         </div>
         <div className={clasess.container}>
-          <h2>Who Need Career Counselling & When?</h2>
+          <h3>Who Need Career Counselling & When?</h3>
           <div>
             <p>
               The perfect time for students to seek Career Counselling is during
@@ -152,7 +148,7 @@ export default function MainPage(props) {
           </div>
         </div>
         <div className={clasess.container}>
-          <h2>What Career Counselling Is Not</h2>
+          <h3>What Career Counselling Is Not</h3>
           <div>
             <p>
               There are some common misconceptions about career counselling. Let
