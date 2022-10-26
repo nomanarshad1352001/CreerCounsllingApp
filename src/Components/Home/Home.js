@@ -6,8 +6,8 @@ import Bsimg from '../Material/Bs.jpg'
 export default function Home(props) {
   return (
     <React.Fragment>
+      <div className={clasess.Maincontainer}>
     <div className={clasess.container}>
-      <div className={clasess.item1}>
         <Intro
         image={interimg}
           Title="Intermediate/Higher Secondary School Certificate"
@@ -16,8 +16,6 @@ export default function Home(props) {
           btnTitle='Your Info'
           onClickFunc={props.OnClick}
         />
-      </div>
-      <div className={clasess.item2}>
       <Intro
       image={Bsimg}
           Title="Bachelor Studies/Graduation and Masters "
@@ -26,7 +24,7 @@ export default function Home(props) {
           btnTitle='Your Info'
           onClickFunc={props.OnClick}
         />
-      </div>
+    </div>
     </div>
   </React.Fragment>
   );

@@ -7,7 +7,7 @@
   z-index: 50;
   transition: all 0.5s ease;
   border-radius: 0px 10px 10px 0px;
-  margin-top: 0.05rem;
+  margin-top: 2rem;
   height: 83%;
 }
 .sidebar .logo-details{
@@ -128,7 +128,7 @@
     display: none;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 560px) {
   .sidebar{
    width: 70px;
   }

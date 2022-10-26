@@ -499,48 +499,48 @@ export default function Controls() {
           <div className={clasess.item1}>
             <Header setIsLoggedIn={setIsLoggedIn} />
           </div>
-          {IsLoggedIn && (
-            <div className={clasess.item2}>
-              <SideNavbar />
-            </div>
-          )}
-          <div className={clasess.item3}>
-            {FormIsShown && (
-              <UserInputForm
-                User={User}
-                setUser={setUser}
-                onClose={HideInputFormFun}
-              />
-            )}
-            <Routes>
-              <Route element={<ProtectedRoutes />}>
-                <Route path="/" element={<Home OnClick={ShowInputFormFun} />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                <Route path="/colleges" element={<Colleges />} />
-                <Route path="/degree" element={<Degree />} />
-                <Route path="/admin" element={<Admin />} />
-                <Route path="/Fclg" element={<FilteredColleges />} />
-                <Route path="/seemore" element={<Seemore />} />
-                <Route path="/Jobs" element={<Jobs/>} />
-                <Route
-                  path="/Fdegree"
-                  element={<FilteredDegrees OnClick={ShowInputFormFun} />}
+          <div className={clasess.item2}>
+              <div>{IsLoggedIn && <SideNavbar />}</div>
+              <div>
+              {FormIsShown && (
+                <UserInputForm
+                  User={User}
+                  setUser={setUser}
+                  onClose={HideInputFormFun}
                 />
-              </Route>
-              <Route
-                path="/mainPage"
-                element={
-                  <MainPage
-                    LoginIsShown={LoginIsShown}
-                    OnShow={ShowLoginFormFun}
-                    onClose={HideLoginFormFun}
-                    setIsLoggedIn={setIsLoggedIn}
-                    setUserLoginData={setUserLoginData}
+              )}
+              <Routes>
+                <Route element={<ProtectedRoutes />}>
+                  <Route
+                    path="/"
+                    element={<Home OnClick={ShowInputFormFun} />}
                   />
-                }
-              />
-            </Routes>
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/colleges" element={<Colleges />} />
+                  <Route path="/degree" element={<Degree />} />
+                  <Route path="/admin" element={<Admin />} />
+                  <Route path="/Fclg" element={<FilteredColleges />} />
+                  <Route path="/seemore" element={<Seemore />} />
+                  <Route path="/Jobs" element={<Jobs />} />
+                  <Route
+                    path="/Fdegree"
+                    element={<FilteredDegrees OnClick={ShowInputFormFun} />}
+                  />
+                </Route>
+                <Route
+                  path="/mainPage"
+                  element={
+                    <MainPage
+                      LoginIsShown={LoginIsShown}
+                      OnShow={ShowLoginFormFun}
+                      onClose={HideLoginFormFun}
+                      setIsLoggedIn={setIsLoggedIn}
+                      setUserLoginData={setUserLoginData}
+                    />
+                  }
+                />
+              </Routes></div>
           </div>
         </div>
         {/* <Footer/> */}

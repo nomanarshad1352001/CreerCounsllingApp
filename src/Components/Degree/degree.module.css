@@ -1,7 +1,7 @@
 .container {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(22rem, auto));
 }
 .title {
   font-size: 1.3rem;
@@ -28,6 +28,9 @@
   font-size: 1.1rem;
   text-align: center;
   padding: 6px;
+}
+.btn{
+  text-align: center;
 }
 @media screen and (max-width: 350px) {
   .title {

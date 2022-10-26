@@ -1,7 +1,9 @@
-.container{
+.Maincontainer{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    margin-bottom: 1rem;
+}
+.container{
+    width: 80%;
 }
