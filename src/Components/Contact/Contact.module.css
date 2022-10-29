@@ -89,11 +89,20 @@ label {
   text-align: center;
   word-wrap: break-word;
 }
-.topTitle,
+.topTitle{
+  text-align: center;
+  font-size: 25px;
+  margin: 5rem 0px 1rem 0px;
+  background-color: blueviolet;
+  padding: 6px;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+}
 .bottomTitle {
   text-align: center;
   font-size: 25px;
-  margin: 20px 0px 0px 0px;
+  margin: 1rem 0px 0px 0px;
   background-color: blueviolet;
   padding: 6px;
   border-radius: 10px;

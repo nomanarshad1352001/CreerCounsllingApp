@@ -12,7 +12,7 @@
   grid-column: 1/-1;
   justify-self: center;
   align-self: center;
-  width: 80%;
+  width: 100%;
 }
 body{
   font-family: 'Ubuntu', sans-serif;
@@ -27,8 +27,13 @@ body{
 .footerContiner{
   bottom: 0;
 }
-@media (max-width: 1040px) {
-  .container {
-    grid-template-rows: 65px auto 100px;
+@media (max-width: 550px) {
+  .Icons{
+    font-size: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .Icons{
+    font-size: 20px;
   }
 }

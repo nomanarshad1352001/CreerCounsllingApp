@@ -4,6 +4,7 @@ import DataContext from "../Store/data-context";
 const useAuth=()=>{
     const ctx = useContext(DataContext);
     const user = {loggedIn :ctx.IsLoggedIn}
+    // const user = {loggedIn :true}
     return user && user.loggedIn;
 };
 export default function ProtectedRoutes() {

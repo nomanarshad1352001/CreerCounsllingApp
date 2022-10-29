@@ -22,6 +22,7 @@ export default function Controls() {
   const [LoginIsShown, setLoginIsShown] = useState(false);
   const [UserLoginData, setUserLoginData] = useState({});
   const [IsLoggedIn, setIsLoggedIn] = useState(false);
+  const [IsNavbarShow, setIsNavbarShow] = useState(false);
   const [User, setUser] = useState({
     Name: "",
     PassedDegree: "",
@@ -484,6 +485,15 @@ export default function Controls() {
       },
     },
   ];
+  const Navfunc = () => {
+    console.log("hambi");
+    if (IsNavbarShow===true) {
+      setIsNavbarShow(false)
+    }
+    else if (IsNavbarShow===false) {
+      setIsNavbarShow(true)
+    }
+  }
   return (
     <DataContext.Provider
       value={{
@@ -497,11 +507,11 @@ export default function Controls() {
       <BrowserRouter>
         <div className={clasess.container}>
           <div className={clasess.item1}>
-            <Header setIsLoggedIn={setIsLoggedIn} />
+            <Header setIsLoggedIn={setIsLoggedIn} Navfunc={Navfunc}/>
           </div>
           <div className={clasess.item2}>
-              <div>{IsLoggedIn && <SideNavbar />}</div>
-              <div>
+           {IsNavbarShow&& <div>{IsLoggedIn && <SideNavbar />}</div>}
+            <div>
               {FormIsShown && (
                 <UserInputForm
                   User={User}
