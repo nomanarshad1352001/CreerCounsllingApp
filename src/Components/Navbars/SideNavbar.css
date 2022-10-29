@@ -1,57 +1,17 @@
 .sidebar{
   position: fixed;
   left: 0;
-  width: 80px;
   background-color: blueviolet;
   padding: 6px 8px;
   z-index: 50;
   transition: all 0.5s ease;
   border-radius: 0px 10px 10px 0px;
-  margin-top: 1rem;
-  height: 75%;
+  margin-top: 5rem;
+  height: 26.2rem;
 }
-.sidebar .logo-details{
-  height: 60px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: white;
-  flex-direction: column;
-  margin-bottom: 25px;
-  justify-content: center;
-}
-.sidebar .logo-details .icon{
-  margin-top: 10px;
-  /* opacity: 0; */
-  transition: all 0.5s ease;
-  color: rgb(0, 0, 0);
-}
-.sidebar .logo-details .logo_name{
-  color: rgb(0, 0, 0);
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: all 0.5s ease;
-}
-.sidebar.open .logo-details .icon,
-.sidebar.open .logo-details .logo_name{
-  opacity: 1;
-}
-.sidebar .logo-details #btn{
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  transition: all 0.4s ease;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.5s ease;
-}
-.sidebar.open .logo-details #btn{
-  text-align: right;
-}
+
 .sidebar i{
-  color: #fff;
+  color: rgb(0, 0, 0);
   height: 60px;
   min-width: 50px;
   font-size: 28px;
@@ -59,7 +19,7 @@
   line-height: 60px;
 }
 .sidebar .nav-list{
-  margin-top: 20px;
+  margin-top: 5px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -108,24 +68,27 @@ height: 30px;
   display: flex;
   height: 100%;
   width: 50px;
-  border-radius: 12px;
+  border-radius: 8px;
   align-items: center;
   text-decoration: none;
   transition: all 0.4s ease;
-  background: #11101D;
-}
-.sidebar li a:hover{
-  background: #FFF;
+  /* background: #11101D; */
 }
 .sidebar li a:hover ,
 .sidebar li a:hover i{
   transition: all 0.5s ease;
-  color: #11101D;
+  background-color: #983dff;
+  color: #FFF;
+  border-radius: 5px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
 }
+
 .sidebar li i{
   height: 50px;
   font-size: 30px;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 @media (max-width: 560px) {
   .sidebar{

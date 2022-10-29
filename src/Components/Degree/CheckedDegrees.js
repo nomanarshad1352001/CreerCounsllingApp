@@ -2,6 +2,7 @@ import React from 'react'
 import Intro from "../Introduction/Intro.js";
 import classes from "./degree.module.css";
 import { useNavigate } from "react-router-dom";
+import mcom from "../Material/mcom.png";
 export default function CheckedDegrees(props) {
     const navigate = useNavigate();
   return (
@@ -48,7 +49,7 @@ export default function CheckedDegrees(props) {
               }
           Check={true}
             key={Deg.id}
-            image={Deg.img}
+            image={mcom}
             Title={Deg.name}
             subTitle={Deg.subName}
             description={Deg.description}

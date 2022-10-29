@@ -3,56 +3,59 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2rem;
   gap: 20px;
 }
 .Title {
   text-align: center;
+  color: blueviolet;
   padding: 10px;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 .container {
-  width: 80%;
+  width: 90%;
   font-size: 20px;
   padding: 20px;
-  color: rgb(53, 44, 44);
-  border-radius: 20px;
+  border-radius: 8px;
   margin: 5px 5px 20px 5px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.068);
   word-wrap: break-word;
-  box-shadow: 0px 10px 10px 0px rgb(208, 208, 208);
-}
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);}
 .container p {
-  padding: 5px;
-  margin: 10px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 .container h3 {
-  background-color: blueviolet;
-  color: whitesmoke;
-  border-radius: 20px;
-  padding: 10px;
+  color: blueviolet;
+  /* color: whitesmoke; */
+  padding: 10px 0;
+  font-size: 2rem;
 }
 .container li {
-  padding: 5px;
-  margin: 5px;
+  margin: 0.5rem 2rem;
 }
 @media screen and (max-width: 900px) {
   .Title {
+    font-size: 25px;
+  }
+  .container {
     font-size: 20px;
+  } 
+}
+@media screen and (max-width: 705px) {
+  .Title {
+    font-size: 22px;
   }
   .container {
     font-size: 18px;
   } 
 }
-@media screen and (max-width: 705px) {
-  .Title {
-    font-size: 16px;
-  }
-  .container {
-    font-size: 17px;
-  } 
-}
 @media screen and (max-width: 500px) {
   .Title {
-    font-size: 14px;
+    font-size: 20px;
   }
   .container {
     font-size: 16px;
@@ -60,11 +63,11 @@
 }
 @media screen and (max-width: 300px) {
   .Title {
-    font-size: 12px;
+    font-size: 16px;
     padding: 10px;
   }
   .container {
-    font-size: 14px;
+    font-size: 16px;
     padding: 15px;
   } 
 }

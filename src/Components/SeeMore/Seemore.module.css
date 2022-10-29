@@ -49,11 +49,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 1rem;
     /* width: 250px; */
-  }
-  .mainImage {
-    width: 14rem;
   }
   .text{
   margin: 0;

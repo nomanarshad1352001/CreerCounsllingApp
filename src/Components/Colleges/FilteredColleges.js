@@ -16,7 +16,7 @@ const goBack=()=>{
     return (
         <React.Fragment><div className={classes.mainHeading}>
         <h2 className={classes.title}> Available Colleges for your Selected Degree</h2>
-        <h3 className={classes.length}>Total Colleges: {FilteredClg.length}</h3>
+        <h3 className={classes.length}>Total Colleges Avail Colleges: {FilteredClg.length}</h3>
       </div>
            <div className={classes.container}>
                 {FilteredClg.map((clg) => {

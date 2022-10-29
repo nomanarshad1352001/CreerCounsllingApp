@@ -17,6 +17,8 @@ import MainPage from "../Main/MainPage";
 import Seemore from "../SeeMore/Seemore.js";
 import ProtectedRoutes from "../ProtectedRoutes";
 import Jobs from "../Jobs/Jobs";
+import Footer from "../Footer.js";
+import mcom from "../Material/mcom.png";
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [LoginIsShown, setLoginIsShown] = useState(false);
@@ -48,7 +50,7 @@ export default function Controls() {
       subName: "Faculty of O level education",
       description:
         "Metriculation in Computer Science helps learners develop an interest in computational thinking and an understanding of the principles of problem-solving using computers.",
-      img: "engineering.jpg",
+      img: {mcom},
     },
     {
       id: "MSbio",
@@ -448,9 +450,10 @@ export default function Controls() {
       id: "GGCC",
       Title: "Govt graduate Commerec College",
       subTitle: "A Intermediate and Bs Level institute",
+      image: {mcom},
       description:
         "Secondary education is an important segment in every person's life. facts will show",
-      btnTitle: "See More",
+      btnTitle: "See",
       degreeAvailable: [
         "FSC(Pre-Engineering)",
         "FSC(Pre-Medical)",
@@ -553,7 +556,7 @@ export default function Controls() {
               </Routes></div>
           </div>
         </div>
-        {/* <Footer/> */}
+        <Footer/>
       </BrowserRouter>
     </DataContext.Provider>
   );

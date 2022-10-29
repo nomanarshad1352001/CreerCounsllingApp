@@ -1,5 +1,5 @@
 .card{
-  border-radius: 25px;
+  border-radius: 8px;
   background-color: #FFF;
   margin-top: 40px;
 }
@@ -22,7 +22,7 @@
   height: 100%;
   width: 100%;
   background-color: blueviolet;
-  border-radius: 25px 25px 25px 25px;
+  border-radius: 8px 8px 0 0;
 }
 .cardimage{
   position: relative;
@@ -32,7 +32,7 @@
   background: #FFF;
   padding: 3px;
 }
-.cardimage .card-img{
+.cardimage .cardimg{
   height: 100%;
   width: 100%;
   object-fit: cover;

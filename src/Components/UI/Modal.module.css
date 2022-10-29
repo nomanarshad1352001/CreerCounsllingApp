@@ -5,7 +5,7 @@
     width: 100%;
     height: 100%;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(50, 35, 53, 0.75);
   }
   
   .modal {
@@ -21,8 +21,8 @@
     background-size: cover;
     background-position: center;
     padding: 1rem;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    box-shadow: 4px 4px 15px rgba(161, 161, 161, 0.5);
     z-index: 100;
     animation: slide-down 300ms ease-out forwards;
   }

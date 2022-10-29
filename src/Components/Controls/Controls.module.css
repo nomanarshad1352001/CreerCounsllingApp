@@ -12,7 +12,8 @@
   grid-column: 1/-1;
   justify-self: center;
   align-self: center;
-  width: 100%;
+  margin-left: 1rem;
+  width: 80%;
 }
 body{
   font-family: 'Ubuntu', sans-serif;
@@ -35,5 +36,10 @@ body{
 @media (max-width: 360px) {
   .Icons{
     font-size: 20px;
+  }
+}
+@media (max-width: 700px){
+  .item2{
+    margin-left: 3rem;
   }
 }

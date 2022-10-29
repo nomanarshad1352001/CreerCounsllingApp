@@ -3,6 +3,7 @@ import Intro from "../Introduction/Intro.js";
 import classes from "./Colleges.module.css";
 import DataContext from "../../Store/data-context";
 import { useNavigate } from "react-router-dom";
+import colg from "../Material/sc.png"
 export default function Colleges() {
   const navigate = useNavigate();
   const ctx = useContext(DataContext);
@@ -18,6 +19,7 @@ export default function Colleges() {
           Title={clg.Title}
           subTitle={clg.subTitle}
           description={clg.description}
+          image={colg}
           btnTitle="See More"
           onClickFunc={() =>
             navigate("/seemore", {

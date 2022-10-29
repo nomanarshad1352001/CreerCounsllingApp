@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../UI/Button'
 import clasess from './User.module.css'
+import asad from '../Material/asad.jpg'
 export default function User() {
   return (
     <div>
@@ -11,7 +12,7 @@ export default function User() {
               <div className={clasess.imagecontent}>
                 <span className={clasess.overlay}></span>
                 <div className={clasess.cardimage}>
-                  <img src="images/profile1.jpg" alt="" className={clasess.cardimg} />
+                  <img src={asad} alt="" className={clasess.cardimg} />
                 </div>
               </div>
               <div className={clasess.cardcontent}>

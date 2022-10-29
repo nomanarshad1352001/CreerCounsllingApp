@@ -10,12 +10,7 @@ export default function SideNavbar() {
   return (
     <div>
       <div className="sidebar">
-        <div className="logo-details">
-          <i className='icon'> <AiFillHome/></i>
-            <div className="logo_name">
-              <h4> CodingLab </h4></div>
-            <i id="btn" ></i>
-        </div>
+        
         <ul className="nav-list">
         <li>
             <Link to="/">

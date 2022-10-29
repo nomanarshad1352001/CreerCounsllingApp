@@ -6,10 +6,13 @@
 .title {
   font-size: 1.3rem;
   text-align: center;
-  padding: 10px;
+  padding: 0.8rem;
   background-color: blueviolet;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
   color: rgb(255, 255, 255);
-  border-radius: 15px;
+  border-radius: 2rem;
   margin: 15px 10px 10px 10px;
   width: 60%;
 }
@@ -21,13 +24,16 @@
 }
 .length {
   width: 30%;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
   background-color: rgb(175, 0, 137);
   color: rgb(255, 255, 255);
-  border-radius: 15px;
+  border-radius: 2rem;
   margin: 15px 10px 10px 10px;
   font-size: 1.1rem;
   text-align: center;
-  padding: 6px;
+  padding: 0.8rem;
 }
 .btn{
   text-align: center;

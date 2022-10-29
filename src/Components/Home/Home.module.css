@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .container{
-    width: 90%;
+    width: 100%;
 }

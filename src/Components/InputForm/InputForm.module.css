@@ -6,8 +6,11 @@
   text-align: center;
   padding: 10px;
   margin: 10px 10px 15px 10px;
-  background: blueviolet;
-  border-radius: 15px;
+  background-color: #983dff;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
   color: whitesmoke;
 }
 .errormsg{
