@@ -8,7 +8,7 @@
   background: blueviolet;
   position: fixed;
   left: -4px;
-  margin: 10px;
+  margin: 10px 0 10px 15px;
   border-radius: 10px;
 }
 .header {
@@ -28,7 +28,6 @@
   display: grid;
   grid-template-columns: 65px 1fr 1fr;
   align-items: center;
-  padding-left: 15px;
   box-shadow: 0 2px 8px rgba(212, 212, 212, 0.25);
   z-index: 200;
 }

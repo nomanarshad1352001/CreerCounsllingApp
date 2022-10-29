@@ -513,7 +513,7 @@ export default function Controls() {
             <Header setIsLoggedIn={setIsLoggedIn} Navfunc={Navfunc}/>
           </div>
           <div className={clasess.item2}>
-           {IsNavbarShow&& <div>{IsLoggedIn && <SideNavbar />}</div>}
+           {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
             <div>
               {FormIsShown && (
                 <UserInputForm
