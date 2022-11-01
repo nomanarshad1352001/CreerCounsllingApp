@@ -3,53 +3,30 @@
 }
 
 .footer {
-  background: linear-gradient(#fb7452, rgba(218, 177, 132, 0.3)),
+  background: linear-gradient(#ff4e229c, #fd6d4931),
     url("https://images.unsplash.com/photo-1593827436316-f25fa93a1af1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE1NTAxMw&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 10px 10px 0px 0px;
   width: 100%;
 }
 .container {
-  padding: 7px 0;
-  bottom: 0;
+  padding: 20px 0;
   color: whitesmoke;
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-around;
+  gap: 2rem;
 }
-.footer .social {
-  text-align: center;
-  padding: 4px;
-  border-radius: 5px;
-  align-self: center;
-}
-.footer .social h4{
-  font-size: 12px;
-}
-.footer .social a {
-  font-size: 25px;
-  color: rgb(255, 255, 255);
-  line-height: 38px;
-  line-height: 38px;
-  display: inline-block;
-  margin: 0 5px;
-  opacity: 0.9;
-}
-.footer .social a:hover {
-  opacity: 2.9;
-  transition: transform 0.6s;
-  transform: scale(1.1);
-}
-.footer ul {
-  margin-top: 0;
-  padding: 0;
+.list{
+  margin: 0 1.5rem;
   list-style: none;
   font-size: 20px;
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 0;
-  text-align: center;
   font-weight: bold;
+}
+.list h3{
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 .footer ul li a {
   color: inherit;
@@ -57,17 +34,52 @@
 }
 .footer ul li {
   display: inline-block;
-  padding: 0 7px;
+  padding: 7px 0;
   font-size: 14px;
+}
+.links{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+.footer .social {
+  text-align: center;
+  align-self: center;
+}
+.footer .social h3{
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.footer .social a {
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  line-height: 38px;
+  margin: 0 10px;
+  opacity: 0.9;
+}
+.footer .social a:hover {
+  transition: transform 0.6s;
+  transform: scale(1.1);
 }
 .footer .copyright {
   text-align: center;
   font-size: 14px;
-  color: rgb(255, 255, 255);
-  padding: 5px;
+  color: #fff;
+  padding-bottom: 1.2rem;
   font-weight: bold;
 }
+@media (max-width: 650px){
+  .container{
+    flex-direction: column;
+    /* padding: 2rem; */
+  }
+}
 @media (max-width: 520px) {
+  .container{
+    flex-direction: column;
+    padding: 20px;
+  }
   .footer ul {
     font-size: 15px;
   }

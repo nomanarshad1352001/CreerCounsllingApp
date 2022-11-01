@@ -7,7 +7,7 @@
   gap: 20px;
 }
 .Title {
-  text-align: center;
+  /* text-align: center; */
   color: #ff4e22;
   padding: 10px;
   font-size: 1.5rem;
@@ -16,7 +16,7 @@
   width: 100%;
   font-size: 20px;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   margin: 5px 5px 20px 5px;
   padding: 1.5rem;
   word-wrap: break-word;
@@ -30,7 +30,7 @@ background: linear-gradient(
   url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-repeat: no-repeat;
     background-size: cover;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .container p {
