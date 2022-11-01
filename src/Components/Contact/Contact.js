@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Contact.module.css';
+import Button from "../UI/Button.js"
 export default function Contact() {
   return (
     <React.Fragment>
@@ -26,7 +27,7 @@ export default function Contact() {
           <label className={classes.label}  htmlFor="subject">Subject</label>
           <textarea id={classes.subject} name="subject" placeholder="Write something.." style={{}}></textarea>
 
-          <input type="submit" value="Submit" />
+          <Button btnTitle="Submit"/>
 
         </form>
       </div>
@@ -44,7 +45,7 @@ export default function Contact() {
 
     </div>
     <div className={classes.bottomTitle}>We care about your Suggestion</div>
-  </React.Fragment>
+     </React.Fragment>
 
   )
 }

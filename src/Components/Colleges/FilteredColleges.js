@@ -15,14 +15,14 @@ const goBack=()=>{
 }
     return (
         <React.Fragment><div className={classes.mainHeading}>
-        <h2 className={classes.title}> Available Colleges for your Selected Degree</h2>
-        <h3 className={classes.length}>Total Colleges Avail Colleges: {FilteredClg.length}</h3>
+        <h2 className={classes.title}> Available Colleges for {Location.state.selected_Title}</h2>
+        <h3 className={classes.length}>Total Colleges: {FilteredClg.length}</h3>
       </div>
            <div className={classes.container}>
                 {FilteredClg.map((clg) => {
                     return (
                         <Intro
-                            btnTitle={"See more"}
+                            btnTitle={"More"}
                             onClickFunc={() =>
                                 navigate("/seemore", {
                                     state: {
@@ -30,7 +30,8 @@ const goBack=()=>{
                                         selected_Title: clg.Title,
                                         selected_subTitle: clg.subTitle,
                                         selected_Description: clg.description,
-                                        selected_Image: clg.img
+                                        selected_Image: clg.img ,
+                                        selected_Button:clg.Subjects
                                     },
                                 })
                             }
@@ -44,7 +45,7 @@ const goBack=()=>{
                 })}
             </div>
             <div className={classes.btnContainer}>
-            <Button btnTitle="Go Back" onClickFunc={goBack}/>
+           {Location.state.Check && <Button btnTitle="Go Back" onClickFunc={goBack}/>} 
             </div>
         </React.Fragment>
     );

@@ -25,6 +25,7 @@ export default function UserDegrees(props) {
                   navigate("/Fclg", {
                     state: {
                       selected_Title: Deg.name,
+                      Check:true
                     },
                   })
                 }

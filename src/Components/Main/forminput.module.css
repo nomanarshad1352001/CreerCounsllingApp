@@ -5,10 +5,10 @@
 }
 
 .input{
-    padding: 15px;
-    margin: 10px 0px;
+    padding: 10px;
+    margin: 5px 0px;
     border-radius: 10px;
-    border: 1px solid blueviolet;
+    border: 1px solid #ff4e22;
     width: 100%;
 }
 
@@ -32,3 +32,5 @@
 .input:invalid[focused="true"] ~ span{
     display: block;
 }
+
+  

@@ -3,12 +3,13 @@ import Intro from "../Introduction/Intro.js";
 import classes from "./Colleges.module.css";
 import DataContext from "../../Store/data-context";
 import { useNavigate } from "react-router-dom";
-import colg from "../Material/sc.png"
+// import colg from "../Material/sc.png"
 export default function Colleges() {
   const navigate = useNavigate();
   const ctx = useContext(DataContext);
   return (
     <React.Fragment>
+      <div className={classes.Maincontainer}>
       <div className={classes.mainHeading}>
         <h2 className={classes.title}>All available Colleges</h2>
       </div>
@@ -19,8 +20,8 @@ export default function Colleges() {
           Title={clg.Title}
           subTitle={clg.subTitle}
           description={clg.description}
-          image={colg}
-          btnTitle="See More"
+          // image={colg}
+          btnTitle="More"
           onClickFunc={() =>
             navigate("/seemore", {
               state: {
@@ -34,6 +35,7 @@ export default function Colleges() {
           }
         />)
       })}
+    </div>
     </div>
     </React.Fragment>
   );

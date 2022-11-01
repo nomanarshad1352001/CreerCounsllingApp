@@ -23,7 +23,7 @@ export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [LoginIsShown, setLoginIsShown] = useState(false);
   const [UserLoginData, setUserLoginData] = useState({});
-  const [IsLoggedIn, setIsLoggedIn] = useState(false);
+  const [IsLoggedIn, setIsLoggedIn] = useState(true);
   const [IsNavbarShow, setIsNavbarShow] = useState(false);
   const [User, setUser] = useState({
     Name: "",
@@ -50,7 +50,7 @@ export default function Controls() {
       subName: "Faculty of O level education",
       description:
         "Metriculation in Computer Science helps learners develop an interest in computational thinking and an understanding of the principles of problem-solving using computers.",
-      img: {mcom},
+      img: { mcom },
     },
     {
       id: "MSbio",
@@ -132,6 +132,7 @@ export default function Controls() {
       description:
         "Bachelor of Business Administration (BBA) is a bachelor's degree in business administration awarded by colleges and universities after completion of undergraduate study in the fundamentals of business management and usually including advanced courses in accounting, economics, finance, management, marketing, strategic management, supply chain management, and other key academic subjects associated with the academic discipline of business management.",
       img: "./Material/bba.jpg",
+      Jobs: ["Business", "commerece", "Admin", "Management", "School", "University", "colleges", "Government"]
     },
     {
       id: "bsbotany",
@@ -311,6 +312,7 @@ export default function Controls() {
         "BS Economics",
         "BS Education",
         "BS Computer Science",
+        "BS Islamic Studies",
         "BS Mathematics",
         "BS Political Science",
         "BS Sociology",
@@ -450,7 +452,7 @@ export default function Controls() {
       id: "GGCC",
       Title: "Govt graduate Commerec College",
       subTitle: "A Intermediate and Bs Level institute",
-      image: {mcom},
+      image: { mcom },
       description:
         "Secondary education is an important segment in every person's life. facts will show",
       btnTitle: "See",
@@ -490,10 +492,10 @@ export default function Controls() {
   ];
   const Navfunc = () => {
     console.log("hambi");
-    if (IsNavbarShow===true) {
+    if (IsNavbarShow === true) {
       setIsNavbarShow(false)
     }
-    else if (IsNavbarShow===false) {
+    else if (IsNavbarShow === false) {
       setIsNavbarShow(true)
     }
   }
@@ -510,11 +512,11 @@ export default function Controls() {
       <BrowserRouter>
         <div className={clasess.container}>
           <div className={clasess.item1}>
-            <Header setIsLoggedIn={setIsLoggedIn} Navfunc={Navfunc}/>
+            <Header setIsLoggedIn={setIsLoggedIn} Navfunc={Navfunc} />
           </div>
           <div className={clasess.item2}>
-           {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
-            <div>
+            {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
+            <div style={IsNavbarShow ? {marginLeft:70 + 'px'}:{}}>
               {FormIsShown && (
                 <UserInputForm
                   User={User}
@@ -556,7 +558,7 @@ export default function Controls() {
               </Routes></div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </DataContext.Provider>
   );

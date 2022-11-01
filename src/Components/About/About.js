@@ -1,5 +1,5 @@
 import React from 'react'
-import User from '../UserIntroCard/User'
+import User from './UserIntroCard/User.js'
 import clasess from  './About.module.css'
 export default function About() {
   return (

@@ -1,13 +1,12 @@
 .container {
   display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(22rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
 }
 .title {
   font-size: 1.3rem;
   text-align: center;
   padding: 0.8rem;
-  background-color: blueviolet;
+  background-color: #ff4e22;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
@@ -27,7 +26,7 @@
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
-  background-color: rgb(175, 0, 137);
+  background-color: #f3562e;
   color: rgb(255, 255, 255);
   border-radius: 2rem;
   margin: 15px 10px 10px 10px;
@@ -38,14 +37,30 @@
 .btn{
   text-align: center;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 750px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
+  }
+}
+@media screen and (max-width: 600px) {
   .title {
-    font-size: 0.3rem;
+    font-size: 1rem;
   }
   .length {
-  margin: 7px 5px 5px 5px;
-  font-size: 0.4rem;
-  padding: 4px;
+    margin: 13px 9px 9px 9px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 460px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+  }
+  .title {
+    font-size: 0.8rem;
+  }
+  .length {
+    margin: 11px 9px 9px 9px;
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 400px) {
@@ -61,24 +76,13 @@
     padding: 5px;
   }
 }
-@media (max-width: 460px) {
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
-  }
+@media screen and (max-width: 350px) {
   .title {
-    font-size: 0.8rem;
+    font-size: 0.3rem;
   }
   .length {
-    margin: 11px 9px 9px 9px;
-    font-size: 0.7rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .title {
-    font-size: 1rem;
-  }
-  .length {
-    margin: 13px 9px 9px 9px;
-    font-size: 0.8rem;
+  margin: 7px 5px 5px 5px;
+  font-size: 0.4rem;
+  padding: 4px;
   }
 }

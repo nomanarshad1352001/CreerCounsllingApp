@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../UI/Button'
+import Button from '../../UI/Button.js'
 import clasess from './User.module.css'
-import asad from '../Material/asad.jpg'
+import asad from '../../Material/asad.jpg'
 export default function User() {
   return (
     <div>
@@ -18,7 +18,7 @@ export default function User() {
               <div className={clasess.cardcontent}>
                 <h2 className={clasess.name}>David Dell</h2>
                 <p className={clasess.description}>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                <Button btnTitle="View more"/>
+                <Button btnTitle="More"/>
               </div>
             </div>
           </div>

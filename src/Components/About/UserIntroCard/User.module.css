@@ -1,5 +1,5 @@
 .card{
-  border-radius: 8px;
+  border-radius: 15px;
   background-color: #FFF;
   margin-top: 40px;
 }
@@ -21,8 +21,8 @@
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: blueviolet;
-  border-radius: 8px 8px 0 0;
+  background-color: #ff4e22;
+  border-radius: 15px 15px 40px 0;
 }
 .cardimage{
   position: relative;
@@ -37,7 +37,7 @@
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
-  background-color: blueviolet;
+  background-color: #ff4e22;
 }
 .name{
   font-size: 18px;

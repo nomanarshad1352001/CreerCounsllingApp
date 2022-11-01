@@ -1,6 +1,6 @@
 .btn {
-  width: 90px  ;
-  height: 40px;
+  width: 70px  ;
+  height: 32px;
   color: #fff;
   border-radius: 5px;
   margin: 0 5px;
@@ -9,16 +9,15 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
-}
-.btn {
-  background: blueviolet;
+  background: #ff4e22;
   border: none;
   z-index: 1;
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .btn:after {
   position: absolute;
@@ -28,7 +27,6 @@
   top: 0;
   right: 0;
   z-index: -1;
-  background: radial-gradient(circle, rgb(220, 150, 247) 0%, blueviolet 100%);
   border-radius: 5px;
    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
@@ -37,6 +35,8 @@
 }
 .btn:hover {
   color: #fff;
+  transition: transform 0.6s;
+   transform: scale(1.1);
 }
 .btn:hover:after {
   left: 0;
@@ -45,23 +45,24 @@
 .btn:active {
   top: 2px;
 }
+@media screen and (max-width: 600px) {
+  .btn{
+    font-size: 0.8rem;
+    width: 70px;
+    height: 30px;
+  }
+}
 
+@media screen and (max-width: 400px) {
+  .btn{
+    font-size: 0.7rem;
+    width: 60px;
+    height: 28px;
+  }
+}
   @media screen and (max-width: 360px) {
     .btn{
-      font-size: 0.8rem;
-      
+      width: 55px;
+      height: 25px;
     }
   }
-  @media screen and (max-width: 400px) {
-    .btn{
-      font-size: 0.9rem;
-      width: 70px;
-    }
-  }
-  @media screen and (max-width: 600px) {
-    .btn{
-      font-size: 0.95rem;
-      width: 80px;
-    }
-  }
- 

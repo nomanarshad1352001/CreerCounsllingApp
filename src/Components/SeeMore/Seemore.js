@@ -25,6 +25,7 @@ const Seemore = (props) => {
           <h3>{Location.state.selected_subTitle}</h3>
           <p>{props.description}</p>
           <p>{Location.state.selected_Description}</p>
+        <div>{Location.state.selected_Button}</div>
         </div>
       </section>
     </Fragment>

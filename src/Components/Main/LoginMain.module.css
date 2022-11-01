@@ -2,21 +2,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  ),
+  url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+background-size: cover;
+background-position: center;
+border-radius: 15px;
 }
 
 .form {
   padding: 0px 50px;
-  border-radius: 10px;
-  margin-top: 2.5rem;
-  width: 44rem;
+  width: 40rem;
 }
 
 .H1 {
-  color: blueviolet;
+  color: #ff4e22;
   text-align: center;
   margin-top: 1rem;
-  padding: 15px;
+  padding: 7px;
 }
 .form input {
   border-radius: 0.5rem;
@@ -24,7 +29,7 @@
 .loginBtn {
   display: flex;
   justify-content:flex-end;
-  padding: 15px;
+  padding: 7px;
 
 }
 @media screen and (max-width: 650px) {
@@ -35,7 +40,7 @@
 }
 @media screen and (max-width: 450px) {
   .form {
-    width: 25rem;
+    width: 20rem;
     padding: 0px 30px;
   }
   .H1 {

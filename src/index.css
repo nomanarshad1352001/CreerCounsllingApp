@@ -8,12 +8,8 @@ body {
   font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(212, 212, 212) !important;
+  background-color: rgb(233, 233, 233) !important;
 }
-
-/* code {
-  font-family: 'Ubuntu', sans-serif;
-} */
 * {
   padding: 0;
   margin: 0;

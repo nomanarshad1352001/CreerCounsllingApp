@@ -13,6 +13,7 @@ export default function CheckedDegrees(props) {
     </div>
     <div className={classes.container}>
       {props.Degree.map((Deg) => {
+        console.log(Deg);
         return (
           <Intro
           btnTitle={"Colleges"}
@@ -39,11 +40,10 @@ export default function CheckedDegrees(props) {
               onClickFunc2={() =>
                 navigate("/Jobs", {
                   state: {
-                    selected_Id: Deg.id,
-                    selected_Title: Deg.name,
-                    selected_subTitle: Deg.subName,
-                    selected_Description: Deg.description,
-                    selected_Image: Deg.img,
+                    // selected_Id: Deg.id,
+                    // selected_Title: Deg.name,
+                    // selected_Description: Deg.description,
+                    Selected_Jobs:Deg
                   },
                 })
               }

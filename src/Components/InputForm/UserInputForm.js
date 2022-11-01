@@ -73,8 +73,8 @@ export default function UserInputForm(props) {
     }
 
     return (
-        <Modal onClickFunc={props.onClose}>
-            <div className={classes.container}>
+        <Modal className={classes.container} onClickFunc={props.onClose}>
+            <div>
                 <div className={classes.heading}>
                     <h3>Enter the Data</h3>
                 </div>

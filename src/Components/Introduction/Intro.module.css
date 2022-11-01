@@ -3,16 +3,17 @@
   backdrop-filter: blur(4px);
   border: 3px solid rgba(255, 255, 255, 0.25);
   text-align: center;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 1rem;
   box-shadow: 0 5px 15px rgba(212, 212, 212, 0.25);
   margin: 20px 20px 10px 20px;
   display: flex;
   flex-direction: column;
+ 
 }
 .Card:hover {
-  transition: 0.2s;
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  transition: transform 0.6s;
+  box-shadow:inset 10px 10px 10px 10px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
 }
@@ -24,8 +25,7 @@
   border-radius: 5px;
 }
 .title {
-  /* background: ; */
-  color: blueviolet;
+  color: #ff4e22;
   font-size: 1.3rem;
   padding: 15px;
   margin-top: 10px;
@@ -47,7 +47,7 @@
   height: 15rem;
   z-index: 0;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .mainImage img {
@@ -58,6 +58,7 @@
 .btnContainer {
   display: flex;
   justify-content: center;
+  gap: 0px;
 }
 @media screen and (max-width: 350px) {
   .title {

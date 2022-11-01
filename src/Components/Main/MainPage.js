@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import Button from "../UI/Button.js";
-import Modal from "../UI/Modal.js";
 import LoginMain from "./LoginMain.js";
 import clasess from "./Mainpage.module.css";
-// import careerCover from "../Material/careerCover.jpg";
 export default function MainPage(props) {
   return (
     <Fragment>
@@ -184,15 +182,14 @@ export default function MainPage(props) {
           </div>
         </div>
         {props.LoginIsShown && (
-          <Modal onClickFunc={props.onClose}>
+         
             <LoginMain
               onCloseLogin={props.onClose}
               setUserLoginData={props.setUserLoginData}
               setIsLoggedIn={props.setIsLoggedIn}
             />
-          </Modal>
         )}
-        <Button btnTitle="Login" onClickFunc={props.OnShow} />
+       { !props.LoginIsShown &&<Button btnTitle="Login" onClickFunc={props.OnShow} />}
       </div>
     </Fragment>
   );

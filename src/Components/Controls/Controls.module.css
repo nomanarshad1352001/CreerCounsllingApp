@@ -8,11 +8,12 @@
   grid-column: 1/-1;
 }
 .item2 {
+  width: 90%;
   grid-row: 2;
   grid-column: 1/-1;
   justify-self: center;
   align-self: center;
-  width: 100%;
+  margin-bottom: 5rem;
 }
 body{
   font-family: 'Ubuntu', sans-serif;

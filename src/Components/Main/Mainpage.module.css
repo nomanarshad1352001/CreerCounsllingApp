@@ -8,31 +8,42 @@
 }
 .Title {
   text-align: center;
-  color: blueviolet;
+  color: #ff4e22;
   padding: 10px;
   font-size: 1.5rem;
 }
 .container {
-  width: 90%;
+  width: 100%;
   font-size: 20px;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 20px;
   margin: 5px 5px 20px 5px;
-  padding: 2rem;
-  border: 1px solid rgba(0, 0, 0, 0.068);
+  padding: 1.5rem;
   word-wrap: break-word;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);}
+   4px 4px 5px 0px rgba(0,0,0,.1);
+background: linear-gradient(
+  rgba(255, 255, 255, 0.7),
+  rgba(232, 194, 167, 0.3)
+  ),
+  url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+  background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
 .container p {
-  padding: 0.5rem 0;
-  margin: 0.5rem 0;
+  padding: 0.1rem 0;
+  margin: 0.1rem 0;
 }
 .container h3 {
-  color: blueviolet;
-  /* color: whitesmoke; */
+  color: #ff4e22;
   padding: 10px 0;
   font-size: 2rem;
+}
+.container h4 {
+  color: #ff4f23;
 }
 .container li {
   margin: 0.5rem 2rem;
@@ -47,19 +58,25 @@
 }
 @media screen and (max-width: 705px) {
   .Title {
-    font-size: 22px;
+    font-size: 20px;
   }
   .container {
     font-size: 18px;
   } 
+  .container h3 {
+    font-size: 1.7rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .Title {
-    font-size: 20px;
+    font-size: 18px;
   }
   .container {
     font-size: 16px;
-  } 
+  }
+  .container h3 {
+    font-size: 1.3rem;
+  }
 }
 @media screen and (max-width: 300px) {
   .Title {
