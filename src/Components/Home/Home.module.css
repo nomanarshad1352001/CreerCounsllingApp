@@ -1,6 +1,16 @@
-.Maincontainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.Maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Title {
+  margin-top: 2rem;
+  background: #ff4e22;
+  text-align: center;
+  padding: 1rem;
+  color: whitesmoke;
+  font-family: 'Capriola', sans-serif;
+  border-radius: 15px;
+  font-size: 20px;
 }

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Button from "../UI/Button.js";
-import LoginMain from "./LoginMain.js";
 import clasess from "./Mainpage.module.css";
+import SignUp from "./SignUp.js";
 export default function MainPage(props) {
   return (
     <Fragment>
@@ -181,15 +181,15 @@ export default function MainPage(props) {
             </p>
           </div>
         </div>
-        {props.LoginIsShown && (
+        {props.SignUpIsShown && (
          
-            <LoginMain
+         <SignUp
               onCloseLogin={props.onClose}
-              setUserLoginData={props.setUserLoginData}
+              setUserSignUpData={props.setUserSignUpData}
               setIsLoggedIn={props.setIsLoggedIn}
             />
         )}
-       { !props.LoginIsShown &&<Button btnTitle="Login" onClickFunc={props.OnShow} />}
+       { !props.SignUpIsShown &&<Button btnTitle="Sign Up" onClickFunc={props.OnShow} />}
       </div>
     </Fragment>
   );

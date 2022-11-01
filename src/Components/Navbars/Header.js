@@ -2,17 +2,29 @@ import React, { Fragment } from "react";
 import Button from "../UI/Button";
 import classes from "./Header.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
+import LoginMain from "../Main/LoginMain.js";
+import Modal from "../UI/Modal";
 export default function Header(props) {
-  const Onclose=()=>{
-  props.setIsLoggedIn(false);
-  }
+  const OnLogOut = () => {
+    props.setIsLoggedIn(false);
+  };
   return (
     <Fragment>
+      {props.LoginIsShown && (
+        <Modal onClickFunc={props.onClose}>
+          <LoginMain onCloseLogin={props.onClose}  setUserLoginData={props.setUserLoginData} IsLoggedIn={props.IsLoggedIn} setIsLoggedIn={props.setIsLoggedIn} />
+        </Modal>
+      )}
       <header className={classes.header}>
-      <button className={classes.btn} onClick={ props.Navfunc}> <div className={classes.Icons}><GiHamburgerMenu /></div></button>
+        <button className={classes.btn} onClick={props.Navfunc}>
+          {" "}
+          <div className={classes.Icons}>
+            <GiHamburgerMenu />
+          </div>
+        </button>
         <h1 className={classes.title}> Career and Degree Counsling </h1>
         <div className={classes.login}>
-          <Button btnTitle='Logout' onClickFunc={Onclose} />
+          {props.IsLoggedIn?<Button btnTitle="Logout" onClickFunc={OnLogOut} />: <Button btnTitle="LogIn" onClickFunc={props.OnShow} /> }
         </div>
       </header>
     </Fragment>

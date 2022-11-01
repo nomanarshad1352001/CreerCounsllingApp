@@ -7,6 +7,7 @@ export default function Home(props) {
   return (
     <React.Fragment>
       <div className={clasess.Maincontainer}>
+          <h1 className={clasess.Title}>Here we offer you two Options For your degree Selection</h1>
         <div className={clasess.container}>
           <Intro
             // image={interimg}

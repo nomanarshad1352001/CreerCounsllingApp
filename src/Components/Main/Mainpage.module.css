@@ -7,7 +7,6 @@
   gap: 20px;
 }
 .Title {
-  /* text-align: center; */
   color: #ff4e22;
   padding: 10px;
   font-size: 1.5rem;
@@ -30,12 +29,13 @@ background: linear-gradient(
   url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-repeat: no-repeat;
     background-size: cover;
-    /* text-align: center; */
+    font-family: 'Capriola', sans-serif;
 }
 
 .container p {
   padding: 0.1rem 0;
   margin: 0.1rem 0;
+  color: rgb(43, 46, 46);
 }
 .container h3 {
   color: #ff4e22;
@@ -47,6 +47,7 @@ background: linear-gradient(
 }
 .container li {
   margin: 0.5rem 2rem;
+  color: rgb(43, 46, 46);
 }
 @media screen and (max-width: 900px) {
   .Title {

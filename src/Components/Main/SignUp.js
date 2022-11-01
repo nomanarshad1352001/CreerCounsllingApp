@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import FormInput from "./FormInput";
 import classes from "./LoginMain.module.css";
 import {useNavigate} from "react-router-dom";
-const App = (props) => {
+const SignUp = (props) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
     username: "",
@@ -25,6 +25,22 @@ const App = (props) => {
       required: true,
     },
     {
+      id: 2,
+      name: "email",
+      type: "email",
+      placeholder: "Email",
+      errorMessage: "It should be a valid email address!",
+      label: "Email",
+      required: true,
+    },
+    {
+        id: 3,
+        name: "birthday",
+        type: "date",
+        placeholder: "Birthday",
+        label: "Birthday",
+    },
+    {
         id: 4,
         name: "password",
         type: "password",
@@ -35,13 +51,23 @@ const App = (props) => {
         pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,20}$`,
         required: true,
     },
+    {
+        id: 5,
+        name: "confirmPassword",
+        type: "password",
+        placeholder: "Confirm Password",
+        errorMessage: "Passwords don't match!",
+        label: "Confirm Password",
+        pattern: values.password,
+        required: true,
+    },
   ];
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.setUserLoginData(values);
+    props.setUserSignUpData(values);
     props.setIsLoggedIn(true);
     setValues({
       username: "",
@@ -56,7 +82,7 @@ const App = (props) => {
   return (
       <div className={classes.login}>
         <form onSubmit={handleSubmit} className={classes.form}>
-          <h1 className={classes.H1}>Sign In</h1>
+          <h1 className={classes.H1}>Register</h1>
           {inputs.map((input) => (
             <FormInput
               key={input.id}
@@ -74,4 +100,4 @@ const App = (props) => {
   );
 };
 
-export default App;
+export default SignUp;

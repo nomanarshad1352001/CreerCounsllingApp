@@ -21,9 +21,11 @@ import Footer from "../Footer.js";
 import mcom from "../Material/mcom.png";
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
+  const [SignUpIsShown, setSignUpIsShown] = useState(false);
+  const [UserSignUpData, setUserSignUpData] = useState({});
   const [LoginIsShown, setLoginIsShown] = useState(false);
   const [UserLoginData, setUserLoginData] = useState({});
-  const [IsLoggedIn, setIsLoggedIn] = useState(true);
+  const [IsLoggedIn, setIsLoggedIn] = useState(false);
   const [IsNavbarShow, setIsNavbarShow] = useState(false);
   const [User, setUser] = useState({
     Name: "",
@@ -41,6 +43,12 @@ export default function Controls() {
   };
   const HideLoginFormFun = () => {
     setLoginIsShown(false);
+  };
+  const ShowSignUpFormFun = () => {
+    setSignUpIsShown(true);
+  };
+  const HideSignUpFormFun = () => {
+    setSignUpIsShown(false);
   };
   let Degrees = [
     {
@@ -132,7 +140,16 @@ export default function Controls() {
       description:
         "Bachelor of Business Administration (BBA) is a bachelor's degree in business administration awarded by colleges and universities after completion of undergraduate study in the fundamentals of business management and usually including advanced courses in accounting, economics, finance, management, marketing, strategic management, supply chain management, and other key academic subjects associated with the academic discipline of business management.",
       img: "./Material/bba.jpg",
-      Jobs: ["Business", "commerece", "Admin", "Management", "School", "University", "colleges", "Government"]
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsbotany",
@@ -491,14 +508,12 @@ export default function Controls() {
     },
   ];
   const Navfunc = () => {
-    console.log("hambi");
     if (IsNavbarShow === true) {
-      setIsNavbarShow(false)
+      setIsNavbarShow(false);
+    } else if (IsNavbarShow === false) {
+      setIsNavbarShow(true);
     }
-    else if (IsNavbarShow === false) {
-      setIsNavbarShow(true)
-    }
-  }
+  };
   return (
     <DataContext.Provider
       value={{
@@ -507,16 +522,25 @@ export default function Controls() {
         Colleges: colleges,
         IsLoggedIn: IsLoggedIn,
         UserLoginData: UserLoginData,
+        UserSignUpData:UserSignUpData,
       }}
     >
       <BrowserRouter>
         <div className={clasess.container}>
           <div className={clasess.item1}>
-            <Header setIsLoggedIn={setIsLoggedIn} Navfunc={Navfunc} />
+            <Header
+              setIsLoggedIn={setIsLoggedIn}
+              Navfunc={Navfunc}
+              LoginIsShown={LoginIsShown}
+              OnShow={ShowLoginFormFun}
+              onClose={HideLoginFormFun}
+              setUserLoginData={setUserLoginData}
+              IsLoggedIn={IsLoggedIn}
+            />
           </div>
           <div className={clasess.item2}>
             {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
-            <div style={IsNavbarShow ? {marginLeft:70 + 'px'}:{}}>
+            <div style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}>
               {FormIsShown && (
                 <UserInputForm
                   User={User}
@@ -547,15 +571,16 @@ export default function Controls() {
                   path="/mainPage"
                   element={
                     <MainPage
-                      LoginIsShown={LoginIsShown}
-                      OnShow={ShowLoginFormFun}
-                      onClose={HideLoginFormFun}
+                    SignUpIsShown={SignUpIsShown}
+                      OnShow={ShowSignUpFormFun}
+                      onClose={HideSignUpFormFun}
                       setIsLoggedIn={setIsLoggedIn}
-                      setUserLoginData={setUserLoginData}
+                      setUserSignUpData={setUserSignUpData}
                     />
                   }
                 />
-              </Routes></div>
+              </Routes>
+            </div>
           </div>
         </div>
         <Footer />

@@ -1,8 +1,8 @@
 import React from 'react'
 import classes from './Jobs.module.css';
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 export default function Jobs() {
-  const Location = useLocation();
+  // const Location = useLocation();
   // console.log(Location.state.selected_Jobs.name);
   return (
     <div className={classes.container}>

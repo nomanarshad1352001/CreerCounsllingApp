@@ -13,7 +13,6 @@ export default function CheckedDegrees(props) {
     </div>
     <div className={classes.container}>
       {props.Degree.map((Deg) => {
-        console.log(Deg);
         return (
           <Intro
           btnTitle={"Colleges"}
