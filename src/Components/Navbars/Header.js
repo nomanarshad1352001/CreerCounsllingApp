@@ -22,7 +22,7 @@ export default function Header(props) {
             <GiHamburgerMenu />
           </div>
         </button>
-        <h1 className={classes.title}> Career and Degree Counsling </h1>
+        <h1 className={classes.title}> Career & Degree Counselling </h1>
         <div className={classes.login}>
           {props.IsLoggedIn?<Button btnTitle="Logout" onClickFunc={OnLogOut} />: <Button btnTitle="LogIn" onClickFunc={props.OnShow} /> }
         </div>
