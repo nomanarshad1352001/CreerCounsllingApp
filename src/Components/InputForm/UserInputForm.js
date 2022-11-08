@@ -113,8 +113,8 @@ export default function UserInputForm(props) {
                         onChange={inputHandler}
                     />
                     <div className={classes.btnContainer}>
-                        <Button btnTitle="Submit"/>
-                        <Button onClickFunc={props.onClose} btnTitle="Close"/>
+                        <Button color="#00af3b" btnTitle="Submit"/>
+                        <Button color="red" onClickFunc={props.onClose} btnTitle="Close"/>
                     </div>
                 </form>
             </div>

@@ -92,8 +92,8 @@ const SignUp = (props) => {
             />
           ))}
           <div className={classes.loginBtn}>
-            <Button btnTitle="Submit" />
-            <Button btnTitle="close" onClickFunc={props.onCloseLogin} />
+            <Button  color="#54BAB9"btnTitle="Submit" />
+            <Button  color="#54BAB9" btnTitle="close" onClickFunc={props.onCloseLogin} />
           </div>
         </form>
       </div>

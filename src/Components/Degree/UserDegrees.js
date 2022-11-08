@@ -10,6 +10,8 @@ export default function UserDegrees(props) {
   ).length;
   return (
     <React.Fragment>
+      <div className={classes.Maincontainer}>
+      <div className={classes.widthSpecifier}>
       <div className={classes.mainHeading}>
         <h2 className={classes.title}>{props.Title}</h2>
         <h3 className={classes.length}>Total Degrees: {Length}</h3>
@@ -62,6 +64,8 @@ export default function UserDegrees(props) {
             );
           }
         )}
+      </div>
+      </div>
       </div>
     </React.Fragment>
   );

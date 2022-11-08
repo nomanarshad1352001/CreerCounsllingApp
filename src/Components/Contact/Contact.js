@@ -4,6 +4,7 @@ import Button from "../UI/Button.js"
 export default function Contact() {
   return (
     <React.Fragment>
+      <div className={classes.Maincontainer}>
       <div className={classes.topTitle}>Good to contact us</div>
     <div className={classes.container}>
 
@@ -27,7 +28,7 @@ export default function Contact() {
           <label className={classes.label}  htmlFor="subject">Subject</label>
           <textarea id={classes.subject} name="subject" placeholder="Write something.." style={{}}></textarea>
 
-          <Button btnTitle="Submit"/>
+          <Button  color="#54BAB9" btnTitle="Submit"/>
 
         </form>
       </div>
@@ -45,6 +46,7 @@ export default function Contact() {
 
     </div>
     <div className={classes.bottomTitle}>We care about your Suggestion</div>
+    </div>
      </React.Fragment>
 
   )

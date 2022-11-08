@@ -11,42 +11,42 @@ export default function SideNavbar() {
     <div>
       <div className="sidebar">
         
-        <ul className="nav-list">
+        <ul>
         <li>
             <Link to="/">
               <i><AiFillHome/></i>
-            </Link>
              <span className="tooltip">Home</span>
+            </Link>
           </li>
          <li>
            <Link to="degree">
              <i ><IoIosSchool/></i>
-             </Link>
            <span className="tooltip">Degrees</span>
+             </Link>
          </li>
          <li>
            <Link to="colleges">
              <i><FaUniversity/></i>
-             </Link>
            <span className="tooltip">Colleges</span>
+             </Link>
          </li>
           <li>
             <Link to="about">
               <i><FaUserFriends/></i>
-            </Link>
              <span className="tooltip">About Us</span>
+            </Link>
           </li>
           <li>
            <Link to="contact">
              <i><MdContactMail/></i>
-            </Link>
            <span className="tooltip">Contact</span>
+            </Link>
          </li>
          <li>
            <Link to="admin">
              <i><MdAdminPanelSettings/></i>
-             </Link>
            <span className="tooltip">Admin</span>
+             </Link>
          </li>
         </ul>
       </div>

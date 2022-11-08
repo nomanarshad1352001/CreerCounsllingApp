@@ -25,8 +25,8 @@ export default function Controls() {
   const [UserSignUpData, setUserSignUpData] = useState({});
   const [LoginIsShown, setLoginIsShown] = useState(false);
   const [UserLoginData, setUserLoginData] = useState({});
-  const [IsLoggedIn, setIsLoggedIn] = useState(false);
-  const [IsNavbarShow, setIsNavbarShow] = useState(false);
+  const [IsLoggedIn, setIsLoggedIn] = useState(true);
+  const [IsNavbarShow, setIsNavbarShow] = useState(true);
   const [User, setUser] = useState({
     Name: "",
     PassedDegree: "",
@@ -580,10 +580,11 @@ export default function Controls() {
                   }
                 />
               </Routes>
+            <div style={{width:"100%"}}> <Footer /></div>
             </div>
+           
           </div>
         </div>
-        <Footer />
       </BrowserRouter>
     </DataContext.Provider>
   );

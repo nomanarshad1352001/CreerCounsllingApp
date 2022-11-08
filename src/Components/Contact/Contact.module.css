@@ -1,3 +1,9 @@
+.Maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   padding: 10px;
   margin-top: 10px;
@@ -5,6 +11,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 20px;
+  width: 75%;
 }
 .formContainer {
   padding: 20px;

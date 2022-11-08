@@ -14,7 +14,9 @@ const goBack=()=>{
     navigate("/Fdegree")
 }
     return (
-        <React.Fragment><div className={classes.mainHeading}>
+        <React.Fragment>
+            <div className={classes.Maincontainer}>
+            <div className={classes.mainHeading}>
         <h2 className={classes.title}> Available Colleges for {Location.state.selected_Title}</h2>
         <h3 className={classes.length}>Total Colleges: {FilteredClg.length}</h3>
       </div>
@@ -45,7 +47,8 @@ const goBack=()=>{
                 })}
             </div>
             <div className={classes.btnContainer}>
-           {Location.state.Check && <Button btnTitle="Go Back" onClickFunc={goBack}/>} 
+           {Location.state.Check && <Button color="blueviolet" btnTitle="Go Back" onClickFunc={goBack}/>} 
+            </div>
             </div>
         </React.Fragment>
     );

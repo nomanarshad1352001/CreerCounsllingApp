@@ -24,7 +24,7 @@ export default function Header(props) {
         </button>
         <h1 className={classes.title}> Career & Degree Counselling </h1>
         <div className={classes.login}>
-          {props.IsLoggedIn?<Button btnTitle="Logout" onClickFunc={OnLogOut} />: <Button btnTitle="LogIn" onClickFunc={props.OnShow} /> }
+          {props.IsLoggedIn?<Button color="#E9590C" btnTitle="Logout" onClickFunc={OnLogOut} />: <Button color="#53A25B" btnTitle="LogIn" onClickFunc={props.OnShow} /> }
         </div>
       </header>
     </Fragment>

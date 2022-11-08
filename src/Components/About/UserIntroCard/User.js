@@ -18,7 +18,7 @@ export default function User() {
               <div className={clasess.cardcontent}>
                 <h2 className={clasess.name}>David Dell</h2>
                 <p className={clasess.description}>The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-                <Button btnTitle="More"/>
+                <Button  color="#54BAB9" btnTitle="More"/>
               </div>
             </div>
           </div>

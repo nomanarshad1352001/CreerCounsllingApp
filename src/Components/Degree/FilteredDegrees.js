@@ -161,7 +161,7 @@ export default function FilteredDegrees(props) {
           Condition={applicableDegree.conditions}
         />
         <div className={classes.btn}>
-          <Button btnTitle="Check More" onClickFunc={props.OnClick} />
+          <Button color="#ff4e22" btnTitle="Check More" onClickFunc={props.OnClick} />
         </div>
       </>
     );
@@ -176,7 +176,7 @@ export default function FilteredDegrees(props) {
             </h4>
           </div>
           <div className={classes.btn}>
-            <Button btnTitle="Your Info" onClickFunc={props.OnClick} />
+            <Button color="#ff4e22" btnTitle="Your Info" onClickFunc={props.OnClick} />
           </div>
         </div>
       ) : (

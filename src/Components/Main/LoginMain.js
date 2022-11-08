@@ -66,8 +66,8 @@ const App = (props) => {
             />
           ))}
           <div className={classes.loginBtn}>
-            <Button btnTitle="Submit" />
-            <Button btnTitle="close" onClickFunc={props.onCloseLogin} />
+            <Button  color="#00af3b" btnTitle="Submit" />
+            <Button  color="red" btnTitle="close" onClickFunc={props.onCloseLogin} />
           </div>
         </form>
       </div>

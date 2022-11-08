@@ -1,6 +1,6 @@
 .btn {
-  width: 70px  ;
-  height: 32px;
+  width: 76px  ;
+  height: 35px;
   color: #fff;
   border-radius: 5px;
   margin: 0 5px;
@@ -13,11 +13,12 @@
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
   outline: none;
-  background: #ff4e22;
   border: none;
   z-index: 1;
   font-weight: bold;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  white-space: nowrap;
+  font-family: 'Capriola', sans-serif;
+  font-size: 12px;
 }
 .btn:after {
   position: absolute;
@@ -62,6 +63,7 @@
 }
   @media screen and (max-width: 360px) {
     .btn{
+      font-size: 0.5rem;
       width: 55px;
       height: 25px;
     }

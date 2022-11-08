@@ -1,9 +1,16 @@
+.Maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, auto));
     justify-content: center;
     margin-top: 25px;
     grid-gap: 4rem;
+    width: 75%;
 }
 .Infocontainer {
     width: 100%;

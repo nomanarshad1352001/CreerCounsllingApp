@@ -22,9 +22,9 @@ const Intro = (props) => {
       </p>
       </div>
       <div className={classes.btnContainer}>
-      <Button btnTitle={props.btnTitle}  onClickFunc={props.onClickFunc}/>
-     {props.Check && <Button btnTitle={props.btnTitle1}  onClickFunc={props.onClickFunc1}/>}
-     {props.Check && <Button btnTitle={props.btnTitle2}  onClickFunc={props.onClickFunc2}/>}
+      <Button color="#ff4e22" btnTitle={props.btnTitle}  onClickFunc={props.onClickFunc}/>
+     {props.Check && <Button color="#54BAB9" btnTitle={props.btnTitle1}  onClickFunc={props.onClickFunc1}/>}
+     {props.Check && <Button color="#781C68" btnTitle={props.btnTitle2}  onClickFunc={props.onClickFunc2}/>}
       </div>
     </section>
   );

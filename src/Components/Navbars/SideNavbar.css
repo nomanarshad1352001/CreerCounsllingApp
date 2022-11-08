@@ -1,43 +1,48 @@
 .sidebar{
   position: fixed;
   left: 0;
-  background-color: #ff4e22;
+  background: rgba(195, 195, 195, 0.25);
+  backdrop-filter: blur(5px);
   padding: 6px 8px 0 6px;
   z-index: 50;
   transition: all 0.5s ease;
-  border-radius: 0 10px 10px 0;
-  margin-top: 3rem;
-  height: 28rem;
+  border-radius: 0 10px 10px 0px;
+  margin-top: 1rem;
+  height: 100%;
   width: 85px;
 }
-.sidebar i{
-  height: 60px;
-  min-width: 50px;
-  font-size: 28px;
-  text-align: center;
-  line-height: 60px;
-  color: #FFF;
-}
-.sidebar .nav-list{
-  margin-top: 20px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 25px;
-}
 .sidebar li{
+  text-align: center;
   position: relative;
-  margin: 8px 0;
+  margin: 25px 0;
   list-style: none;
   border-radius: 10px;
   cursor: pointer;
-  background-color: #000;
 }
-.sidebar li .tooltip{
+.sidebar li a{
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #2f2e2e;
+  padding: 10px 8px 2px 8px;
+  color: whitesmoke;
+  font-size: 30px;
+}
+.sidebar li a:hover,
+.sidebar li a:active,
+.sidebar li a.active {
+  transition: all 0.5s ease;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.sidebar li a .tooltip{
   position: absolute;
-  top: -20px;
-  left: calc(100% + 15px);
+  top: -40px;
+  left: calc(70% + 20px);
   z-index: 3;
   background-color: #ff4e22;
   color: #FFF;
@@ -52,75 +57,15 @@
   transition: 0s;
  
 }
-.sidebar .bx{
-width: 40px;
-height: 30px;
-}
-.sidebar li:hover .tooltip{
+.sidebar li a:hover .tooltip{
   opacity: 1;
   pointer-events: auto;
   transition: all 0.4s ease;
   top: 50%;
   transform: translateY(-50%);
 }
-.sidebar.open li .tooltip{
-  display: none;
-}
-.sidebar li a{
-  display: flex;
-  height: 100%;
-  width: 50px;
-  border-radius: 8px;
-  align-items: center;
-  text-decoration: none;
-  transition: all 0.4s ease;
-  /* background: #11101D; */
-}
-.sidebar li a:hover ,
-.sidebar li a:hover i{
-  transition: all 0.5s ease;
-  background-color: #fff;
-  color: #000;
-  border-radius: 5px;
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-  7px 7px 20px 0px rgba(0,0,0,.1),
-  4px 4px 5px 0px rgba(0,0,0,.1);
-}
-
-.sidebar li i{
-  height: 50px;
-  font-size: 30px;
-  border-radius: 8px;
-}
-@media (max-width: 560px) {
-  .sidebar{
-   width: 70px;
-  }
-}
-@media (max-width: 360px) {
-  .sidebar{
-    width: 60px;
-  }
-  .sidebar .logo-details{
-    height: 40px;
-  }
-  .sidebar .logo-details #btn{
-    font-size: 14px;
-  }
-  h4{
-    font-size: 12px;
-  }
-  .sidebar i{
-    font-size: 22px;
-  }
+@media (max-width: 450px) {
   .sidebar li .tooltip{
     font-size: 12px;
-  }
-  .sidebar li{
-    width: 50px;
-  }
-  .sidebar li i{
-    height: 50px;
-    font-size: 25px;
   }
 }

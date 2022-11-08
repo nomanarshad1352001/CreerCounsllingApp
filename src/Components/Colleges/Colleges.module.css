@@ -1,13 +1,20 @@
+.Maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
     justify-content: center;
+    width: 75%;
   }
   .title{
       font-size: 1.3rem;
       text-align: center;
       padding: 10px;
-      background-color:#ff4e22;
+      background-color:#8b8b8b;
       color: rgb(255, 255, 255);
       box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
       7px 7px 20px 0px rgba(0,0,0,.1),
@@ -38,33 +45,19 @@
    .btnContainer{
     text-align: center;
    }
-    @media screen and (max-width: 890px) {
-        .container {
-            grid-template-columns: repeat(auto-fit, minmax(19rem, auto));
-        }
-    }
     @media screen and (max-width: 760px) {
-      .container {
-          grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
-      }
       .length{
         font-size: 1rem;
         width: 50%;
       }
   }
   @media screen and (max-width: 650px) {
-      .container {
-          grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-      }
       .length{
           font-size: 1rem;
           width: 50%;
         }
   }
   @media screen and (max-width: 450px) {
-      .container {  
-        grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
-      }
       .title {
           font-size: 1rem;
         }
@@ -73,17 +66,11 @@
         }
   }
   @media screen and (max-width: 405px) {
-    .container {
-      grid-template-columns: repeat(auto-fit, minmax(13rem, auto));
-    }
     .title {
         font-size: 0.9rem;
     }
 }
   @media screen and (max-width: 350px) {
-      .container {
-          grid-template-columns: repeat(auto-fit, minmax(12rem, auto));
-      }
       .title {
           font-size: 0.8rem;
         }
@@ -92,9 +79,6 @@
         }
   }
   @media screen and (max-width: 250px) {
-      .container {
-          grid-template-columns: repeat(auto-fit, minmax(5rem, auto));
-      }
       .title {
           font-size: 0.6rem;
         }
@@ -103,9 +87,6 @@
         }
   }
   @media screen and (max-width: 249px) {
-      .container {
-          grid-template-columns: repeat(auto-fit, minmax(6rem, auto));
-      }
       .length{
           font-size: 0.3rem;
         }

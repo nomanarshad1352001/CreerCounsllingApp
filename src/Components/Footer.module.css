@@ -8,9 +8,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  margin-top: 4rem;
 }
 .container {
-  padding: 20px 0;
+  padding: 15px 0;
   color: whitesmoke;
   display: flex;
   justify-content: space-around;
@@ -72,13 +73,13 @@
 @media (max-width: 650px){
   .container{
     flex-direction: column;
-    /* padding: 2rem; */
   }
 }
 @media (max-width: 520px) {
   .container{
     flex-direction: column;
     padding: 20px;
+    gap: 20px;
   }
   .footer ul {
     font-size: 15px;
@@ -86,49 +87,86 @@
   .footer .copyright {
     font-size: 15px;
   }
+  .footer .social h3{
+    font-size: 1.4rem;
+  }
   .footer .social a {
     font-size: 25px;
-    height: 30px;
-    width: 30px;
-  }
-  .container {
-    gap: 35px;
   }
 }
 @media (max-width: 450px) {
+  .list{
+    margin: 0 0.7rem;
+  }
   .footer ul {
     font-size: 12px;
   }
+  .footer ul li {
+    font-size: 12px;
+  }
+  .footer .social h3{
+    font-size: 1.2rem;
+  }
   .footer .copyright {
-    font-size: 13px;
+    font-size: 12px;
   }
   .footer .social a {
     font-size: 25px;
   }
   .container {
-    gap: 20px;
+    gap: 12px;
   }
 }
 @media (max-width: 350px) {
+  .list{
+    margin: 0 0.5rem;
+  }
   .footer ul {
     font-weight: 300;
+    font-size: 10px;
+  }
+  .footer ul li {
+    padding: 3px 0;
+    font-size: 10px;
+  }
+  .footer .social h3{
+    font-size: 1rem;
   }
   .footer .social a {
     font-size: 20px;
   }
-  .container {
-    gap: 10px;
-  }
-}
-
-@media (max-width: 320px) {
-  .footer ul {
-    font-weight: 300;
-  }
-  .footer .social a {
-    font-size: 20px;
+  .footer .copyright {
+    font-size: 10px;
   }
   .container {
     gap: 5px;
   }
 }
+@media (max-width: 320px) {
+  .list{
+    margin: 0 0.4rem;
+  }
+  .footer ul {
+    font-size: 8px;
+  }
+  .footer ul li {
+    padding: 3px 0;
+    font-size: 9px;
+  }
+  .footer .social h3{
+    font-size: 0.8rem;
+  }
+  .footer .social a {
+    font-size: 20px;
+  }
+  .footer .copyright {
+    font-size: 9px;
+  }
+  .container {
+    gap: 3px;
+  }
+}
+
+
+
+
