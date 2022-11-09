@@ -14,7 +14,6 @@
   font-weight: 800;
 }
 .mainImage {
- 
   width: 95%;
   z-index: 0;
   padding: 0;
@@ -22,31 +21,28 @@
   overflow: hidden;
   text-align: center;
 }
-.img{
-  border: 2px solid blue;
+img {
   width: 100%;
+  padding: 25px;
 }
-.flex_row{
+.flex_row {
   justify-content: center;
   display: flex;
-  font-size: 22px;
-  gap: 5px;
+  font-size: 30px;
+  gap: 10px;
+  height: 10vh;
 }
 .container {
-  /* padding: 20px; */
   margin: 5px 5px 20px 5px;
-  padding: 1.5rem;
+  padding: 1.5rem 1.5rem 0 1.5rem;
   word-wrap: break-word;
-  font-family: 'Capriola', sans-serif;
+  font-family: "Capriola", sans-serif;
   display: grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
   grid-gap: 5px;
-}
-.innercont{
-padding: 15px;
-margin: 15px;
+  height: 30vh;
 }
 .container p {
   color: rgb(43, 46, 46);
@@ -55,11 +51,11 @@ margin: 15px;
 .container h3 {
   color: #ff4e22;
   padding: 10px 0;
-  font-size: 32px;
+  font-size: 30px;
 }
-.container .btn{
+.container .btn {
   padding: 19px 0;
-  text-align: left;
+  text-align: right;
 }
 @media screen and (max-width: 870px) {
   .mainImage {
@@ -67,23 +63,54 @@ margin: 15px;
   }
 }
 @media screen and (max-width: 700px) {
-  .Title {
-    font-size: 18px;
-  }
   .container {
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
+    height: 60vh;
+    text-align: center;
   }
-  .content{
-    height: 34rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .Title {
-    font-size: 16px;
+  .innerContent {
+    height: 18vh;
   }
 }
-@media screen and (max-width: 300px) {
-  .Title {
-    font-size: 10x;
+@media screen and (max-width: 490px) {
+  .container {
+    height: 45vh;
+  }
+  .container p {
+    font-size: 15px;
+  }
+  .container h3 {
+    font-size: 28px;
+  }
+  .innerContent {
+    height: 22vh;
+  }
+}
+@media screen and (max-width: 390px) {
+  .container {
+    height: 35vh;
+  }
+  .container p {
+    font-size: 12px;
+    padding: 12px;
+  }
+  .container h3 {
+    font-size: 20px;
+  }
+  .innerContent {
+    height: 20vh;
+  }
+}
+@media screen and (max-width: 310px) {
+  .container {
+    height: 35vh;
+  }
+  .innerContent {
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 250px) {
+  .innerContent {
+    height: 35vh;
   }
 }

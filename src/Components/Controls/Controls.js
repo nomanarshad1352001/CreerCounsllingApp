@@ -26,7 +26,7 @@ export default function Controls() {
   const [LoginIsShown, setLoginIsShown] = useState(false);
   const [UserLoginData, setUserLoginData] = useState({});
   const [IsLoggedIn, setIsLoggedIn] = useState(true);
-  const [IsNavbarShow, setIsNavbarShow] = useState(true);
+  const [IsNavbarShow, setIsNavbarShow] = useState(false);
   const [User, setUser] = useState({
     Name: "",
     PassedDegree: "",
@@ -522,7 +522,7 @@ export default function Controls() {
         Colleges: colleges,
         IsLoggedIn: IsLoggedIn,
         UserLoginData: UserLoginData,
-        UserSignUpData:UserSignUpData,
+        UserSignUpData: UserSignUpData,
       }}
     >
       <BrowserRouter>
@@ -571,7 +571,7 @@ export default function Controls() {
                   path="/mainPage"
                   element={
                     <MainPage
-                    SignUpIsShown={SignUpIsShown}
+                      SignUpIsShown={SignUpIsShown}
                       OnShow={ShowSignUpFormFun}
                       onClose={HideSignUpFormFun}
                       setIsLoggedIn={setIsLoggedIn}
@@ -581,7 +581,9 @@ export default function Controls() {
                 />
               </Routes>
             </div>
-            <div style={{width:"100%"}}><Footer /></div>
+          </div>
+          <div style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}} className={clasess.item3}>
+            <Footer />
           </div>
         </div>
       </BrowserRouter>

@@ -16,12 +16,12 @@ export default function Header(props) {
         </Modal>
       )}
       <header className={classes.header}>
-        <button className={classes.btn} onClick={props.Navfunc}>
+       {props.IsLoggedIn&&  <button className={classes.btn} onClick={props.Navfunc}>
           {" "}
           <div className={classes.Icons}>
             <GiHamburgerMenu />
           </div>
-        </button>
+        </button>}
         <h1 className={classes.title}> Career & Degree Counselling </h1>
         <div className={classes.login}>
           {props.IsLoggedIn?<Button color="#E9590C" btnTitle="Logout" onClickFunc={OnLogOut} />: <Button color="#53A25B" btnTitle="LogIn" onClickFunc={props.OnShow} /> }

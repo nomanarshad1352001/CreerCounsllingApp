@@ -2,17 +2,22 @@ import React, { Fragment, useState } from "react";
 import Button from "../UI/Button.js";
 import clasess from "./Mainpage.module.css";
 import SignUp from "./SignUp.js";
-import img1 from "../Material/7.png";
-import img2 from "../Material/8.png";
-import img5 from "../Material/9.png";
+import img1 from "../Material/1.png";
+import img2 from "../Material/2.png";
 import img4 from "../Material/4.png";
+import img5 from "../Material/5.png";
+import img7 from "../Material/7.png";
 export default function MainPage(props) {
   const words = [
     {
       id: 0,
       value: (
         <div className={clasess.container}>
-          <div className={clasess.innercont}>
+           <div className={clasess.mainImage}>
+            {" "}
+            <img src={img1} alt="fireSpot" />
+          </div>
+          <div className={clasess.innerContent}>
             {" "}
             <h3>What Is Career Counselling?</h3>
             <p>
@@ -21,18 +26,7 @@ export default function MainPage(props) {
               right career after 12th and graduation. Career confusion and
               indecision can affect you at any stage of your career, thus it is
               important to get the right support to resolve it and plan ahead.
-              <div className={clasess.btn}>
-                <Button
-                  color="#2192FF"
-                  btnTitle="Sign Up"
-                  onClickFunc={props.OnShow}
-                />
-              </div>
             </p>
-          </div>
-          <div className={clasess.mainImage}>
-            {" "}
-            <img src={img1} alt="fireSpot" />
           </div>
         </div>
       ),
@@ -45,7 +39,7 @@ export default function MainPage(props) {
             {" "}
             <img src={img2} alt="fireSpot" />
           </div>
-          <div className={clasess.innercont}>
+          <div className={clasess.innerContent}>
             {" "}
             <h3>Why Do I Need Career Counselling?</h3>
             <p>Here are a few ways in which career counselling helps us:</p>
@@ -54,14 +48,7 @@ export default function MainPage(props) {
             <p>Helps Gain Confidence And Insight</p>
             <p>Helps Change Unwanted Behavior Patterns</p>
             <p>
-              Helps Remove Career-Related Frustration
-              <div className={clasess.btn}>
-                <Button
-                  color="#2192FF"
-                  btnTitle="Sign Up"
-                  onClickFunc={props.OnShow}
-                />
-              </div>
+              Helps Remove Career-Related Frustration.
             </p>
           </div>
         </div>
@@ -75,7 +62,7 @@ export default function MainPage(props) {
             {" "}
             <img src={img5} alt="fireSpot" />
           </div>
-          <div className={clasess.innercont}>
+          <div className={clasess.innerContent}>
             <h3>Who Need Career Counselling & When?</h3>
             <p>
               The perfect time for students to seek Career Counselling is during
@@ -85,13 +72,6 @@ export default function MainPage(props) {
               trying to “fit in” with peers. It is also a time when career
               decisions are made. This is why they need someone to guide them in
               the right direction at this time.
-              <div className={clasess.btn}>
-                <Button
-                  color="#2192FF"
-                  btnTitle="Sign Up"
-                  onClickFunc={props.OnShow}
-                />
-              </div>
             </p>{" "}
           </div>
         </div>
@@ -105,7 +85,7 @@ export default function MainPage(props) {
             {" "}
             <img src={img4} alt="fireSpot" />
           </div>
-          <div className={clasess.innercont}>
+          <div className={clasess.innerContent}>
             <h3>What Career Counselling Is Not</h3>
             <p>
               It is not general advice about careers, courses and curriculum.
@@ -116,13 +96,6 @@ export default function MainPage(props) {
               companies and colleges respectively.
             </p>
             <p>It is not a procedure that runs on trial-and-error.
-            <div className={clasess.btn}>
-                <Button
-                  color="#2192FF"
-                  btnTitle="Sign Up"
-                  onClickFunc={props.OnShow}
-                />
-              </div>
             </p>
           </div>
         </div>
@@ -142,10 +115,10 @@ export default function MainPage(props) {
         </div> */}
         <div className={clasess.mainImage}>
             {" "}
-            <img src={img1} alt="fireSpot" />
+            <img src={img7} alt="fireSpot" />
           </div>
         <div className={clasess.main}>
-          <div className={clasess.content}> {wordData}</div>
+          <div> {wordData}</div>
           <div className={clasess.flex_row}>
             {words.map((data, index) => (
               <h1 key={data.id} onClick={() => handleClick(index)}>
