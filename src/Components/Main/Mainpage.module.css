@@ -1,4 +1,5 @@
 .Maincontainer {
+  /* border: 2px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,58 +7,68 @@
 }
 .Title {
   color: #ff4e22;
-  padding: 10px;
-  font-size: 16px;
+  margin-top: 3rem;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 30px;
+  font-weight: 800;
 }
- .content{
-   height: 20rem;
- }
- .mainImage {
-  width: 75%;
+.mainImage {
+ 
+  width: 95%;
   z-index: 0;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
   text-align: center;
 }
- .flex_row{
-   justify-content: center;
-   display: flex;
-   font-size: 22px;
-   gap: 5px;
- }
+.img{
+  border: 2px solid blue;
+  width: 100%;
+}
+.flex_row{
+  justify-content: center;
+  display: flex;
+  font-size: 22px;
+  gap: 5px;
+}
 .container {
-  padding: 20px;
+  /* padding: 20px; */
   margin: 5px 5px 20px 5px;
   padding: 1.5rem;
   word-wrap: break-word;
-    font-family: 'Capriola', sans-serif;
-    display: grid;
+  font-family: 'Capriola', sans-serif;
+  display: grid;
   grid-template-columns:1fr 1fr;
   justify-content: center;
   align-items: center;
   grid-gap: 5px;
 }
+.innercont{
+padding: 15px;
+margin: 15px;
+}
 .container p {
-  padding: 0.1rem 0;
-  margin: 0.1rem 0;
   color: rgb(43, 46, 46);
-  font-size: 14px;
+  font-size: 18px;
 }
 .container h3 {
   color: #ff4e22;
   padding: 10px 0;
+  font-size: 32px;
 }
 .container .btn{
-  padding: 10px;
-  text-align: center;
+  padding: 19px 0;
+  text-align: left;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 870px) {
   .mainImage {
     width: 100%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .Title {
-    font-size: 14px;
+    font-size: 18px;
   }
   .container {
     grid-template-columns:1fr;
@@ -68,12 +79,11 @@
 }
 @media screen and (max-width: 500px) {
   .Title {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media screen and (max-width: 300px) {
   .Title {
-    font-size: 10px;
-    padding: 10px;
+    font-size: 10x;
   }
 }

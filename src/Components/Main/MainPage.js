@@ -2,9 +2,9 @@ import React, { Fragment, useState } from "react";
 import Button from "../UI/Button.js";
 import clasess from "./Mainpage.module.css";
 import SignUp from "./SignUp.js";
-import img1 from "../Material/1.png";
-import img2 from "../Material/2.png";
-import img5 from "../Material/5.png";
+import img1 from "../Material/7.png";
+import img2 from "../Material/8.png";
+import img5 from "../Material/9.png";
 import img4 from "../Material/4.png";
 export default function MainPage(props) {
   const words = [
@@ -12,11 +12,7 @@ export default function MainPage(props) {
       id: 0,
       value: (
         <div className={clasess.container}>
-          <div className={clasess.mainImage}>
-            {" "}
-            <img src={img1} alt="fireSpot" />
-          </div>
-          <div>
+          <div className={clasess.innercont}>
             {" "}
             <h3>What Is Career Counselling?</h3>
             <p>
@@ -34,6 +30,10 @@ export default function MainPage(props) {
               </div>
             </p>
           </div>
+          <div className={clasess.mainImage}>
+            {" "}
+            <img src={img1} alt="fireSpot" />
+          </div>
         </div>
       ),
     },
@@ -45,7 +45,7 @@ export default function MainPage(props) {
             {" "}
             <img src={img2} alt="fireSpot" />
           </div>
-          <div>
+          <div className={clasess.innercont}>
             {" "}
             <h3>Why Do I Need Career Counselling?</h3>
             <p>Here are a few ways in which career counselling helps us:</p>
@@ -75,7 +75,7 @@ export default function MainPage(props) {
             {" "}
             <img src={img5} alt="fireSpot" />
           </div>
-          <div>
+          <div className={clasess.innercont}>
             <h3>Who Need Career Counselling & When?</h3>
             <p>
               The perfect time for students to seek Career Counselling is during
@@ -105,7 +105,7 @@ export default function MainPage(props) {
             {" "}
             <img src={img4} alt="fireSpot" />
           </div>
-          <div>
+          <div className={clasess.innercont}>
             <h3>What Career Counselling Is Not</h3>
             <p>
               It is not general advice about careers, courses and curriculum.
@@ -137,9 +137,13 @@ export default function MainPage(props) {
   return (
     <Fragment>
       <div className={clasess.Maincontainer}>
-        <div className={clasess.Title}>
-          <h2>Welcome to our Career and Degree Counslling App </h2>
-        </div>
+        {/* <div className={clasess.Title}>
+          <h2>Welcome to our Career & Degree Counselling App </h2>
+        </div> */}
+        <div className={clasess.mainImage}>
+            {" "}
+            <img src={img1} alt="fireSpot" />
+          </div>
         <div className={clasess.main}>
           <div className={clasess.content}> {wordData}</div>
           <div className={clasess.flex_row}>

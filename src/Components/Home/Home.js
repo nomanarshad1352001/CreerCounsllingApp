@@ -1,13 +1,12 @@
 import React from "react";
 import Intro from "../Introduction/Intro.js";
 import clasess from "./Home.module.css";
-import interimg from '../Material/1.png'
+import interimg from '../Material/6.png'
 import Bsimg from '../Material/2.png'
 export default function Home(props) {
   return (
     <React.Fragment>
       <div className={clasess.container}>
-        <div className={clasess.mainImage}> <img src={interimg} alt="fireSpot" /></div>
         <Intro
           Title="Intermediate / Higher Secondary School Certificate"
           subTitle="A College level Education"
@@ -15,6 +14,7 @@ export default function Home(props) {
           btnTitle='Your Info'
           onClickFunc={props.OnClick}
         />
+        <div className={clasess.mainImage}> <img src={interimg} alt="fireSpot" /></div>
         <div className={clasess.mainImage}> <img src={Bsimg} alt="fireSpot" /></div>
         <Intro
           Title="Bachelor Studies / Graduation and Masters "

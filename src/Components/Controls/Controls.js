@@ -580,9 +580,8 @@ export default function Controls() {
                   }
                 />
               </Routes>
-            <div style={{width:"100%"}}> <Footer /></div>
             </div>
-           
+            <div style={{width:"100%"}}><Footer /></div>
           </div>
         </div>
       </BrowserRouter>
