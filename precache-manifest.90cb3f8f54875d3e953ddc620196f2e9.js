@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4f3ce389117ca88347dd",
+    "revision": "2505f82feca552003e9a",
     "url": "/CreerCounsllingApp/static/css/main.0b368f5a.chunk.css"
   },
   {
-    "revision": "4f3ce389117ca88347dd",
-    "url": "/CreerCounsllingApp/static/js/main.4f3ce389.chunk.js"
+    "revision": "2505f82feca552003e9a",
+    "url": "/CreerCounsllingApp/static/js/main.2505f82f.chunk.js"
   },
   {
     "revision": "2d281c672a566deb1a05",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/CreerCounsllingApp/static/media/4.ce70afc7.png"
   },
   {
-    "revision": "acbc2a9b7318ed56ceaa13dbdac5c731",
+    "revision": "261f8dfa51c7556770bf4dd152f131a1",
     "url": "/CreerCounsllingApp/index.html"
   }
 ];

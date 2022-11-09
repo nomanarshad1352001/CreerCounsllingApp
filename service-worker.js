@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/CreerCounsllingApp/precache-manifest.e4c66bd8984733c5a402075f45418073.js"
+  "/CreerCounsllingApp/precache-manifest.90cb3f8f54875d3e953ddc620196f2e9.js"
 );
 
 workbox.clientsClaim();
