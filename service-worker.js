@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mainPage/precache-manifest.ff8343e1754b1f74908d5e7e1a53bb16.js"
+  "/CreerCounsllingApp/precache-manifest.90cb3f8f54875d3e953ddc620196f2e9.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/mainPage/index.html", {
+workbox.routing.registerNavigationRoute("/CreerCounsllingApp/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
