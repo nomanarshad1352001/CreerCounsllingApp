@@ -6,6 +6,10 @@
 }
 .widthSpecifier{
   width: 75%;
+  margin-top: 10px;
+  background: rgb(208, 208, 208);
+  padding: 10px 10px 50px 10px;
+  border-radius: 10px;
 }
 .container {
   display: grid;

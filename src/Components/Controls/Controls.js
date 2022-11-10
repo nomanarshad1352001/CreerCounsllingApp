@@ -538,9 +538,12 @@ export default function Controls() {
               IsLoggedIn={IsLoggedIn}
             />
           </div>
-          <div className={clasess.item2}>
+          <div
+            style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}
+            className={clasess.item2}
+          >
             {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
-            <div style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}>
+            <div>
               {FormIsShown && (
                 <UserInputForm
                   User={User}
@@ -567,22 +570,25 @@ export default function Controls() {
                     element={<FilteredDegrees OnClick={ShowInputFormFun} />}
                   />
                 </Route>
-                <Route
-                  path="/mainPage"
-                  element={
-                    <MainPage
-                      SignUpIsShown={SignUpIsShown}
-                      OnShow={ShowSignUpFormFun}
-                      onClose={HideSignUpFormFun}
-                      setIsLoggedIn={setIsLoggedIn}
-                      setUserSignUpData={setUserSignUpData}
-                    />
-                  }
-                />
+                  <Route
+                    path="/mainPage"
+                    element={
+                      <MainPage
+                        SignUpIsShown={SignUpIsShown}
+                        OnShow={ShowSignUpFormFun}
+                        onClose={HideSignUpFormFun}
+                        setIsLoggedIn={setIsLoggedIn}
+                        setUserSignUpData={setUserSignUpData}
+                        />
+                    }
+                  />
               </Routes>
             </div>
           </div>
-          <div style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}} className={clasess.item3}>
+          <div
+            style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}
+            className={clasess.item3}
+          >
             <Footer />
           </div>
         </div>

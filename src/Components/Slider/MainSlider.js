@@ -15,7 +15,11 @@ const MainSlider= () => {
   };
   const title = {
     margin: "30px 10px 20px 10px",
-    textAlign:"center"
+    textAlign:"center",
+    background:'#7b7b7b',
+    padding:'7px',
+    borderRadius:'10px',
+    color:"whitesmoke"
   };
   return (
     <div>

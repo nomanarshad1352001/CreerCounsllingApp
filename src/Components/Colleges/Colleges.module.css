@@ -8,7 +8,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
     justify-content: center;
-    width: 75%;
   }
   .title{
       font-size: 1.3rem;

@@ -16,6 +16,7 @@ export default function Colleges() {
     <div className={classes.container}>
       {ctx.Colleges.map((clg)=>{
         return(<Intro
+          padding='5px'
         key={clg.id}
           Title={clg.Title}
           subTitle={clg.subTitle}

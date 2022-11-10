@@ -24,6 +24,7 @@ const goBack=()=>{
                 {FilteredClg.map((clg) => {
                     return (
                         <Intro
+                        padding='5px'
                             btnTitle={"More"}
                             onClickFunc={() =>
                                 navigate("/seemore", {
@@ -47,7 +48,7 @@ const goBack=()=>{
                 })}
             </div>
             <div className={classes.btnContainer}>
-           {Location.state.Check && <Button color="blueviolet" btnTitle="Go Back" onClickFunc={goBack}/>} 
+           {Location.state.Check && <Button padding='5px' color="blueviolet" btnTitle="Go Back" onClickFunc={goBack}/>} 
             </div>
             </div>
         </React.Fragment>

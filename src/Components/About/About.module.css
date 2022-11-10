@@ -8,9 +8,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, auto));
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 15px;
     grid-gap: 4rem;
-    width: 75%;
 }
 .Infocontainer {
     width: 100%;

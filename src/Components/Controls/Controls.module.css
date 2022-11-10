@@ -8,19 +8,23 @@
   grid-column: 1/-1;
 }
 .item2 {
-  width: 100%;
+  width: 70%;
+  margin-top: 10px;
+  background: rgb(208, 208, 208);
+  padding: 10px 10px 50px 10px;
+  border-radius: 10px;
   grid-row: 2;
   grid-column: 1/-1;
   justify-self: center;
   align-self: center;
 }
-.item3{
+.item3 {
   grid-row: 3;
   grid-column: 1/-1;
   bottom: 0;
 }
-body{
-  font-family: 'Ubuntu', sans-serif;
+body {
+  font-family: "Ubuntu", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 0;
@@ -29,16 +33,16 @@ body{
   outline: 0;
   box-sizing: border-box;
 }
-.footerContiner{
+.footerContiner {
   bottom: 0;
 }
 @media (max-width: 550px) {
-  .Icons{
+  .Icons {
     font-size: 30px;
   }
 }
 @media (max-width: 360px) {
-  .Icons{
+  .Icons {
     font-size: 20px;
   }
 }

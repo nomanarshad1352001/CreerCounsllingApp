@@ -21,7 +21,7 @@
   overflow: hidden;
   text-align: center;
 }
-img {
+.mainImage img {
   width: 100%;
   padding: 25px;
 }
