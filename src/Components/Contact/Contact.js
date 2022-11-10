@@ -47,8 +47,9 @@ export default function Contact() {
                 placeholder="Write something.."
                 style={{}}
               ></textarea>
-
-              <Button color="#54BAB9" btnTitle="Submit" />
+              <div className={classes.btn}>
+                <Button padding="10px" color="#54BAB9" btnTitle="Submit" />
+              </div>
             </form>
           </div>
           <div className={classes.msg}>

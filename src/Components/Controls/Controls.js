@@ -541,17 +541,17 @@ export default function Controls() {
           <div
             style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}
             className={clasess.item2}
-          >
+            >
             {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
             <div>
               {FormIsShown && (
                 <UserInputForm
-                  User={User}
-                  setUser={setUser}
-                  onClose={HideInputFormFun}
+                User={User}
+                setUser={setUser}
+                onClose={HideInputFormFun}
                 />
               )}
-              <Routes>
+                <Routes>
                 <Route element={<ProtectedRoutes />}>
                   <Route
                     path="/"

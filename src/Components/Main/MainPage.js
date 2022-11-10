@@ -46,10 +46,6 @@ export default function MainPage(props) {
             <p>Helps Pick The Right Career</p>
             <p>Helps Provide Expert Resources</p>
             <p>Helps Gain Confidence And Insight</p>
-            <p>Helps Change Unwanted Behavior Patterns</p>
-            <p>
-              Helps Remove Career-Related Frustration.
-            </p>
           </div>
         </div>
       ),
@@ -66,10 +62,7 @@ export default function MainPage(props) {
             <h3>Who Need Career Counselling & When?</h3>
             <p>
               The perfect time for students to seek Career Counselling is during
-              the ages 13-17 years (8th standard to 12th standard). This is a
-              time of many changes taking place in their life, both physical and
-              emotional, such as transitioning from school to college, and
-              trying to “fit in” with peers. It is also a time when career
+              the ages 13-17 years (8th standard to 12th standard). It is a time when career
               decisions are made. This is why they need someone to guide them in
               the right direction at this time.
             </p>{" "}

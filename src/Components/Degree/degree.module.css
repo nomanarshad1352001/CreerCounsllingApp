@@ -4,13 +4,6 @@
   justify-content: center;
   align-items: center;
 }
-.widthSpecifier{
-  width: 75%;
-  margin-top: 10px;
-  background: rgb(208, 208, 208);
-  padding: 10px 10px 50px 10px;
-  border-radius: 10px;
-}
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
@@ -27,7 +20,6 @@
   color: rgb(255, 255, 255);
   border-radius: 2rem;
   margin: 15px 10px 10px 10px;
-  width: 60%;
 }
 .mainHeading {
   display: flex;
@@ -36,7 +28,6 @@
   flex-direction: column;
 }
 .length {
-  width: 30%;
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);

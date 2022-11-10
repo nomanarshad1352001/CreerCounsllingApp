@@ -17,6 +17,7 @@
   white-space: nowrap;
   font-family: 'Capriola', sans-serif;
   font-size: 12px;
+text-align: center;
 }
 .btn:after {
   position: absolute;
@@ -46,23 +47,17 @@
 }
 @media screen and (max-width: 600px) {
   .btn{
-    font-size: 0.8rem;
-    /* width: 70px;
-    height: 30px; */
+    font-size: 0.7rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   .btn{
-    font-size: 0.7rem;
-    /* width: 60px;
-    height: 28px; */
+    font-size: 0.6rem;
   }
 }
   @media screen and (max-width: 360px) {
     .btn{
       font-size: 0.5rem;
-      /* width: 55px;
-      height: 25px; */
     }
   }
