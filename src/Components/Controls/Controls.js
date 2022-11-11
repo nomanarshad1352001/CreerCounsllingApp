@@ -19,6 +19,7 @@ import ProtectedRoutes from "../ProtectedRoutes";
 import Jobs from "../Jobs/Jobs";
 import Footer from "../Footer.js";
 import mcom from "../Material/mcom.png";
+import Login from "../Auth/login";
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [SignUpIsShown, setSignUpIsShown] = useState(false);
@@ -590,6 +591,7 @@ export default function Controls() {
             className={clasess.item3}
           >
             <Footer />
+            <div><Login /></div>
           </div>
         </div>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 import Button from "../UI/Button.js";
 import React, { useState } from "react";
-import FormInput from "./FormInput";
-import classes from "./LoginMain.module.css";
+import FormInput from "../Main/FormInput";
+import classes from "./signup.module.css";
 import {useNavigate} from "react-router-dom";
 const SignUp = (props) => {
   const navigate = useNavigate();
@@ -80,6 +80,7 @@ const SignUp = (props) => {
     navigate("/")
   };
   return (
+    <div  className={classes.signup}>
       <div className={classes.signup_content}>
             <h1 className={classes.H1}>Signup for Free</h1>
         <div className={classes.innercont}>
@@ -110,6 +111,7 @@ const SignUp = (props) => {
           </form>
         </div>
         </div>
+      </div>
       </div>
   );
 };

@@ -1,0 +1,59 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background-color: aqua; */
+}
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  border-radius: 15px;
+  }
+  
+  .form {
+    padding: 0px 50px;
+    width: 40rem;
+  }
+  
+  .H1 {
+    color: #ff4e22;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 7px;
+  }
+  .form input {
+    border-radius: 0.5rem;
+  }
+  .loginBtn {
+    display: flex;
+    justify-content:flex-end;
+    padding: 7px;
+  
+  }
+  @media screen and (max-width: 650px) {
+    .form {
+      width: 25rem;
+      padding: 0px 30px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .form {
+      width: 20rem;
+      padding: 0px 30px;
+    }
+    .H1 {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width: 410px) {
+    .form {
+      width: 15rem;
+      padding: 0px 20px;
+    }
+    .H1 {
+      font-size: 20px;
+    }
+  }
+  

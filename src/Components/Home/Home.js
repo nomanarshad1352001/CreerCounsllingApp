@@ -17,11 +17,11 @@ export default function Home(props) {
           />
           <div className={clasess.mainImage}>
             {" "}
-            <img src={interimg} alt="fireSpot" />
+            <img className={clasess.mImage} src={interimg} alt="fireSpot" />
           </div>
           <div className={clasess.mainImage}>
             {" "}
-            <img src={Bsimg} alt="fireSpot" />
+            <img className={clasess.mImage} src={Bsimg} alt="fireSpot" />
           </div>
           <Intro
             Title="Bachelor Studies / Graduation and Masters "
