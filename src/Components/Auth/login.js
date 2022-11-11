@@ -1,16 +1,11 @@
-import Button from "../UI/Button.js";
 import React, { useState } from "react";
 import FormInput from "../Main/FormInput";
 import classes from "./login.module.css";
-import {useNavigate} from "react-router-dom";
 const login = (props) => {
-  const navigate = useNavigate();
+
   const [values, setValues] = useState({
-    username: "",
     email: "",
-    birthday: "",
     password: "",
-    confirmPassword: "",
   });
   const inputs = [
     {
@@ -45,27 +40,33 @@ const login = (props) => {
       email: "",
       password: "",
     });
-    props.onCloseLogin();
-    navigate("/")
   };
   return (
     <div className={classes.main}>
       <div className={classes.login}>
         <form onSubmit={handleSubmit} className={classes.form}>
-          <h1 className={classes.H1}>Sign In</h1>
-          {inputs.map((input) => (
-            <FormInput
-              key={input.id}
-              {...input}
-              value={values[input.name]}
-              onChange={onChange}
-            />
-          ))}
+          <h1 className={classes.H1}>Log in to your account</h1>
+            <div className={classes.inputs}>
+              {inputs.map((input) => (
+                <FormInput
+                  key={input.id}
+                  {...input}
+                  value={values[input.name]}
+                  onChange={onChange}
+                />
+              ))}
+          </div>
           <div className={classes.loginBtn}>
-            <Button  color="#00af3b" btnTitle="Submit" />
-            <Button  color="red" btnTitle="close" onClickFunc={"../"} />
+            <button className={classes.Btn} onClick={setValues}>Log In</button>
           </div>
         </form>
+        <hr></hr>
+        <div className={classes.link}>
+          <p className={classes.para}>New to Career & Degree Counselling?</p>
+          <a className={classes.spanlink} href={"./"}  >
+            <span>Sign Up</span>
+          </a>
+        </div>
       </div>
     </div>
   )

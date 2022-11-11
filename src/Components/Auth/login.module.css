@@ -1,36 +1,90 @@
+
 .main{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    /* background-color: aqua; */
+    background-color: aqua;
 }
 .login {
+    
+    margin: 5rem;
+    padding: 2rem 0;
+    background-color: #ffffff;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  border-radius: 15px;
+    border-radius: 12px;
   }
   
   .form {
     padding: 0px 50px;
-    width: 40rem;
+    width: 30rem;
+  }
+  .input{
+    display: none;
+    border: 2px solid blue;
   }
   
   .H1 {
     color: #ff4e22;
     text-align: center;
-    margin-top: 1rem;
-    padding: 7px;
+    font-size: 32px;
+    margin-bottom: 1rem;
   }
   .form input {
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
   }
   .loginBtn {
     display: flex;
-    justify-content:flex-end;
-    padding: 7px;
-  
+    justify-content: center;
+    align-items: center;
+  }
+  .Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
+    background-color: #ff4e22;
+    padding: 12px 30px;
+    font-style: inherit;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .Btn:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 5px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    transition: all 0.3s ease;
+  }
+  .Btn:hover {
+    color: #fff;
+    transition: transform 0.3s;
+    transform: scale(1.1);
+  }
+  .link{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .spanlink{
+    margin-top: 10px;
   }
   @media screen and (max-width: 650px) {
     .form {
@@ -40,11 +94,15 @@
   }
   @media screen and (max-width: 450px) {
     .form {
-      width: 20rem;
+      width: 18rem;
       padding: 0px 30px;
     }
     .H1 {
       font-size: 1.5rem;
+    }
+    .para{
+      text-align: center;
+      margin: 0 10px;
     }
   }
   @media screen and (max-width: 410px) {
@@ -53,7 +111,7 @@
       padding: 0px 20px;
     }
     .H1 {
-      font-size: 20px;
+      font-size: 1rem;
     }
   }
   

@@ -23,7 +23,9 @@ border-radius: 15px;
   display: flex;
   justify-content:flex-end;
   padding: 7px;
-
+}
+.Btn{
+  margin:  0 12px;
 }
 @media screen and (max-width: 650px) {
   .form {

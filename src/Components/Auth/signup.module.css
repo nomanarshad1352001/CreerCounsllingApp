@@ -9,8 +9,6 @@ margin: 5rem 20rem;
     border-radius: 20px;
     box-shadow: 0 0 0 1px rgb(0 0 0 / 25%), 0 3px 20px 0 rgb(0 0 0 / 15%);
     background-color: #ffffff;
-    background-image: url(../Material/login.png);
-    background-size: 1000px 160px;
     background-repeat: no-repeat;
     background-position: top left;
   }
@@ -21,7 +19,7 @@ margin: 5rem 20rem;
     align-items: stretch;
   }
   .signup_content .page_body {
-    /* width: calc(100% - 250px); */
+    width: calc(100% - 250px);
     /* width: auto; */
     padding: 40px 40px 20px 40px;
   }
@@ -39,7 +37,7 @@ margin: 5rem 20rem;
   }
   .login{
     /* width: calc(100% - 502px); */
-    width: 330px;
+    width: 350px;
     margin-top: 2rem;
   }
   .signup-content .page-body, .login {
@@ -75,22 +73,26 @@ margin: 5rem 20rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 3rem;
+      margin: 4rem;
       }
     .innercont{
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 2rem;
       justify-content: center;
+      margin: 2rem;
     }
-    .login{
-      width: 430px;
-  }
+    .signup_content .page_body {
+      width: calc(100% - 0px);
+      padding: 10px;
+    }
+    .form{
+      margin-right: 0;
+    }
 }
   @media screen and (max-width: 412px) {
     .signup {
-      margin: 1rem;
+      margin: 2rem;
       }
     .innercont{
       margin: 1rem;

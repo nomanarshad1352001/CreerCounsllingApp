@@ -2,7 +2,7 @@ import React from "react";
 import Intro from "../Introduction/Intro.js";
 import clasess from "./Home.module.css";
 import interimg from "../Material/6.png";
-import Bsimg from "../Material/2.png";
+import Bsimg from "../Material/5.png";
 export default function Home(props) {
   return (
     <React.Fragment>
