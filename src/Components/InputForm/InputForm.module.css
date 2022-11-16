@@ -19,6 +19,30 @@
   color: red;
   display: block;
 }
+.inputForm input[type="text"],
+.inputForm input[type="number"],
+.inputForm select,
+.inputForm textarea {
+ width: 100%;
+  padding: 9px; 
+  border: 2px solid #ff4e22; 
+  border-radius: 10px;
+  margin-bottom: 8px; 
+  resize: vertical;
+}
+.inputForm option {
+  background: #ff4e22;
+  border-radius: 10%;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.inputForm label {
+  padding: 3px;
+  border-radius: 5px;
+  color: rgb(45, 45, 45);
+  font-weight: bold;
+}
 @media screen and (max-width: 500px) {
   .heading {
     padding: 5px;

@@ -1,6 +1,6 @@
 import Button from "../UI/Button.js";
 import React, { useState } from "react";
-import FormInput from "../Main/FormInput";
+import FormInput from "./FormInput";
 import classes from "./signup.module.css";
 import {useNavigate} from "react-router-dom";
 const SignUp = (props) => {
@@ -22,7 +22,7 @@ const SignUp = (props) => {
         "Username should be 3-16 characters and shouldn't include any special character!",
       label: "User Name",
       pattern: "^[A-Za-z0-9]{3,16}$",
-      required: true,
+      required:true
     },
     {
       id: 2,
@@ -31,7 +31,7 @@ const SignUp = (props) => {
       placeholder: "Email",
       errorMessage: "It should be a valid email address!",
       label: "Email",
-      required: true,
+      required:true
     },
     {
         id: 3,
@@ -39,6 +39,7 @@ const SignUp = (props) => {
         type: "date",
         placeholder: "Birthday",
         label: "Birthday",
+        required:true
     },
     {
         id: 4,
@@ -49,7 +50,7 @@ const SignUp = (props) => {
             "Password should be 3-20 characters and include at least 1 letter, 1 number and 1 special character!",
         label: "Password",
         pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,20}$`,
-        required: true,
+        required:true
     },
     {
         id: 5,
@@ -59,7 +60,7 @@ const SignUp = (props) => {
         errorMessage: "Passwords don't match!",
         label: "Confirm Password",
         pattern: values.password,
-        required: true,
+        required:true
     },
   ];
   const onChange = (e) => {
@@ -68,7 +69,6 @@ const SignUp = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     props.setUserSignUpData(values);
-    props.setIsLoggedIn(true);
     setValues({
       username: "",
       email: "",
@@ -76,22 +76,21 @@ const SignUp = (props) => {
       password: "",
       confirmPassword: "",
     });
-    props.onCloseLogin();
-    navigate("/")
+    navigate("/login")
   };
   return (
     <div  className={classes.signup}>
       <div className={classes.signup_content}>
-            <h1 className={classes.H1}>Signup for Free</h1>
+            <h1>Signup for Free</h1>
         <div className={classes.innercont}>
         <div className={classes.page_body}>
-          <h2 className={classes.h3}><span></span> Free account</h2>
+          <h2>Free account</h2>
           <p>Create apps, connect databases and add-on services, and collaborate on your apps, for free.</p>
           
-          <h2 className={classes.h3}><span></span> Your app platform</h2>
+          <h2>Your app platform</h2>
           <p>A platform for apps, with app management &amp; instant scaling, for development and production.</p>
           <hr></hr>
-          <h2 className={classes.h3}><span></span> Deploy now</h2>
+          <h2>Deploy now</h2>
           <p>Go from code to running app in minutes. Deploy, scale, and deliver your app to the world.</p>
         </div>
         <div className={classes.login}>
@@ -106,7 +105,6 @@ const SignUp = (props) => {
             ))}
             <div className={classes.loginBtn}>
               <Button  color="#54BAB9"btnTitle="Submit" />
-              <Button  color="#54BAB9" btnTitle="close" onClickFunc={props.onCloseLogin} />
             </div>
           </form>
         </div>

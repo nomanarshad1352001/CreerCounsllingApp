@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import FormInput from "../Main/FormInput";
+import FormInput from "./FormInput";
 import classes from "./login.module.css";
-const login = (props) => {
-
+import { useNavigate } from "react-router-dom";
+import Button from "../UI/Button";
+const Login = (props) => {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     email: "",
     password: "",
@@ -36,6 +38,7 @@ const login = (props) => {
     event.preventDefault();
     props.setUserLoginData(values);
     props.setIsLoggedIn(true);
+    navigate("/home")
     setValues({
       email: "",
       password: "",
@@ -57,13 +60,13 @@ const login = (props) => {
               ))}
           </div>
           <div className={classes.loginBtn}>
-            <button className={classes.Btn} onClick={setValues}>Log In</button>
+            <Button onClickFunc={setValues} btnTitle="Login" padding="13px" color="brown"/>
           </div>
         </form>
         <hr></hr>
         <div className={classes.link}>
           <p className={classes.para}>New to Career & Degree Counselling?</p>
-          <a className={classes.spanlink} href={"./"}  >
+          <a className={classes.spanlink} href={"./signup"}  >
             <span>Sign Up</span>
           </a>
         </div>
@@ -72,4 +75,4 @@ const login = (props) => {
   )
 }
 
-export default login
+export default Login

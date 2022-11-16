@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import clasess from "./Controls.module.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../Navbars/Header";
@@ -19,11 +19,12 @@ import ProtectedRoutes from "../ProtectedRoutes";
 import Jobs from "../Jobs/Jobs";
 import Footer from "../Footer.js";
 import mcom from "../Material/mcom.png";
+import Login from "../Auth/Login.js";
+import SignUp from "../Auth/Signup.js";
+import img from "../Material/img.png";
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
-  const [SignUpIsShown, setSignUpIsShown] = useState(false);
   const [UserSignUpData, setUserSignUpData] = useState({});
-  const [LoginIsShown, setLoginIsShown] = useState(false);
   const [UserLoginData, setUserLoginData] = useState({});
   const [IsLoggedIn, setIsLoggedIn] = useState(true);
   const [IsNavbarShow, setIsNavbarShow] = useState(false);
@@ -37,18 +38,6 @@ export default function Controls() {
   };
   const HideInputFormFun = () => {
     setFormIsShown(false);
-  };
-  const ShowLoginFormFun = () => {
-    setLoginIsShown(true);
-  };
-  const HideLoginFormFun = () => {
-    setLoginIsShown(false);
-  };
-  const ShowSignUpFormFun = () => {
-    setSignUpIsShown(true);
-  };
-  const HideSignUpFormFun = () => {
-    setSignUpIsShown(false);
   };
   let Degrees = [
     {
@@ -507,13 +496,7 @@ export default function Controls() {
       },
     },
   ];
-  const Navfunc = () => {
-    if (IsNavbarShow === true) {
-      setIsNavbarShow(false);
-    } else if (IsNavbarShow === false) {
-      setIsNavbarShow(true);
-    }
-  };
+  console.log(IsNavbarShow);
   return (
     <DataContext.Provider
       value={{
@@ -529,32 +512,34 @@ export default function Controls() {
         <div className={clasess.container}>
           <div className={clasess.item1}>
             <Header
-              setIsLoggedIn={setIsLoggedIn}
-              Navfunc={Navfunc}
-              LoginIsShown={LoginIsShown}
-              OnShow={ShowLoginFormFun}
-              onClose={HideLoginFormFun}
-              setUserLoginData={setUserLoginData}
               IsLoggedIn={IsLoggedIn}
+              IsNavbarShow={IsNavbarShow}
+              setIsNavbarShow={setIsNavbarShow}
+              setIsLoggedIn={setIsLoggedIn}
             />
+            <img src={img} alt="top" />
           </div>
           <div
-            style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}
+            style={IsNavbarShow ? { marginLeft: 75 + "px" } : {}}
             className={clasess.item2}
-            >
-            {IsNavbarShow && <div>{IsLoggedIn && <SideNavbar />}</div>}
+          >
+            {IsNavbarShow && (
+              <div>
+                {IsLoggedIn && <SideNavbar setIsNavbarShow={setIsNavbarShow} />}
+              </div>
+            )}
             <div>
               {FormIsShown && (
                 <UserInputForm
-                User={User}
-                setUser={setUser}
-                onClose={HideInputFormFun}
+                  User={User}
+                  setUser={setUser}
+                  onClose={HideInputFormFun}
                 />
               )}
-                <Routes>
+              <Routes>
                 <Route element={<ProtectedRoutes />}>
                   <Route
-                    path="/"
+                    path="/home"
                     element={<Home OnClick={ShowInputFormFun} />}
                   />
                   <Route path="/about" element={<About />} />
@@ -570,23 +555,26 @@ export default function Controls() {
                     element={<FilteredDegrees OnClick={ShowInputFormFun} />}
                   />
                 </Route>
-                  <Route
-                    path="/mainPage"
-                    element={
-                      <MainPage
-                        SignUpIsShown={SignUpIsShown}
-                        OnShow={ShowSignUpFormFun}
-                        onClose={HideSignUpFormFun}
-                        setIsLoggedIn={setIsLoggedIn}
-                        setUserSignUpData={setUserSignUpData}
-                        />
-                    }
-                  />
+                <Route path="/" element={<MainPage />} />
+                <Route
+                  path="/signup"
+                  element={<SignUp setUserSignUpData={setUserSignUpData} />}
+                />
+                <Route
+                  path="/login"
+                  element={
+                    <Login
+                      setUserLoginData={setUserLoginData}
+                      IsLoggedIn={IsLoggedIn}
+                      setIsLoggedIn={setIsLoggedIn}
+                    />
+                  }
+                />
               </Routes>
             </div>
           </div>
           <div
-            style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}
+            // style={IsNavbarShow ? { marginLeft: 85 + "px" } : {}}
             className={clasess.item3}
           >
             <Footer />

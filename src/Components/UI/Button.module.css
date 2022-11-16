@@ -18,6 +18,7 @@
   font-family: 'Capriola', sans-serif;
   font-size: 12px;
 text-align: center;
+min-width: 45px;
 }
 .btn:after {
   position: absolute;

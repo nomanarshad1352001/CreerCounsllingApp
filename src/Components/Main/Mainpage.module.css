@@ -5,6 +5,13 @@
   justify-content: center;
   align-items: center;
 }
+.topTitle{
+  margin: 10rem 0 5rem 0;
+  color: whitesmoke;
+  font-family: "Capriola", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
 .Title {
   color: #ff4e22;
   margin-top: 3rem;
@@ -15,8 +22,6 @@
 }
 .mainImage {
   width: 95%;
- 
-  width: 90%;
   z-index: 0;
   padding: 0;
   margin: 0;
@@ -26,10 +31,6 @@
 .mainImage img {
   width: 100%;
   padding: 25px;
-}
-img{
-  width: 80%;
-  
 }
 .flex_row {
   justify-content: center;
@@ -52,10 +53,14 @@ img{
 }
 .innerContent {
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .container p {
   color: rgb(43, 46, 46);
   font-size: 16px;
+  margin: 0;
 }
 .container h3 {
   color: #ff4e22;

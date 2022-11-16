@@ -5,9 +5,11 @@ export default function Contact() {
   return (
     <React.Fragment>
       <div className={classes.Maincontainer}>
+        <div className={classes.containerWithTitle}>
         <div className={classes.topTitle}>Good to contact us</div>
         <div className={classes.container}>
           <div className={classes.formContainer}>
+          <div className={classes.title}>Your writting</div>
             <form>
               <label className={classes.label} htmlFor="fname">
                 First Name
@@ -33,9 +35,8 @@ export default function Contact() {
                 Country
               </label>
               <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
+                <option value="Lahore">Lahore</option>
+                <option value="Islamabad">Islamabad</option>
               </select>
 
               <label className={classes.label} htmlFor="subject">
@@ -67,6 +68,7 @@ export default function Contact() {
           </div>
         </div>
         <div className={classes.bottomTitle}>We care about your Suggestion</div>
+        </div>
       </div>
     </React.Fragment>
   );

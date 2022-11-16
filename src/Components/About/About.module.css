@@ -4,12 +4,14 @@
   justify-content: center;
   align-items: center;
 }
+.widthSpecifier{
+  width: 80%;
+}
 .container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, auto));
+    grid-template-columns:1fr;
     justify-content: center;
     margin-top: 15px;
-    grid-gap: 4rem;
 }
 .Infocontainer {
     width: 100%;

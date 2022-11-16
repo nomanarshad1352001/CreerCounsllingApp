@@ -20,6 +20,7 @@ export default function UserDegrees(props) {
           (Deg) => {
             return (
               <Intro
+              padding="10px"
                 Check={true}
                 btnTitle={"Colleges"}
                 onClickFunc={() =>

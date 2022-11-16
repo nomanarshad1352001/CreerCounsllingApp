@@ -1,7 +1,5 @@
 import React, { Fragment, useState } from "react";
-// import Button from "../UI/Button.js";
 import clasess from "./Mainpage.module.css";
-import SignUp from "./SignUp.js";
 import img1 from "../Material/1.png";
 import img2 from "../Material/2.png";
 import img4 from "../Material/3.png";
@@ -103,13 +101,11 @@ export default function MainPage(props) {
   return (
     <Fragment>
       <div className={clasess.Maincontainer}>
-        {/* <div className={clasess.Title}>
-          <h2>Welcome to our Career & Degree Counselling App </h2>
-        </div> */}
-        <div className={clasess.mainImage}>
+      <div className={clasess.topTitle}>Lets Started</div>
+        {/* <div className={clasess.mainImage}>
             {" "}
             <img src={img7} alt="fireSpot" />
-          </div>
+          </div> */}
         <div className={clasess.main}>
           <div> {wordData}</div>
           <div className={clasess.flex_row}>
@@ -120,13 +116,6 @@ export default function MainPage(props) {
             ))}
           </div>
         </div>
-        {props.SignUpIsShown && (
-          <SignUp
-            onCloseLogin={props.onClose}
-            setUserSignUpData={props.setUserSignUpData}
-            setIsLoggedIn={props.setIsLoggedIn}
-          />
-        )}
       </div>
     </Fragment>
   );

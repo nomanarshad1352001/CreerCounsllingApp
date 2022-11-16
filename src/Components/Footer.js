@@ -62,7 +62,7 @@ const Footer = () => {
             </a>
           </div>
         </section>
-        <p className={classes.copyright}>© 2022 Career & Degree Counselling App, All Rights Reserved</p>
+        <div className={classes.copyright}>© 2022 Career & Degree Counselling App, All Rights Reserved</div>
       </div>
     </React.Fragment>
   );

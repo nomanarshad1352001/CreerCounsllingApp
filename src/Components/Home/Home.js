@@ -1,8 +1,8 @@
 import React from "react";
 import Intro from "../Introduction/Intro.js";
 import clasess from "./Home.module.css";
-import interimg from "../Material/6.png";
-import Bsimg from "../Material/5.png";
+// import interimg from "../Material/6.png";
+// import Bsimg from "../Material/5.png";
 export default function Home(props) {
   return (
     <React.Fragment>
@@ -15,14 +15,14 @@ export default function Home(props) {
             btnTitle="Your Info"
             onClickFunc={props.OnClick}
           />
-          <div className={clasess.mainImage}>
+          {/* <div className={clasess.mainImage}>
             {" "}
             <img className={clasess.mImage} src={interimg} alt="fireSpot" />
-          </div>
-          <div className={clasess.mainImage}>
+          </div> */}
+          {/* <div className={clasess.mainImage}>
             {" "}
             <img className={clasess.mImage} src={Bsimg} alt="fireSpot" />
-          </div>
+          </div> */}
           <Intro
             Title="Bachelor Studies / Graduation and Masters "
             subTitle="A University level Education"

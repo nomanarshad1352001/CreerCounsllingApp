@@ -10,11 +10,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.formContainer {
-  padding: 20px;
-  width: 500px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   background: linear-gradient(
         rgba(255, 255, 255, 0.7),
@@ -23,23 +18,25 @@
       url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
     background-size: cover;
     background-position: center;
+}
+.formContainer {
+  padding: 10px;
+  width: 460px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 380px;
 }
 .msg {
   margin: 10px 10px 10px 10px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   box-sizing: border-box;
-  background: linear-gradient(
-        rgba(255, 255, 255, 0.7),
-        rgba(255, 255, 255, 0.3)
-      ),
-      url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
-    background-size: cover;
-    background-position: center;
+  height: 380px;
+
 }
 .title {
   font-size: 20px;
@@ -62,42 +59,44 @@
 .topTitle {
   text-align: center;
   font-size: 25px;
-  margin: 2rem 0px 1rem 0px;
-  background-color: #ff4e22;
-  padding: 6px;
+  margin: 2rem 0px 0.5rem 0px;
+  background-color: #7b7b7b;
+  padding: 8px;
   border-radius: 10px;
   color: whitesmoke;
   font-weight: bold;
+  width: 100%;
 }
 .bottomTitle {
   text-align: center;
   font-size: 25px;
   margin: 1rem 0px 0px 0px;
-  padding: 6px;
   border-radius: 10px;
-  color: #ff4e22;
+  background-color: #7b7b7b;
+  padding: 8px;
+  color: whitesmoke;
   font-weight: bold;
+  width: 100%;
 }
-input[type="text"],
-input[type="number"],
-select,
-textarea {
+.formContainer input[type="text"],
+.formContainer input[type="number"],
+.formContainer select,
+.formContainer textarea {
  width: 100%;
-  padding: 9px; /* Some padding */
-  border: 2px solid #ff4e22; /* Gray border */
-  border-radius: 10px; /* Rounded borders */
-  /* box-sizing: border-box; Make sure that padding and width stays in place */
-  margin-bottom: 8px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  padding: 9px; 
+  border: 2px solid #ff4e22; 
+  border-radius: 10px;
+  margin-bottom: 8px; 
+  resize: vertical;
 }
-option {
+.formContainer option {
   background: #ff4e22;
   border-radius: 10%;
   font-weight: 800;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-label {
+.formContainer label {
   padding: 3px;
   border-radius: 5px;
   color: rgb(45, 45, 45);
@@ -132,10 +131,10 @@ width: 20%;
     flex-direction: column;
   }
   .formContainer {
-    width: 75%;
+    width: 90%;
   }
   .msg {
-    width: 70%;
+    width: 90%;
     margin-top: 20px;
   }
   .topTitle,

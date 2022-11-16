@@ -21,14 +21,12 @@ const Intro = (props) => {
       </div>
       <div className={classes.btncontainer}>
         <Button
-         padding={props.padding}
           color="#ff4e22"
           btnTitle={props.btnTitle}
           onClickFunc={props.onClickFunc}
         />
         {props.Check && (
           <Button
-          padding={props.padding}
             color="#54BAB9"
             btnTitle={props.btnTitle1}
             onClickFunc={props.onClickFunc1}
@@ -36,7 +34,6 @@ const Intro = (props) => {
         )}
         {props.Check && (
           <Button
-          padding={props.padding}
             color="#781C68"
             btnTitle={props.btnTitle2}
             onClickFunc={props.onClickFunc2}

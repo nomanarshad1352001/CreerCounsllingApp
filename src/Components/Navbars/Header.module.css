@@ -5,11 +5,11 @@
   z-index: 100;
 }
 .btn {
-  position: fixed;
-  left: -4px;
+  position: absolute;
+  left: -2px;
   margin: 10px 0 10px 15px;
-  border-radius: 6px;
-  background: none;
+  background: red;
+width: 0;
 }
 .header {
   position: fixed;
@@ -34,6 +34,8 @@
 .login {
   grid-column: 3;
   justify-self:center;
+  margin-right: 15px;
+  margin-right: 15px;
 }
 .title {
   grid-column: 2;
