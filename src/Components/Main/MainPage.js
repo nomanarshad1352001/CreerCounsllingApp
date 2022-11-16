@@ -4,7 +4,7 @@ import img1 from "../Material/1.png";
 import img2 from "../Material/2.png";
 import img4 from "../Material/3.png";
 import img5 from "../Material/4.png";
-import img7 from "../Material/7.png";
+// import img7 from "../Material/7.png";
 export default function MainPage(props) {
   const words = [
     {

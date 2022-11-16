@@ -3,8 +3,10 @@ import DataContext from "../../Store/data-context";
 import UserDegrees from "./UserDegrees";
 import classes from "./degree.module.css";
 import Button from "../UI/Button";
-
+import { useNavigate } from "react-router-dom";
+import NoData from "../Material/no.jpg"
 export default function FilteredDegrees(props) {
+  const navigate = useNavigate();
   const ctx = useContext(DataContext);
   var element;
 
@@ -168,18 +170,19 @@ export default function FilteredDegrees(props) {
   }
   return (
     <React.Fragment>
-      {!applicableDegree ? (
-        <div>
-          <div className={classes.mainHeading}>
-            <h4 className={classes.title}>
+      {!applicableDegree ?
+      (
+        <div className={classes.WhenEmpty}>
+            <img src={NoData} alt="img" />
+            <h4 className={classes.Title}>
               No Degrees available against your Passed Degre.
             </h4>
-          </div>
           <div className={classes.btn}>
-            <Button color="#ff4e22" btnTitle="Your Info" onClickFunc={props.OnClick} />
+            <Button color="#ff4e22" btnTitle="Go to Home" onClickFunc={()=>{ navigate("/home")}} />
           </div>
         </div>
-      ) : (
+      ) 
+      : (
         element
       )}
     </React.Fragment>

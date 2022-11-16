@@ -3,6 +3,7 @@ import FormInput from "./FormInput";
 import classes from "./login.module.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../UI/Button";
+import loginimg from "../Material/log.png";
 const Login = (props) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({
@@ -20,15 +21,15 @@ const Login = (props) => {
       required: true,
     },
     {
-        id: 1,
-        name: "password",
-        type: "password",
-        placeholder: "Password",
-        errorMessage:
-            "Password should be 3-20 characters and include at least 1 letter, 1 number and 1 special character!",
-        label: "Password",
-        pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,20}$`,
-        required: true,
+      id: 1,
+      name: "password",
+      type: "password",
+      placeholder: "Password",
+      errorMessage:
+        "Password should be 3-20 characters and include at least 1 letter, 1 number and 1 special character!",
+      label: "Password",
+      pattern: `^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{3,20}$`,
+      required: true,
     },
   ];
   const onChange = (e) => {
@@ -38,7 +39,7 @@ const Login = (props) => {
     event.preventDefault();
     props.setUserLoginData(values);
     props.setIsLoggedIn(true);
-    navigate("/home")
+    navigate("/home");
     setValues({
       email: "",
       password: "",
@@ -46,33 +47,41 @@ const Login = (props) => {
   };
   return (
     <div className={classes.main}>
-      <div className={classes.login}>
-        <form onSubmit={handleSubmit} className={classes.form}>
-          <h1 className={classes.H1}>Log in to your account</h1>
-            <div className={classes.inputs}>
-              {inputs.map((input) => (
-                <FormInput
-                  key={input.id}
-                  {...input}
-                  value={values[input.name]}
-                  onChange={onChange}
+      <div className={classes.loginMain}>
+      <h1>Log in to your account</h1>
+        <div className={classes.login}>
+          <img src={loginimg} alt="login image" />
+          <div>
+            <form onSubmit={handleSubmit} className={classes.form}>
+                {inputs.map((input) => (
+                  <FormInput
+                    key={input.id}
+                    {...input}
+                    value={values[input.name]}
+                    onChange={onChange}
+                  />
+                ))}
+              <div className={classes.loginBtn}>
+                <Button
+                  onClickFunc={setValues}
+                  btnTitle="Login"
+                  padding="13px"
+                  color="brown"
                 />
-              ))}
+              </div>
+            </form>
+            <hr></hr>
           </div>
-          <div className={classes.loginBtn}>
-            <Button onClickFunc={setValues} btnTitle="Login" padding="13px" color="brown"/>
-          </div>
-        </form>
-        <hr></hr>
+        </div>
         <div className={classes.link}>
           <p className={classes.para}>New to Career & Degree Counselling?</p>
-          <a className={classes.spanlink} href={"./signup"}  >
+          <a className={classes.spanlink} href={"./signup"}>
             <span>Sign Up</span>
           </a>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
