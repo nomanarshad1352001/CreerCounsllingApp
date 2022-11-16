@@ -20,7 +20,7 @@
 .item1 img{
 box-sizing: border-box;
 width: 100%;
-height: 50%;
+height: 60%;
 position: fixed;
 z-index: -1;
 }

@@ -32,14 +32,22 @@
   width: 100%;
   padding: 25px;
 }
-.flex_row {
-  justify-content: center;
-  display: flex;
-  font-size: 30px;
-  gap: 10px;
+.mainswiper  {
+  text-align: center;
   height: 10%;
 }
-.container {
+.swiper {
+  display: inline;
+}
+.swiper h1 {
+  cursor: pointer;
+  color: #ff4e22;
+  font-size: 50px;
+  font-weight: bold;
+  display: inline;
+  margin: 0px 5px 0px 5px;
+}
+.main .container {
   margin: 5px 5px 20px 5px;
   padding: 1.5rem 1.5rem 0 1.5rem;
   word-wrap: break-word;
@@ -80,7 +88,7 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .container {
+  .main .container {
     grid-template-columns: 1fr;
     height: 70%;
     text-align: center;
@@ -91,8 +99,9 @@
   }
 }
 @media screen and (max-width: 590px) {
-  .container {
+  .main .container {
     height: 60%;
+
   }
   .innerContent {
     height: 25vh;
@@ -102,7 +111,7 @@
   }
 }
 @media screen and (max-width: 490px) {
-  .container {
+  .main .container {
     height: 50%;
     padding: 0.6rem 1.2rem 0 1.2rem;
   }
@@ -110,7 +119,7 @@
     font-size: 14px;
   }
   .container h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
   .innerContent {
     height: 25vh;
@@ -120,7 +129,7 @@
   }
 }
 @media screen and (max-width: 390px) {
-  .container {
+  .main .container {
     height: 25%;
     padding: 0.4rem 1.1rem 0 1.1rem;
   }
@@ -138,7 +147,7 @@
   }
 }
 @media screen and (max-width: 310px) {
-  .container {
+  .main .container {
     height: 22%;
     padding: 0.2rem 1rem 0 1rem;
   }

@@ -11,7 +11,7 @@ export default function MainPage(props) {
       id: 0,
       value: (
         <div className={clasess.container}>
-           <div className={clasess.mainImage}>
+          <div className={clasess.mainImage}>
             {" "}
             <img src={img1} alt="fireSpot" />
           </div>
@@ -60,9 +60,9 @@ export default function MainPage(props) {
             <h3>Who Need Career Counselling & When?</h3>
             <p>
               The perfect time for students to seek Career Counselling is during
-              the ages 13-17 years (8th standard to 12th standard). It is a time when career
-              decisions are made. This is why they need someone to guide them in
-              the right direction at this time.
+              the ages 13-17 years (8th standard to 12th standard). It is a time
+              when career decisions are made. This is why they need someone to
+              guide them in the right direction at this time.
             </p>{" "}
           </div>
         </div>
@@ -86,8 +86,7 @@ export default function MainPage(props) {
               It is not a service that helps you get jobs or admissions in
               companies and colleges respectively.
             </p>
-            <p>It is not a procedure that runs on trial-and-error.
-            </p>
+            <p>It is not a procedure that runs on trial-and-error.</p>
           </div>
         </div>
       ),
@@ -101,19 +100,21 @@ export default function MainPage(props) {
   return (
     <Fragment>
       <div className={clasess.Maincontainer}>
-      <div className={clasess.topTitle}>Lets Started</div>
+        <div className={clasess.topTitle}>Lets Started</div>
         {/* <div className={clasess.mainImage}>
             {" "}
             <img src={img7} alt="fireSpot" />
           </div> */}
         <div className={clasess.main}>
           <div> {wordData}</div>
-          <div className={clasess.flex_row}>
-            {words.map((data, index) => (
-              <h1 key={data.id} onClick={() => handleClick(index)}>
-                .
-              </h1>
-            ))}
+          <div className={clasess.mainswiper}>
+            <div className={clasess.swiper}>
+              {words.map((data, index) => (
+                <h1 key={data.id} onClick={() => handleClick(index)}>
+                  .
+                </h1>
+              ))}
+            </div>
           </div>
         </div>
       </div>
