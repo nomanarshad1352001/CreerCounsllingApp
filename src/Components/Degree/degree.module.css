@@ -4,6 +4,14 @@
   justify-content: center;
   align-items: center;
 }
+.imgTitle{
+  margin-top: 1rem;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+ }
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
@@ -13,7 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 .WhenEmpty{
   margin: 5rem 10px 10px 10px;
@@ -64,6 +71,10 @@
     margin: 13px 9px 9px 9px;
     font-size: 0.8rem;
   }
+  .imgTitle{
+    margin-top: 0.7rem;
+    font-size: 16px;
+   }
 }
 @media (max-width: 460px) {
   .title, .WhenEmpty .Title {
@@ -77,6 +88,7 @@
 @media (max-width: 400px) {
   .title{
     font-size: 0.6rem;
+    padding: 5px;
   }
   .length {
     margin: 9px 7px 7px 7px;
@@ -86,11 +98,17 @@
 }
 @media screen and (max-width: 350px) {
   .title {
-    font-size: 0.3rem;
+    font-size: 0.4rem;
+    padding: 4px;
   }
   .length {
   margin: 7px 5px 5px 5px;
   font-size: 0.4rem;
   padding: 4px;
   }
+  .imgTitle{
+    margin-top: 0.3rem;
+    font-size: 12px;
+    padding: 5px;
+   }
 }

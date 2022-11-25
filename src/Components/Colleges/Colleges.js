@@ -11,7 +11,7 @@ export default function Colleges() {
     <React.Fragment>
       <div className={classes.Maincontainer}>
       <div className={classes.mainHeading}>
-        <h2 className={classes.title}>All available Colleges</h2>
+        <h2 className={classes.title}>All Colleges</h2>
       </div>
     <div className={classes.container}>
       {ctx.Colleges.map((clg)=>{

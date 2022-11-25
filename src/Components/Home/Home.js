@@ -8,6 +8,7 @@ export default function Home(props) {
     <React.Fragment>
       <div className={clasess.Maincontainer}>
         <div className={clasess.container}>
+          <div className={clasess.imgTitle}>We offer you a Comprehensive option for your Degree Selections </div>
           <Intro
             Title="Intermediate / Higher Secondary School Certificate"
             subTitle="A College level Education"

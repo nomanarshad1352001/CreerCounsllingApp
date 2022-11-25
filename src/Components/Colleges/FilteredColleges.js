@@ -17,7 +17,7 @@ const goBack=()=>{
         <React.Fragment>
             <div className={classes.Maincontainer}>
             <div className={classes.mainHeading}>
-        <h2 className={classes.title}> Available Colleges for {Location.state.selected_Title}</h2>
+        <h2 className={classes.title}>Colleges for {Location.state.selected_Title}</h2>
         <h3 className={classes.length}>Total Colleges: {FilteredClg.length}</h3>
       </div>
            <div className={classes.container}>

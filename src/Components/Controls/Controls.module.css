@@ -21,7 +21,7 @@
 box-sizing: border-box;
 width: 100%;
 height: 50%;
-position: fixed;
+position: absolute;
 z-index: -1;
 top: 65px;
 }
@@ -45,12 +45,12 @@ body {
 }
 @media (max-width: 800px) {
   .item1 img{
-    height: 40%;
+    height: 50%;
     }
 }
 @media (max-width: 700px) {
   .item1 img{
-    height: 35%;
+    height: 45%;
     }
 }
 @media (max-width: 600px) {
@@ -58,7 +58,12 @@ body {
     font-size: 30px;
   }
   .item1 img{
-    height: 30%;
+    height: 38%;
+    }
+}
+@media (max-width: 600px) {
+  .item1 img{
+    height: 34%;
     }
 }
 @media (max-width: 360px) {
@@ -66,6 +71,6 @@ body {
     font-size: 20px;
   }
   .item1 img{
-    height: 25%;
+    height: 28%;
     }
 }

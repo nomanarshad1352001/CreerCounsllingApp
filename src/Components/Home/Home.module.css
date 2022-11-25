@@ -4,6 +4,14 @@
   justify-content: center;
   align-items: center;
 }
+.imgTitle{
+ margin-top: 3rem;
+ padding: 10px;
+ color: whitesmoke;
+ font-size: 20px;
+ font-weight: bold;
+ text-align: center;
+}
 .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -22,8 +30,19 @@
   width: 90%;
   padding: 50px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .container {
    width: 100%;
   }
+  .imgTitle{
+    margin-top: 2rem;
+    font-size: 16px;
+   }
+}
+@media screen and (max-width: 360px) {
+  .imgTitle{
+    margin-top: 1rem;
+    font-size: 14px;
+    padding: 5px;
+   }
 }

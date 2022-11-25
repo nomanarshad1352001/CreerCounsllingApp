@@ -554,7 +554,7 @@ export default function Controls() {
                   <Route path="/Jobs" element={<Jobs />} />
                   <Route
                     path="/Fdegree"
-                    element={<FilteredDegrees/>}
+                    element={<FilteredDegrees OnClick={ShowInputFormFun}/>}
                   />
                 </Route>
                 <Route path="/" element={<MainPage />} />
