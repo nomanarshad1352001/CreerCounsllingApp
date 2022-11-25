@@ -1,43 +1,25 @@
-.main {
+.main{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10rem;
+  
 }
-.loginMain{
+.loginMain {
+  margin-top: 12rem;
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
-  padding: 2rem 0;
-  width: 700px;
+  padding: 2rem 2rem;
+  width: 450px;
 }
 .login {
   margin: 1rem;
-  padding: 2rem 0;
-  display: flex;
-  align-items: center;
+  padding: 0.5rem 0;
 }
-.login img {
-  width: 60%;
-}
-.form {
-  border-radius: 12px;
-   width: 110%;
-  padding: 25px;
-
-}
-.input {
-  display: none;
-  border: 2px solid blue;
-}
-
 .loginMain h1 {
   color: #ff4e22;
   text-align: center;
   font-size: 32px;
   margin-bottom: 1rem;
-}
-.form input {
-  border-radius: 0.3rem;
 }
 .loginBtn {
   display: flex;
@@ -61,26 +43,17 @@
     padding: 30px;
     width: 100%;
   }
-  .login {
-  flex-direction: column;
-  }
-  .login img {
-    width: 70%;
-  }
   .main {
     margin-top: 7rem;
   }
 }
 @media screen and (max-width: 450px) {
-  .loginMain h1  {
+  .loginMain h1 {
     font-size: 1.5rem;
   }
   .para {
     text-align: center;
     margin: 0 10px;
-  }
-  .login img {
-    width: 80%;
   }
   .main {
     margin-top: 5rem;
@@ -88,7 +61,7 @@
 }
 @media screen and (max-width: 410px) {
   .form {
-    padding:20px;
+    padding: 20px;
   }
   .loginMain h1 {
     font-size: 1rem;

@@ -20,7 +20,7 @@ import Jobs from "../Jobs/Jobs";
 import Footer from "../Footer.js";
 import mcom from "../Material/mcom.png";
 import Login from "../Auth/login.js";
-import SignUp from "../Auth/signup.js";
+import SignUp from "../Auth/Signup.js";
 import img from "../Material/img2-01.png";
 import back from "../Material/background.png";
 export default function Controls() {

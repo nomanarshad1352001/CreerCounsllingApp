@@ -1,20 +1,17 @@
 .formInput{
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin-bottom: 15px;
 }
 .input{
     padding: 10px;
-    margin: 10px 0px;
-    margin-bottom: 12px;
     border-radius: 5px;
     border: 1px solid #41414169;
     width: 100%;
 }
 .loginlabel{
-    font-size: 18px ;
-    color: rgb(0, 0, 0);
+    font-size: 14px ;
+    color: rgb(78, 77, 77);
 }
 .span{
     font-size: 14px;
@@ -26,6 +23,7 @@
 }
 .input:invalid[focused="true"] ~ span{
     display: block;
+    word-wrap: break-word;
 }
 
   

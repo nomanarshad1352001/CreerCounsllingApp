@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 20rem;
+  margin: 5rem 2rem 2rem 2rem;
 }
 .signup_content {
   max-width: 600px;
@@ -50,6 +50,7 @@
   border-radius: 18px;
   margin-right: -30px;
   margin-top: -5px;
+  margin-bottom: 1rem;
   z-index: 10;
   box-shadow: 0 0 0 1px rgb(89 105 128 / 10%),
     0 3px 20px 0 rgb(89 105 128 / 30%), 0 1px 2px 0 rgb(0 0 0 / 5%);
