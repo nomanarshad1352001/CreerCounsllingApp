@@ -2,6 +2,7 @@ import React from "react";
 import Intro from "../Introduction/Intro.js";
 import classes from "../Degree/degree.module.css";
 import { useNavigate } from "react-router-dom";
+import degree from "../Material/pre-eng.jpg"
 
 export default function UserDegrees(props) {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ export default function UserDegrees(props) {
                   })
                 }
                 key={Deg.id}
-                image={Deg.img}
+                image={degree}
                 Title={Deg.name}
                 subTitle={Deg.subName}
                 description={Deg.description}

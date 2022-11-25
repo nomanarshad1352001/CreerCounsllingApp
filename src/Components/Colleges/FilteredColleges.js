@@ -3,6 +3,7 @@ import Intro from "../Introduction/Intro";
 import DataContext from "../../Store/data-context";
 import classes from "./Colleges.module.css";
 import {useLocation, useNavigate} from "react-router-dom";
+import colg from "../Material/gc-town.jpg"
 import Button from "../UI/Button";
 
 export default function FilteredColleges() {
@@ -33,13 +34,13 @@ const goBack=()=>{
                                         selected_Title: clg.Title,
                                         selected_subTitle: clg.subTitle,
                                         selected_Description: clg.description,
-                                        selected_Image: clg.img ,
+                                        selected_Image: clg.colg,
                                         selected_Button:clg.Subjects
                                     },
                                 })
                             }
                             key={clg.id}
-                            image={clg.img}
+                            image={colg}
                             Title={clg.Title}
                             subTitle={clg.subTitle}
                             description={clg.description}

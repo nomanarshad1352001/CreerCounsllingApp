@@ -1,8 +1,8 @@
 import React from "react";
 import Intro from "../Introduction/Intro.js";
 import clasess from "./Home.module.css";
-// import interimg from "../Material/6.png";
-// import Bsimg from "../Material/5.png";
+import interimg from "../Material/inter.png";
+import Bsimg from "../Material/masters.png";
 export default function Home(props) {
   return (
     <React.Fragment>
@@ -15,6 +15,7 @@ export default function Home(props) {
             description="Secondary education is an important segment in every person's life."
             btnTitle="Your Info"
             onClickFunc={props.OnClick}
+            image={interimg}
           />
           {/* <div className={clasess.mainImage}>
             {" "}
@@ -30,6 +31,7 @@ export default function Home(props) {
             description="Having a Bachelor's degree will keep you in demand as the need for skilled, college educated workers continues to rise."
             btnTitle="Your Info"
             onClickFunc={props.OnClick}
+            image={Bsimg}
           />
         </div>
       </div>

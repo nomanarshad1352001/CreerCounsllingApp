@@ -50,7 +50,7 @@ const Login = (props) => {
       <div className={classes.loginMain}>
       <h1>Log in to your account</h1>
         <div className={classes.login}>
-          <img src={loginimg} alt="login image" />
+          <img src={loginimg} alt="login_image" />
           <div>
             <form onSubmit={handleSubmit} className={classes.form}>
                 {inputs.map((input) => (

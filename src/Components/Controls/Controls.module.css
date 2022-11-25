@@ -7,6 +7,23 @@
   grid-row: 1;
   grid-column: 1/-1;
 }
+.item1 .topback{
+  box-sizing: border-box;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 65px;
+}
+.item1 .back{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  opacity: 75%;
+  position: fixed;
+  top: 65px;
+  z-index: -2;
+}
 .item2 {
   width: 80%;
   margin-top: 10px;
@@ -16,14 +33,6 @@
   grid-column: 1/-1;
   justify-self: center;
   align-self: center;
-}
-.item1 img{
-box-sizing: border-box;
-width: 100%;
-height: 50%;
-position: absolute;
-z-index: -1;
-top: 65px;
 }
 .item3 {
   grid-row: 3;
@@ -43,13 +52,23 @@ body {
 .footerContiner {
   bottom: 0;
 }
+@media (max-width: 980px) {
+    .item1 .back{
+      width:auto;
+      height: 100%;
+    }
+}
 @media (max-width: 800px) {
-  .item1 img{
+  .item1 .topback{
     height: 50%;
+    }
+    .item1 .back{
+      width:auto;
+      height: 100%;
     }
 }
 @media (max-width: 700px) {
-  .item1 img{
+  .item1 .topback{
     height: 45%;
     }
 }
@@ -57,20 +76,24 @@ body {
   .Icons {
     font-size: 30px;
   }
-  .item1 img{
+  .item1 .topback{
     height: 38%;
     }
 }
 @media (max-width: 600px) {
-  .item1 img{
+  .item1 .topback{
     height: 34%;
     }
+  .item1 .back{
+    width:auto;
+    height: 100%;
+  }
 }
 @media (max-width: 360px) {
   .Icons {
     font-size: 20px;
   }
-  .item1 img{
+  .item1 .topback{
     height: 28%;
     }
 }

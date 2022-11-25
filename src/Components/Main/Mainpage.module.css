@@ -32,9 +32,13 @@
   width: 100%;
   padding: 25px;
 }
-.mainswiper  {
-  text-align: center;
+.flex_row {
+  justify-content: center;
+  display: flex;
+  font-size: 30px;
+  gap: 10px;
   height: 10%;
+  cursor: pointer;
 }
 .swiper {
   display: inline;
@@ -79,12 +83,19 @@
   padding: 19px 0;
   text-align: right;
 }
+.inner{
+  margin-bottom: 0;
+}
+
 @media screen and (max-width: 870px) {
   .mainImage {
     width: 100%;
   }
   .innerContent {
     height: 35vh;
+  }
+  .inner{
+    margin-bottom: 6rem;
   }
 }
 @media screen and (max-width: 700px) {
@@ -97,6 +108,9 @@
   .innerContent {
     height: 22vh;
   }
+  .inner{
+    margin-bottom: 5rem;
+  }
 }
 @media screen and (max-width: 590px) {
   .main .container {
@@ -108,6 +122,9 @@
   }
   .mainImage img {
     padding: 18px;
+  }
+  .inner{
+    margin-bottom: 5rem;
   }
 }
 @media screen and (max-width: 490px) {

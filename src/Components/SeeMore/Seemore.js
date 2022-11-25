@@ -1,6 +1,7 @@
 import classes from "./Seemore.module.css";
 import React, { Fragment} from "react";
 import { useLocation } from "react-router-dom";
+import colg from "../Material/careerCover.jpg"
 const Seemore = (props) => {
   const Location = useLocation();
   return (
@@ -13,7 +14,7 @@ const Seemore = (props) => {
       <section className={classes.seemore}>
         <div className={classes.header}>
           <div className={classes.mainImage}>
-            <img  src={props.image}  alt="fireSpot"/>   
+            <img  src={colg}  alt="fireSpot"/>   
           </div>
         </div>
         <div className={classes.text}>

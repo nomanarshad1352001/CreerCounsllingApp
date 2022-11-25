@@ -19,14 +19,15 @@ import ProtectedRoutes from "../ProtectedRoutes";
 import Jobs from "../Jobs/Jobs";
 import Footer from "../Footer.js";
 import mcom from "../Material/mcom.png";
-import Login from "../Auth/Login.js";
-import SignUp from "../Auth/Signup.js";
-import img from "../Material/img.png";
+import Login from "../Auth/login.js";
+import SignUp from "../Auth/signup.js";
+import img from "../Material/img2-01.png";
+import back from "../Material/background.png";
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [UserSignUpData, setUserSignUpData] = useState({});
   const [UserLoginData, setUserLoginData] = useState({});
-  const [IsLoggedIn, setIsLoggedIn] = useState(true);
+  const [IsLoggedIn, setIsLoggedIn] = useState(false);
   const [IsNavbarShow, setIsNavbarShow] = useState(false);
   const [User, setUser] = useState({
     Name: "",
@@ -303,7 +304,6 @@ export default function Controls() {
       subTitle: "A Intermediate and Bs Level institute",
       description:
         "Secondary education is an important segment in every person's life.  raise a person's economic status and reduce infant",
-      btnTitle: "See More",
       degreeAvailable: [
         "FSC(Pre-Engineering)",
         "FSC(Pre-Medical)",
@@ -328,15 +328,7 @@ export default function Controls() {
         "BS Urdu",
         "BS Zology",
         "BS Geography",
-      ],
-      lastYearMerit: {
-        FSCpe: 850,
-        FSCpm: 950,
-        ICSp: 1050,
-        ICSs: 750,
-        ICSe: 650,
-        ICOM: 700,
-      },
+      ]
     },
     {
       id: "GGTC",
@@ -344,7 +336,6 @@ export default function Controls() {
       subTitle: "A Intermediate and Bs Level institute",
       description:
         "Secondary education is an important segment in every person's life. facts will show",
-      btnTitle: "See More",
       degreeAvailable: [
         "FSC(Pre-Engineering)",
         "FSC(Pre-Medical)",
@@ -519,7 +510,8 @@ export default function Controls() {
               setIsNavbarShow={setIsNavbarShow}
               setIsLoggedIn={setIsLoggedIn}
             />
-            <img src={img} alt="top" />
+            <img className={clasess.back}src={back} alt="top" />
+            <img  className={clasess.topback} src={img} alt="top" />
           </div>
           <div
             style={IsNavbarShow ? { marginLeft: 75 + "px" } : {}}

@@ -1,13 +1,13 @@
 import classes from "./Intro.module.css";
 import React from "react";
 import Button from "../UI/Button.js";
-import eng from "../Material/Bs.jpg"
+// import eng from "../Material/Bs.jpg"
 const Intro = (props) => {
   return (
     <section className={classes.Card}>
       <div className={classes.header}>
         <div className={classes.mainImage}>
-          <img src={eng} alt="fireSpot" />
+          <img src={props.image} alt="fireSpot" />
         </div>
         <div className={classes.title}>
           <h1>{props.Title}</h1>

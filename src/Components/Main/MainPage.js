@@ -105,17 +105,18 @@ export default function MainPage(props) {
             {" "}
             <img src={img7} alt="fireSpot" />
           </div> */}
+        {/* <div className={clasess.mainImage}>
+          <img src={img7} alt="fireSpot" />
+        </div> */}
         <div className={clasess.main}>
-          <div> {wordData}</div>
-          <div className={clasess.mainswiper}>
-            <div className={clasess.swiper}>
-              {words.map((data, index) => (
-                <h1 key={data.id} onClick={() => handleClick(index)}>
-                  .
-                </h1>
-              ))}
-            </div>
-          </div>
+          <div className={clasess.inner}> {wordData}</div>
+        </div>
+        <div className={clasess.flex_row}>
+            {words.map((data, index) => (
+              <h1 key={data.id} onClick={() => handleClick(index)}>
+                .
+              </h1>
+            ))}
         </div>
       </div>
     </Fragment>
