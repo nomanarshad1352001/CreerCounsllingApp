@@ -18,22 +18,16 @@ export default function Colleges() {
         return(<Intro
           padding='5px'
         key={clg.id}
-          Title={clg.Title}
-          subTitle={clg.subTitle}
+          Title={clg.name}
+          subTitle={clg.subName}
           description={clg.description}
           image={colg}
           btnTitle="More"
           onClickFunc={() =>
             navigate("/seemore", {
-              state: {
-                selected_Id: clg.id,
-                selected_Title: clg.Title,
-                selected_subTitle: clg.subTitle,
-                selected_Description: clg.description,
-                selected_Image: clg.img
-              },
-            })
-          }
+              state:{selected_name: clg.name,
+             clgCheck:true
+              }})}
         />)
       })}
     </div>

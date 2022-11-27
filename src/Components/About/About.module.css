@@ -32,3 +32,8 @@
       background-size: cover;
       font-family: 'Capriola', sans-serif;
   }
+  @media (max-width: 480px) {
+    .widthSpecifier{
+      width: 95%;
+    }
+  }

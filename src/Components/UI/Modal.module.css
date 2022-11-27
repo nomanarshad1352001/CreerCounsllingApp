@@ -20,13 +20,21 @@
       url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
     background-size: cover;
     background-position: center;
-    padding: 1rem;
-    border-radius: 15px;
+    border-radius: 10px;
     box-shadow: 4px 4px 15px rgba(161, 161, 161, 0.5);
     z-index: 100;
     animation: slide-down 300ms ease-out forwards;
   }
-  
+  .heading {
+    text-align: center;
+    padding: 10px;
+    background-color: #ff4e22;
+    border-radius: 10px 10px 0px 0px;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    color: whitesmoke;
+  }
   @media (min-width: 768px) {
     .modal {
       width: 40rem;
@@ -39,6 +47,9 @@
       z-index: 1000;
       width: 70%;
       left: 13.5%;
+    }
+    .heading {
+      padding: 5px;
     }
   }
   @keyframes slide-down {

@@ -16,7 +16,6 @@ import FilteredColleges from "../Colleges/FilteredColleges";
 import MainPage from "../Main/MainPage";
 import Seemore from "../SeeMore/Seemore.js";
 import ProtectedRoutes from "../ProtectedRoutes";
-import Jobs from "../Jobs/Jobs";
 import Footer from "../Footer.js";
 import mcom from "../Material/mcom.png";
 import Login from "../Auth/login.js";
@@ -27,7 +26,7 @@ export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [UserSignUpData, setUserSignUpData] = useState({});
   const [UserLoginData, setUserLoginData] = useState({});
-  const [IsLoggedIn, setIsLoggedIn] = useState(false);
+  const [IsLoggedIn, setIsLoggedIn] = useState(true);
   const [IsNavbarShow, setIsNavbarShow] = useState(false);
   const [User, setUser] = useState({
     Name: "",
@@ -49,6 +48,35 @@ export default function Controls() {
       description:
         "Metriculation in Computer Science helps learners develop an interest in computational thinking and an understanding of the principles of problem-solving using computers.",
       img: { mcom },
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "MSbio",
@@ -58,6 +86,35 @@ export default function Controls() {
       description:
         "Metriculation in Biology helps learners to understand the biological world in which they live and take an informed interest in science and scientific developments.",
       img: "engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "MArt",
@@ -67,6 +124,35 @@ export default function Controls() {
       description:
         "All those students who choose arts subjects have vast options for further studies. .",
       img: "engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "FSCpe",
@@ -76,6 +162,35 @@ export default function Controls() {
       description:
         "It is another option for science students after completing matriculation. It is the major",
       img: "./Material/engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "FSCpm",
@@ -85,6 +200,35 @@ export default function Controls() {
       description:
         "It is another option for science students after completing matriculation. It the major and primary step toward the best engineering fields",
       img: "Material/engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "ICSp",
@@ -94,6 +238,35 @@ export default function Controls() {
       description:
         "It is another option for science students after completing matriculation. ",
       img: "Material/engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "ICSs",
@@ -103,6 +276,35 @@ export default function Controls() {
       description:
         "Statistics is the branch of Mathematics, working with analysis, and data collection. Statistics analysis first gather the data,",
       img: "engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "ICSe",
@@ -112,6 +314,35 @@ export default function Controls() {
       description:
         "Economics is a term used to summarize the data into the mathematical.Economics is the study of how people allocate scarce resources for production, ",
       img: "engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "Icom",
@@ -121,6 +352,35 @@ export default function Controls() {
       description:
         "I.COM program is particularly designed for Commerce degree. Basic concepts of commerce are induced in students who adopt the subject.",
       img: "engineering.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsbotany",
@@ -129,6 +389,91 @@ export default function Controls() {
       subName: "Faculty of Biological Sciences.",
       description: "Botany is the scientific study of plantlife.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsbba",
@@ -138,6 +483,81 @@ export default function Controls() {
       description:
         "Bachelor of Business Administration (BBA) is a bachelor's degree in business administration.",
       img: "./Material/bba.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
       Jobs: [
         "Business",
         "commerece",
@@ -157,6 +577,91 @@ export default function Controls() {
       description:
         "Chemical engineering is one of the most broadly-based engineering disciplines.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bseconomics",
@@ -166,6 +671,91 @@ export default function Controls() {
       description:
         "A bachelor's degree in economics prepares you for a career of business, banking, government, and financial transactions.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bseng",
@@ -175,6 +765,91 @@ export default function Controls() {
       description:
         "BS English (Applied Linguistics) is a four-year degree program that has been designed with a special focus on advancing academic and professional development",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsedu",
@@ -184,6 +859,91 @@ export default function Controls() {
       description:
         "A bachelor's degree in education program blends the core of traditional pedagogical practices with learner-centred and active learning methodologies.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
   
     {
@@ -194,6 +954,91 @@ export default function Controls() {
       description:
         "BS Islamic Sciences is a program developed for the future requirements of global Islamic society.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsmath",
@@ -203,8 +1048,92 @@ export default function Controls() {
       description:
         "A BS in Mathematics provides broad knowledge of mathematics topics with depth in certain areas such as algebra, calculus, functional analysis.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
-  
     {
       id: "bssocio",
       name: "BS Sociology",
@@ -213,6 +1142,91 @@ export default function Controls() {
       description:
         "A bachelor of science (BS) in sociology offers a broader foundation in statistics, some calculus, and data analysis.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsurdu",
@@ -222,6 +1236,91 @@ export default function Controls() {
       description:
         "Bs urdu is a unique degree which provides vaste knowledge to students about urdu adab",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsps",
@@ -231,6 +1330,91 @@ export default function Controls() {
       description:
         "The Bachelors Program in Political Science considers the subject from a political, philosophical and historical point of view",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bschemPM",
@@ -240,8 +1424,92 @@ export default function Controls() {
       description:
         "The Bachelor of Science Degree in Chemistry prepares students for careers as professional chemists and serves as a foundation for careers in other fields such as biology and medicine.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
-  
     {
       id: "bsphy",
       name: "BS Physics",
@@ -250,6 +1518,91 @@ export default function Controls() {
       description:
         "BS Physics, a four year degree program, not only enables the students to scientifically understand and analyze the behavior of nature but orientate them with many interdisciplinary subjects",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsstat",
@@ -259,6 +1612,91 @@ export default function Controls() {
       description:
         "The Bachelor of Science in Statistics is a degree program emphasizing statistics both as a science unto itself and as a service science, with powerful applications.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bszology",
@@ -268,6 +1706,91 @@ export default function Controls() {
       description:
         "The program is solidly grounded in the basic sciences (general biology, chemistry, math and physics) needed to understand the latest research in botany. ",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsgeo",
@@ -277,6 +1800,91 @@ export default function Controls() {
       description:
         "With the B.S. in Geography, you can focus on specific areas such as climate change, fire history, biogeography, arid lands, or other topics that bridge the physical sciences.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bsmcom",
@@ -286,6 +1894,91 @@ export default function Controls() {
       description:
         "Bachelor of Science in Mass Communication is designed for students who want to obtain a background in general communication skills while concentrating in any one of the areas.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
     {
       id: "bscom",
@@ -295,13 +1988,98 @@ export default function Controls() {
       description:
         "The Bachelor of Computer Science is a bachelor's degree awarded by some universities for completion of an undergraduate program in computer science.",
       img: "./Material/botany.jpg",
+      subjects:[
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'English',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'zoology'
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Biology',
+          'Islamiyat',
+          'computer',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ],
+        [
+          'Islamiyat',
+          'computer',
+          'urdu',
+          'Biology',
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+        ],
+        [
+          'Math', 
+          'urdu',
+          'Islamiyat',
+          'computer',
+          'urdu',
+        ]
+      ],
+      Jobs: [
+        "Business",
+        "commerece",
+        "Admin",
+        "Management",
+        "School",
+        "University",
+        "colleges",
+        "Government",
+      ],
     },
   ];
   let colleges = [
     {
       id: "GGCS",
-      Title: "Govt Graduate College Of Science",
-      subTitle: "A Intermediate and Bs Level institute",
+      name: "Govt Graduate College Of Science",
+      subName: "A Intermediate and Bs Level institute",
       description:
         "Secondary education is an important segment in every person's life.  raise a person's economic status and reduce infant",
       degreeAvailable: [
@@ -332,8 +2110,8 @@ export default function Controls() {
     },
     {
       id: "GGTC",
-      Title: "Govt Graduate Township College",
-      subTitle: "A Intermediate and Bs Level institute",
+      name: "Govt Graduate Township College",
+      subName: "A Intermediate and Bs Level institute",
       description:
         "Secondary education is an important segment in every person's life. facts will show",
       degreeAvailable: [
@@ -371,8 +2149,8 @@ export default function Controls() {
     },
     {
       id: "GGMAOC",
-      Title: "Govt graduate MAO College",
-      subTitle: "A Intermediate and Bs Level institute",
+      name : "Govt graduate MAO College",
+      subName: "A Intermediate and Bs Level institute",
       description:
         "Secondary education is an important segment in every person's life.rates as these listed facts will showSecondary education is an important segment in every person's life.",
       btnTitle: "See More",
@@ -410,8 +2188,8 @@ export default function Controls() {
     },
     {
       id: "GGCLC",
-      Title: "Govt graduate civil-line College",
-      subTitle: "A Intermediate and Bs Level institute",
+      name: "Govt graduate civil-line College",
+      subName: "A Intermediate and Bs Level institute",
       description:
         "Secondary education is an important segment in every person's life. facts will show",
       btnTitle: "See More",
@@ -449,8 +2227,8 @@ export default function Controls() {
     },
     {
       id: "GGCC",
-      Title: "Govt graduate Commerec College",
-      subTitle: "A Intermediate and Bs Level institute",
+      name: "Govt graduate Commerec College",
+      subName: "A Intermediate and Bs Level institute",
       image: { mcom },
       description:
         "Secondary education is an important segment in every person's life. facts will show",
@@ -489,7 +2267,6 @@ export default function Controls() {
       },
     },
   ];
-  console.log(IsNavbarShow);
   return (
     <DataContext.Provider
       value={{
@@ -543,7 +2320,6 @@ export default function Controls() {
                   <Route path="/admin" element={<Admin />} />
                   <Route path="/Fclg" element={<FilteredColleges />} />
                   <Route path="/seemore" element={<Seemore />} />
-                  <Route path="/Jobs" element={<Jobs />} />
                   <Route
                     path="/Fdegree"
                     element={<FilteredDegrees OnClick={ShowInputFormFun}/>}

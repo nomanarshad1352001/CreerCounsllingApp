@@ -1,4 +1,4 @@
-.Maincontainer {
+/* .Maincontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,9 +120,9 @@ transition: all 0.3s ease;
     width: 100%;
   }
 }
+ */
 
-
-/*This just a demo*/
+/* This just a demo
 .app__footer_cards {
   width: 100%;
   display: flex;
@@ -171,4 +171,175 @@ transition: all 0.3s ease;
     width: 100%;
   }
 }
+ */
+ .Maincontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      ),
+      url("https://images.unsplash.com/photo-1603760589435-097546501ffa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NzE0OTc2NA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
+    background-size: cover;
+    background-position: center;
+}
+.formContainer {
+  padding: 10px;
+  width: 460px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 380px;
+}
+.msg {
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+  height: 380px;
 
+}
+.title {
+  font-size: 20px;
+  background-color: #ff4e22;
+  border-radius: 8px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: whitesmoke;
+}
+.content {
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+}
+.topTitle {
+  text-align: center;
+  font-size: 25px;
+  margin: 2rem 0px 0.5rem 0px;
+  background-color: #7b7b7b;
+  padding: 8px;
+  border-radius: 10px;
+  color: whitesmoke;
+  font-weight: bold;
+  width: 100%;
+}
+.bottomTitle {
+  text-align: center;
+  font-size: 25px;
+  margin: 1rem 0px 0px 0px;
+  border-radius: 10px;
+  background-color: #7b7b7b;
+  padding: 8px;
+  color: whitesmoke;
+  font-weight: bold;
+  width: 100%;
+}
+.formContainer input[type="text"],
+.formContainer input[type="number"],
+.formContainer select,
+.formContainer textarea {
+ width: 100%;
+  padding: 9px; 
+  border: 2px solid #ff4e22; 
+  border-radius: 10px;
+  margin-bottom: 8px; 
+  resize: vertical;
+}
+.formContainer option {
+  background: #ff4e22;
+  border-radius: 10%;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.formContainer label {
+  padding: 3px;
+  border-radius: 5px;
+  color: rgb(45, 45, 45);
+  font-weight: bold;
+}
+.btn{
+margin-left: -10px;
+width: 20%;
+}
+@media screen and (max-width: 820px) {
+  .formContainer {
+    width: 80%;
+  }
+  .msg {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .formContainer {
+    width: 65%;
+  }
+  .msg {
+    width: 35%;
+  }
+  .btn{
+    margin-left: -10px;
+    width: 25%;
+    }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .formContainer {
+    width: 90%;
+  }
+  .msg {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .topTitle,
+  .bottomTitle {
+    font-size: 20px;
+  }
+  .btn{
+    margin-left: -10px;
+    width: 28%;
+    }
+}
+@media screen and (max-width: 500px) {
+  .topTitle,
+  .bottomTitle {
+    font-size: 22px;
+  }
+  .content {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 15px;
+  }
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    padding: 8px; /* Some padding */
+    margin-bottom: 8px; /* Bottom margin */
+  }
+  .btn{
+    margin-left: -10px;
+    width: 40%;
+    }
+}

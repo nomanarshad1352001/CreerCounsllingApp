@@ -3,7 +3,6 @@ import FormInput from "./FormInput";
 import classes from "./login.module.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../UI/Button";
-import loginimg from "../Material/log.png";
 const Login = (props) => {
   const navigate = useNavigate();
   const [values, setValues] = useState({

@@ -3,7 +3,7 @@ import React from "react";
 const DataContext = React.createContext({
   Degrees: [],
   UserData:{},
-  colleges:[],
+  Colleges:[],
   IsLoggedIn:false,
 });
 export default DataContext;

@@ -1,17 +1,11 @@
+.inputForm{
+  padding: 10px;
+}
 .btnContainer {
   display: flex;
   gap: 10px;
-}
-.heading {
-  text-align: center;
-  padding: 8px;
-  margin: 5px 5px 7px 5px;
-  background-color: #ff4e22;
-  border-radius: 10px;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  color: whitesmoke;
+  margin: 5px 8px 0px 0px;
+justify-content: flex-end;
 }
 .errormsg{
   font-size: 12px;
@@ -27,7 +21,6 @@
   padding: 9px; 
   border: 2px solid #ff4e22; 
   border-radius: 10px;
-  margin-bottom: 8px; 
   resize: vertical;
 }
 .inputForm option {
@@ -39,13 +32,7 @@
 }
 .inputForm label {
   padding: 3px;
-  border-radius: 5px;
-  color: rgb(45, 45, 45);
+  color: rgb(72, 71, 71);
   font-weight: bold;
-}
-@media screen and (max-width: 500px) {
-  .heading {
-    padding: 5px;
-    margin: 5px 5px 7px 5px;
-  }
+  font-size: 12px;
 }

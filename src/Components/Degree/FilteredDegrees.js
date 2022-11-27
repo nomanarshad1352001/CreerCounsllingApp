@@ -9,7 +9,6 @@ export default function FilteredDegrees(props) {
   const navigate = useNavigate();
   const ctx = useContext(DataContext);
   var element;
-
   var DegreesList = [
     {
       degreeName: "Matric Science(com)",
@@ -148,7 +147,6 @@ export default function FilteredDegrees(props) {
       ],
     },
   ];
-
   let applicableDegree = DegreesList.find(
     (deg) => deg.degreeName === ctx.UserData.PassedDegree
   );

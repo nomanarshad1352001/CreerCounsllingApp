@@ -1,33 +1,107 @@
+import React, { useContext, Fragment } from "react";
+import DataContext from "../../Store/data-context.js";
 import classes from "./Seemore.module.css";
-import React, { Fragment} from "react";
 import { useLocation } from "react-router-dom";
-import colg from "../Material/careerCover.jpg"
-const Seemore = (props) => {
+import { useNavigate } from "react-router-dom";
+import BS from "../Material/Bs.jpg";
+const Seemore = () => {
+  const ctx = useContext(DataContext);
   const Location = useLocation();
+  const navigate = useNavigate();
+  let SeeMore;
+  Location.state.clgCheck === true
+    ? (SeeMore = ctx.Colleges)
+    : (SeeMore = ctx.Degrees);
+  let final = SeeMore.find((obj) => obj.name === Location.state.selected_name);
+  console.log(final);
   return (
     <Fragment>
-      {/* <h1>{Location.state.selected_Id}</h1>
-      <h1>{Location.state.selected_Title}</h1>
-      <h1>{Location.state.selected_subTitle}</h1>
-      <h1>{Location.state.selected_Description}</h1>
-      <h1>{Location.state.selected_Image}</h1> */}
-      <section className={classes.seemore}>
+      <section className={classes.Card}>
         <div className={classes.header}>
           <div className={classes.mainImage}>
-            <img  src={colg}  alt="fireSpot"/>   
+            <img src={BS} alt="fireSpot" />
           </div>
-        </div>
-        <div className={classes.text}>
           <div className={classes.title}>
-            <h1>{props.Title}</h1>
-            <h1>{Location.state.selected_Title}</h1>
+            <h1>{final.name}</h1>
           </div>
-          <h3>{props.subTitle}</h3>
-          <h3>{Location.state.selected_subTitle}</h3>
-          <p>{props.description}</p>
-          <p>{Location.state.selected_Description}</p>
-        <div>{Location.state.selected_Button}</div>
         </div>
+        <div className={classes.Subtitle}>
+          <h2>{final.subName}</h2>
+        </div>
+        <div className={classes.description}>
+          <p>{final.description}</p>
+        </div>
+        {Location.state.clgCheck === true ? (
+          <div>
+            {" "}
+            <h1 className={classes._MainTitle}>Degrees Available</h1>
+            <div className={classes._Main}>
+              {final.degreeAvailable.map((da, index) => {
+                return (
+                  <div
+                    onClick={() =>
+                      navigate("/seemore", {
+                        state: { selected_name: da },
+                      })
+                    }
+                    className={classes.deg}
+                    key={index}
+                  >
+                    {da}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
+          <div>
+            {" "}
+            <h3 className={classes._MainTitle}>Subjects</h3>
+            <div className={classes._Main}>
+              {final.subjects.map((sem, index) => {
+                return (
+                  <div className={classes.sem} key={index}>
+                    {" "}
+                    <div className={classes.semTitle}>
+                      {final.degType === "Graduation" ? (
+                        <div>Semester {index + 1}</div>
+                      ) : (
+                        <div>Year {index + 1}</div>
+                      )}
+                    </div>
+                    <div className={classes.MainSub}>
+                      {" "}
+                      {sem.map((sub, index) => {
+                        return (
+                          <div className={classes.sub} key={index}>
+                            {sub}
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <h1 className={classes._MainTitle}>Jobs</h1>
+            <div className={classes._Main}>
+              {final.Jobs.map((job, index) => {
+                return (
+                  <div className={classes.job} key={index}>
+                    {job}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+        {/* <div className={classes.btncontainer}>
+          <Button
+            color="#ff4e22"
+            btnTitle={props.btnTitle}
+            onClickFunc={props.onClickFunc}
+          />
+        </div> */}
       </section>
     </Fragment>
   );

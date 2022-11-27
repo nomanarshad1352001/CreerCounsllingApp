@@ -7,17 +7,16 @@
   margin: 0px -5px 0px 12px;
   cursor: pointer;
   transition: all 0.1s ease;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   border: none;
   z-index: 1;
   font-weight: bold;
   white-space: nowrap;
-  font-family: 'Capriola', sans-serif;
+  font-family: "Capriola", sans-serif;
   font-size: 12px;
-text-align: center;
+  text-align: center;
 }
 .btn:after {
   position: absolute;
@@ -28,15 +27,14 @@ text-align: center;
   right: 0;
   z-index: -1;
   border-radius: 5px;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 .btn:hover {
   color: #fff;
   transition: transform 0.6s;
-   transform: scale(1.1);
+  transform: scale(1.1);
 }
 .btn:hover:after {
   left: 0;
@@ -46,18 +44,20 @@ text-align: center;
   top: 2px;
 }
 @media screen and (max-width: 600px) {
-  .btn{
+  .btn {
     font-size: 0.7rem;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .btn{
+  .btn {
     font-size: 0.6rem;
+    height: 25px;
   }
 }
-  @media screen and (max-width: 360px) {
-    .btn{
-      font-size: 0.5rem;
-    }
+@media screen and (max-width: 360px) {
+  .btn {
+    font-size: 0.5rem;
+    min-width: 45px;
   }
+}

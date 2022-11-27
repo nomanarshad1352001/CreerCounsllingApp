@@ -2,7 +2,7 @@ import React from "react";
 import Intro from "../Introduction/Intro.js";
 import classes from "../Degree/degree.module.css";
 import { useNavigate } from "react-router-dom";
-import degree from "../Material/pre-eng.jpg"
+import degree from "../Material/engineering.jpg"
 
 export default function UserDegrees(props) {
   const navigate = useNavigate();
@@ -36,23 +36,7 @@ export default function UserDegrees(props) {
                 onClickFunc1={() =>
                   navigate("/seemore", {
                     state: {
-                      selected_Id: Deg.id,
-                      selected_Title: Deg.name,
-                      selected_subTitle: Deg.subName,
-                      selected_Description: Deg.description,
-                      selected_Image: Deg.img,
-                    },
-                  })
-                }
-                btnTitle2="Jobs"
-                onClickFunc2={() =>
-                  navigate("/Jobs", {
-                    state: {
-                      selected_Id: Deg.id,
-                      selected_Title: Deg.name,
-                      selected_subTitle: Deg.subName,
-                      selected_Description: Deg.description,
-                      selected_Image: Deg.img,
+                      selected_name: Deg.name,
                     },
                   })
                 }

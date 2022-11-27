@@ -9,6 +9,9 @@ const Backdrop = (props) => {
   const ModalOverlay = (props) => {
     return (
       <div className={classes.modal}>
+         <div className={classes.heading}>
+                    <h3>Enter the Data</h3>
+                </div>
         <div className={classes.content}>{props.children}</div>
       </div>
     );

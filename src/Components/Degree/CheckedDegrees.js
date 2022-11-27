@@ -2,7 +2,7 @@ import React from "react";
 import Intro from "../Introduction/Intro.js";
 import classes from "./degree.module.css";
 import { useNavigate } from "react-router-dom";
-import mcom from "../Material/phy.png";
+import mcom from "../Material/engineering.jpg";
 export default function CheckedDegrees(props) {
   const navigate = useNavigate();
   return (
@@ -18,35 +18,11 @@ export default function CheckedDegrees(props) {
                 <Intro
                   btnTitle={"Colleges"}
                   btnTitle1={"More"}
-                  btnTitle2={"Jobs"}
                   onClickFunc={() =>
-                    navigate("/Fclg", {
-                      state: {
-                        selected_Title: Deg.name,
-                      },
-                    })
-                  }
+                    navigate("/Fclg", {state: { selected_Title: Deg.name }})}
                   onClickFunc1={() =>
                     navigate("/seemore", {
-                      state: {
-                        selected_Id: Deg.id,
-                        selected_Title: Deg.name,
-                        selected_subTitle: Deg.subName,
-                        selected_Description: Deg.description,
-                        selected_Image: Deg.img,
-                      },
-                    })
-                  }
-                  onClickFunc2={() =>
-                    navigate("/Jobs", {
-                      state: {
-                        // selected_Id: Deg.id,
-                        // selected_Title: Deg.name,
-                        // selected_Description: Deg.description,
-                        Selected_Jobs: Deg,
-                      },
-                    })
-                  }
+                      state: { selected_name: Deg.name}})}
                   Check={true}
                   key={Deg.id}
                   image={mcom}

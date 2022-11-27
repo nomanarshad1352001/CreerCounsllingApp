@@ -90,15 +90,37 @@
   .form {
     margin-right: 0;
   }
-}
-@media screen and (max-width: 412px) {
-  .signup {
-    margin: 2rem;
-  }
-  .innercont {
-    margin: 1rem;
-  }
   .login {
     width: 350px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .signup {
+    margin: 2.5rem;
+    font-size: 16px;
+  }
+  .login {
+    width: 325px;
+  }
+
+}
+@media screen and (max-width: 410px) {
+  .signup {
+    margin: 2rem;
+    font-size: 14px;
+  }
+  .innercont {
+    margin: 0.5rem;
+  }
+  .login {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .login {
+    width: 220px;
+  }
+  .signup {
+    font-size: 12px;
   }
 }

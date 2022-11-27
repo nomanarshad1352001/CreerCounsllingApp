@@ -32,13 +32,6 @@ const Intro = (props) => {
             onClickFunc={props.onClickFunc1}
           />
         )}
-        {props.Check && (
-          <Button
-            color="#781C68"
-            btnTitle={props.btnTitle2}
-            onClickFunc={props.onClickFunc2}
-          />
-        )}
       </div>
     </section>
   );
