@@ -26,7 +26,7 @@
 }
 .item2 {
   width: 80%;
-  margin-top: 10px;
+  margin-top: 4rem;
   padding: 10px 10px 50px 10px;
   border-radius: 10px;
   grid-row: 2;
@@ -60,7 +60,7 @@ body {
 }
 @media (max-width: 800px) {
   .item1 .topback{
-    height: 45%;
+    height: 40%;
     }
     .item1 .back{
       width:auto;
@@ -69,7 +69,7 @@ body {
 }
 @media (max-width: 700px) {
   .item1 .topback{
-    height: 40%;
+    height: 35%;
     }
 }
 @media (max-width: 600px) {
@@ -77,12 +77,12 @@ body {
     font-size: 30px;
   }
   .item1 .topback{
-    height: 35%;
+    height: 30%;
     }
 }
 @media (max-width: 500px) {
   .item1 .topback{
-    height: 28%;
+    height: 25%;
     }
   .item1 .back{
     width:auto;
@@ -91,7 +91,7 @@ body {
 }
 @media (max-width: 400px) {
   .item1 .topback{
-    height: 25%;
+    height: 22%;
     }
     .item2{
       width: 90%;
@@ -102,7 +102,7 @@ body {
     font-size: 20px;
   }
   .item1 .topback{
-    height: 20%;
+    height: 18%;
     }
     .item2{
       width: 95%;
