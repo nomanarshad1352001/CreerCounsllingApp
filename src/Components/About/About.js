@@ -10,9 +10,9 @@ export default function About() {
           <div className={clasess.item1}>
             <User />
           </div>
-          <div className={clasess.item2}>
+          {/* <div className={clasess.item2}>
             <User />
-          </div>
+          </div> */}
         </div>
         </div>
       </div>

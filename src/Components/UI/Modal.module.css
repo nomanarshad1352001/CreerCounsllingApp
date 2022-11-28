@@ -7,12 +7,12 @@
     z-index: 100;
     background-color: rgba(50, 35, 53, 0.75);
   }
-  
+
   .modal {
     position: fixed;
     top: 15vh;
     left: 13.5%;
-    width: 70%;
+    width: 50%;
     background: linear-gradient(
         rgba(255, 255, 255, 0.7),
         rgba(255, 255, 255, 0.3)

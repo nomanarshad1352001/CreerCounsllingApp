@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState,useRef, useEffect} from "react";
 import clasess from "./Controls.module.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../Navbars/Header";
@@ -22,6 +22,23 @@ import Login from "../Auth/login.js";
 import SignUp from "../Auth/Signup.js";
 import img from "../Material/img2-01.png";
 import back from "../Material/background.png";
+
+let useClickOutside = (handler) => {
+  let domNode = useRef();
+  useEffect(() => {
+    let maybeHandler = (event) => {
+      if (!domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+    document.addEventListener("mousedown", maybeHandler);
+    return () => {
+      document.removeEventListener("mousedown", maybeHandler);
+    };
+  });
+  return domNode;
+};
+
 export default function Controls() {
   const [FormIsShown, setFormIsShown] = useState(false);
   const [UserSignUpData, setUserSignUpData] = useState({});
@@ -2296,7 +2313,7 @@ export default function Controls() {
           >
             {IsNavbarShow && (
               <div>
-                {IsLoggedIn && <SideNavbar setIsNavbarShow={setIsNavbarShow} />}
+                {IsLoggedIn && <SideNavbar useClickOutside={useClickOutside} setIsNavbarShow={setIsNavbarShow} />}
               </div>
             )}
             <div>

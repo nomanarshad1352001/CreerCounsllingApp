@@ -1,27 +1,27 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { MdAdminPanelSettings, MdContactMail } from "react-icons/md";
 import { IoIosSchool } from "react-icons/io";
 import { FaUniversity, FaUserFriends } from "react-icons/fa";
 import "./SideNavbar.css";
-let useClickOutside = (handler) => {
-  let domNode = useRef();
-  useEffect(() => {
-    let maybeHandler = (event) => {
-      if (!domNode.current.contains(event.target)) {
-        handler();
-      }
-    };
-    document.addEventListener("mousedown", maybeHandler);
-    return () => {
-      document.removeEventListener("mousedown", maybeHandler);
-    };
-  });
-  return domNode;
-};
+// let useClickOutside = (handler) => {
+//   let domNode = useRef();
+//   useEffect(() => {
+//     let maybeHandler = (event) => {
+//       if (!domNode.current.contains(event.target)) {
+//         handler();
+//       }
+//     };
+//     document.addEventListener("mousedown", maybeHandler);
+//     return () => {
+//       document.removeEventListener("mousedown", maybeHandler);
+//     };
+//   });
+//   return domNode;
+// };
 export default function SideNavbar(props) {
-  let domNode = useClickOutside(() => {
+  let domNode =props.useClickOutside(() => {
     props.setIsNavbarShow(false);
   });
   return (

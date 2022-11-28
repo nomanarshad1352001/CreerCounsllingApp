@@ -11,14 +11,14 @@
     display: grid;
     grid-template-columns:1fr;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 7.5rem;
 }
 .Infocontainer {
     width: 100%;
     font-size: 20px;
     padding: 4rem;
     border-radius: 20px;
-    margin: 20px 5px 20px 0px;
+    margin: 5px 5px 20px 0px;
     word-wrap: break-word;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
      7px 7px 20px 0px rgba(0,0,0,.1),
@@ -32,8 +32,16 @@
       background-size: cover;
       font-family: 'Capriola', sans-serif;
   }
+  @media (max-width: 850px) {
+    .container{
+      margin-top: 4rem;
+  }
+  }
   @media (max-width: 480px) {
     .widthSpecifier{
       width: 95%;
     }
+    .container{
+      margin-top: 2rem;
+  }
   }
