@@ -85,13 +85,13 @@ const SignUp = (props) => {
         <div className={classes.innercont}>
         <div className={classes.page_body}>
           <h2>Free account</h2>
-          <p>Create apps, connect databases and add-on services, and collaborate on your apps, for free.</p>
+          <p>Create Free Account, Enter Your Previous Degree Record, and Check for Degree, for free.</p>
           
-          <h2>Your app platform</h2>
-          <p>A platform for apps, with app management &amp; instant scaling, for development and production.</p>
+          <h2>Your Degree platform</h2>
+          <p>A platform for Degree, with College Asistance &amp; instant Chosing of Degree, for Learning and Job.</p>
           <hr></hr>
-          <h2>Deploy now</h2>
-          <p>Go from code to running app in minutes. Deploy, scale, and deliver your app to the world.</p>
+          <h2>Your College platform</h2>
+          <p>See Various Colleges Information and Degree They Offers.  </p>
         </div>
         <div className={classes.login}>
           <form onSubmit={handleSubmit} className={classes.form}>

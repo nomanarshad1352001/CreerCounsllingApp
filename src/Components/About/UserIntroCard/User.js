@@ -12,7 +12,7 @@ export default function User() {
               <div className={clasess.imagecontent}>
                 <span className={clasess.overlay}></span>
                 <div className={clasess.cardimage}>
-                  <img src={asad} alt="" className={clasess.cardimg} />
+                  {/* <img src={asad} alt="" className={clasess.cardimg} /> */}
                 </div>
               </div>
               <div className={clasess.cardcontent}>
