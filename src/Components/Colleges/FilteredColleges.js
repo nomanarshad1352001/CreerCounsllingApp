@@ -3,7 +3,7 @@ import Intro from "../Introduction/Intro";
 import DataContext from "../../Store/data-context";
 import classes from "./Colleges.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
-import colg from "../Material/gc-town.jpg";
+// import colg from "../Material/gc-town.jpg";
 import Button from "../UI/Button";
 
 export default function FilteredColleges() {
@@ -11,7 +11,7 @@ export default function FilteredColleges() {
   const Location = useLocation();
   const ctx = useContext(DataContext);
   const FilteredClg = ctx.Colleges.filter((clg, index) =>
-    clg.degreeAvailable.includes(Location.state.selected_Title)
+    clg.offeringDegrees.includes(Location.state.selected_Title)
   );
   const goBack = () => {
     navigate("/Fdegree");
@@ -41,11 +41,11 @@ export default function FilteredColleges() {
                     },
                   })
                 }
-                key={clg.id}
-                image={colg}
+                key={clg.tag}
+                image={clg.selectedFile}
                 Title={clg.name}
                 subTitle={clg.subName}
-                description={clg.description}
+                description={clg.detail}
               />
             );
           })}

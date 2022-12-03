@@ -3,7 +3,7 @@ import Intro from "../Introduction/Intro.js";
 import classes from "./Colleges.module.css";
 import DataContext from "../../Store/data-context";
 import { useNavigate } from "react-router-dom";
-import colg from "../Material/civil.jpg"
+// import colg from "../Material/civil.jpg"
 export default function Colleges() {
   const navigate = useNavigate();
   const ctx = useContext(DataContext);
@@ -17,11 +17,11 @@ export default function Colleges() {
       {ctx.Colleges.map((clg)=>{
         return(<Intro
           padding='5px'
-        key={clg.id}
+          key={clg.tag}
           Title={clg.name}
           subTitle={clg.subName}
           description={clg.description}
-          image={colg}
+          image={clg.selectedFile}
           btnTitle="More"
           onClickFunc={() =>
             navigate("/seemore", {
