@@ -13,13 +13,12 @@ const Seemore = () => {
     ? (SeeMore = ctx.Colleges)
     : (SeeMore = ctx.Degrees);
   let final = SeeMore.find((obj) => obj.name === Location.state.selected_name);
-  console.log(final);
   return (
     <Fragment>
       <section className={classes.Card}>
         <div className={classes.header}>
           <div className={classes.mainImage}>
-            <img src={final.selectedFile} alt="fireSpot" />
+            <img className={classes.image} src={final.selectedFile} alt="fireSpot" />
           </div>
           <div className={classes.title}>
             <h1>{final.name}</h1>
@@ -34,6 +33,13 @@ const Seemore = () => {
         {Location.state.clgCheck === true ? (
           <div>
             {" "}
+            <div>
+              <h1 className={classes._MainTitle}>External Links</h1>
+              <div className={classes._Main}>
+              <a className={classes.prospectus} href={final.link1}>Propectus</a>
+              <a className={classes.prospectus} href={final.link2}>College Website</a>
+              </div>
+            </div>
             <h1 className={classes._MainTitle}>Degrees Available</h1>
             <div className={classes._Main}>
               {final.offeringDegrees.map((da, index) => {
@@ -97,9 +103,6 @@ const Seemore = () => {
             </div>
           </div>
         )}
-        <div>
-        <a className={classes._MainTitle} href={final.link}>Institute Website link</a>
-        </div>
       </section>
     </Fragment>
   );

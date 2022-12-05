@@ -10,12 +10,13 @@
   padding: 10px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.856);
-  align-items: flex-start;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
 }
 .formContainer {
   padding: 10px;
-  width: 50%;
+  width: 80%;
   box-shadow: 0 2px 4px rgba(255, 0, 0, 0.25);
   border-radius: 20px;
   height: 100%;
@@ -74,7 +75,6 @@
   padding: 0.7rem;
   margin: .5rem 0.5rem;
   width: 60%;
-  border: 1px solid #b82703;
   border-radius: 10px;
   background-color: #138d03;
   color: #fff;
@@ -89,6 +89,15 @@
   background-color: #ff2222;
   font-weight: bold;
 }
+.btn3{
+  width: 100%;
+  margin: 2px 2px;
+  padding: 3px;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #ffd622;
+  cursor: pointer;
+}
 .img{
   display: flex;
   flex-direction: column;
@@ -97,14 +106,16 @@
   font-size: xx-large;
 }
 .customers {
-  margin-top: 5px;
+  margin-top: 1rem;
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
   overflow: hidden;
+  text-align: center;
 }
 
 .customers td, .customers th {
-  border: 1px solid rgb(0, 0, 0);
+  text-align: center;
+  border: 1px solid #ff4e22;
   overflow: hidden;
   padding: 8px;
 }
@@ -120,11 +131,11 @@
   background-color: #ff4e22;
   color: white;
 }
-@media screen and (max-width: 1100px) {
+/* @media screen and (max-width: 1100px) {
   .container {
     width: 900px;
   }
-}
+} */
 @media screen and (max-width: 1100px) {
   .container {
     width: 800px;
@@ -152,5 +163,10 @@
   }
   .bottomTitle {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 517px) {
+  .customers {
+    display: none;
   }
 }

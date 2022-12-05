@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../../UI/Button.js'
 import clasess from './User.module.css'
-import asad from '../../Material/asad.jpg'
+// import asad from '../../Material/asad.jpg'
 export default function User() {
   return (
     <div>

@@ -45,7 +45,7 @@ export default function FilteredColleges() {
                 image={clg.selectedFile}
                 Title={clg.name}
                 subTitle={clg.subName}
-                description={clg.detail}
+                description={clg.description}
               />
             );
           })}

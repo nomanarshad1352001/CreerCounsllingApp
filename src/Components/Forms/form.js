@@ -1,72 +1,97 @@
-import React , {useState , useContext  } from 'react';
+import React , {useState , useContext ,useEffect } from 'react';
 import FileBase from 'react-file-base64';
 import { useDispatch } from 'react-redux';
-import {createCollege} from '../../actions/colleges';
+import {createCollege,updateCollege} from '../../actions/colleges';
 import DataContext from "../../Store/data-context";
-
+import { useSelector } from "react-redux";
+import { deleteCollege } from '../../actions/colleges';
 import classes from './clgForm.module.css';
 const form = () => {
   const ctx = useContext(DataContext);
+  const [currentId, setCurrentId] = useState(null);
   const [collegeData, setCollegeData] = useState ({
-    tag: '' , title: '', subTitle: '', description: '', detail: '', offeringDegrees: '', link:'', selectedFile : ''
+    tag: '' , name: '', subName: '', description: '', detail: '', offeringDegrees: [] , link1:'', link2:'', selectedFile : ''
   });
+  const college = useSelector((state)=>currentId ? state.colleges.find ((c)=>c._id===currentId):null);
+
+  useEffect(()=>{
+    if(college) setCollegeData(college);
+  },[college])
   const dispatch = useDispatch ();  
   const handleSubmit = (e) =>{
       e.preventDefault();
-   
-      dispatch (createCollege(collegeData));
-      clear ();
+
+      if(currentId){
+        dispatch(updateCollege(currentId,collegeData));
+        clear ();
+      }else if(collegeData.name.trim().length !== 0||collegeData.tag.trim().length !== 0){
+        dispatch (createCollege(collegeData));
+        clear ();
+      }
     }
   
   const clear = () =>{
-      setCollegeData({tag: '' , title: '', subTitle: '', description: '', detail: '', offeringDegrees: [], link:'', selectedFile : ''})
+      setCurrentId(null);
+      setCollegeData({tag: '' , name: '', subName: '', description: '', detail: '', offeringDegrees: [], link1:'', link2:'', selectedFile : ''})
   }
-const clg = ctx.Colleges;
+let expenseContent =<tbody>{"There is noting in database"}</tbody>
+if (ctx.Colleges.length >0) {
+  expenseContent = ctx.Colleges.map((data, index) => (
+    <tbody key={index}>
+      <tr>
+        <th scope="row">{index + 1}</th>
+        <td>{data.tag}</td>
+        <td>{data.name}</td>
+        <td>{data.subName}</td>
+        <td><a href={data.link1}>View</a></td>
+        <td>
+          <button className={classes.btn3}
+            onClick={() => {dispatch(deleteCollege(data._id))}}>
+            Delete
+          </button>
+          <button className={classes.btn3}
+            onClick={() => {setCurrentId(data._id)}}>
+            Edit
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  ))
+}
   return (
     <React.Fragment>
       <div className={classes.Maincontainer}>
         <div className={classes.containerWithTitle}>
         <div className={classes.container}>
             <div className={classes.dataContainer}>
-                <table className={classes.customers}>
-                <thead  className={classes.thead}>
+            <table className={classes.customers}>
+              <thead className={classes.thead}>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">N0</th>
                   <th scope="col">ID</th>
                   <th scope="col">Name</th>
                   <th scope="col">Sub Name</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Detail</th>
-                  <th scope="col">Degrees</th>
+                  <th scope="col">Propectus</th>
+                  <th scope="col">Operation</th>
                 </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>{clg.tag}</td>
-                  <td>{clg.name}</td>
-                  <td>{clg.subName}</td>
-                  <td>{clg.description}</td>
-                  <td>{clg.detail}</td>
-                  <td>{clg.offeringDegrees}</td>
-                </tr>
-                </tbody>
-              </table>
+              </thead>
+              {expenseContent}
+            </table>
             </div>
           <div className={classes.formContainer}>
-          <div className={classes.title}>Colleges Inout Form</div>
+          <div className={classes.title}>{currentId? 'Editing':'Creating'} a college</div>
             <form className={classes.formin} autoComplete="off" noValidate onSubmit={handleSubmit}>
               <label className={classes.label} htmlFor="Tag">Enter ID</label>
                 <input className={classes.input} name='tag' id="Tag" placeholder="College Id.." value={collegeData.tag} 
                   onChange={(e)=> setCollegeData ({...collegeData, tag : e.target.value})}
                 />
-              <label className={classes.label} htmlFor="title">Name</label>
-                <input className={classes.input} name='title' id="title" value={collegeData.title} placeholder="College Name.."
-                  onChange={(e)=> setCollegeData ({...collegeData, title : e.target.value})}
+              <label className={classes.label} htmlFor="name">Name</label>
+                <input className={classes.input} name='name' id="name" value={collegeData.name} placeholder="College Name.."
+                  onChange={(e)=> setCollegeData ({...collegeData, name : e.target.value})}
                 />
-              <label className={classes.label} htmlFor="subTitle">Sub Name</label>
-                <input className={classes.input} name='subTitle' id="subTitle" value={collegeData.subTitle} placeholder="College Sub Name.."
-                  onChange={(e)=> setCollegeData ({...collegeData, subTitle : e.target.value})}
+              <label className={classes.label} htmlFor="subName">Sub Name</label>
+                <input className={classes.input} name='subName' id="subName" value={collegeData.subName} placeholder="College Sub Name.."
+                  onChange={(e)=> setCollegeData ({...collegeData, subName : e.target.value})}
                 />
               <label className={classes.label} htmlFor="description">Description</label>
                 <input className={classes.input} name='description' id="description" value={collegeData.description} placeholder="Description.."
@@ -78,11 +103,15 @@ const clg = ctx.Colleges;
                 />
               <label className={classes.label} htmlFor="offeringDegrees">Offering Degrees</label>
                 <input className={classes.input} name='offeringDegrees' id="offeringDegrees" value={collegeData.offeringDegrees} placeholder="Degrees.."
-                onChange={(e)=> setCollegeData ({...collegeData, offeringDegrees : e.target.value})}
+                onChange={(e)=> setCollegeData ({...collegeData, offeringDegrees : e.target.value.split(',')})}
                 />
-              <label className={classes.label} htmlFor="link">Website URL</label>
-                <input className={classes.input} name='link' id="link" value={collegeData.link} placeholder="Website URL.."
-                onChange={(e)=> setCollegeData ({...collegeData, link : e.target.value})}
+              <label className={classes.label} htmlFor="link1">Propectus URL</label>
+                <input className={classes.input} name='link1' id="link1" value={collegeData.link1} placeholder="Propectus URL.."
+                onChange={(e)=> setCollegeData ({...collegeData, link1 : e.target.value})}
+                />
+              <label className={classes.label} htmlFor="link2">Website URL</label>
+                <input className={classes.input} name='link2' id="link2" value={collegeData.link2} placeholder="Website URL.."
+                onChange={(e)=> setCollegeData ({...collegeData, link2 : e.target.value})}
                 />
               <div className={classes.img}>
                 <FileBase className={classes.file} type = "file" multiple = {false} onDone={({base64})=> setCollegeData({...collegeData, selectedFile: base64})}/>

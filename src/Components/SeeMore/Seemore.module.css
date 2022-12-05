@@ -127,7 +127,16 @@
   font-family: 'Capriola', sans-serif;
   cursor: pointer; 
 }
-
+.prospectus{
+  color: whitesmoke;
+  background-color: rgb(111, 111, 111);
+  padding: .3rem 1rem;
+  margin: .3rem .3rem;
+  border-radius: 10px;
+  font-family: 'Capriola', sans-serif;
+  cursor: pointer; 
+  text-decoration: none;
+}
 @media screen and (max-width: 600px) {
   .title {
     font-size: 14px;

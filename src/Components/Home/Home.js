@@ -28,7 +28,7 @@ export default function Home(props) {
           <Intro
             Title="Bachelor Studies / Graduation and Masters "
             subTitle="A University level Education"
-            description="Having a Bachelor's degree will keep you in demand as the need for skilled, college educated workers continues to rise."
+            description="A Bachelor of Science (B.S.) degree can generally be earned in four years of full-time undergraduate study. The benefits of earning a B.S. degree are numerous, including increased employment opportunities and possibly higher wages."
             btnTitle="Your Info"
             onClickFunc={props.OnClick}
             image={Bsimg}
