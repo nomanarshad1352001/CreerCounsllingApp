@@ -25,19 +25,20 @@
 }
 .title {
   color: #ff4e22;
-  font-size: 15px;
-  padding: 10px;
+  font-size: 1.5rem;
+  padding: 1.3rem 0 0.5rem 0;
   margin-top: 5px;
   margin-bottom: 5px;
   width: 100%;
 }
 .Subtitle{
-  font-size: 12px;
+  font-size: 1rem;
+  font-weight: bold;
   padding-bottom: 8px;
 }
 .description{
-  font-size: 15px;
-  padding: 10px 0 5px 0;
+  font-size: 1.2rem;
+  padding: 10px 10px 5px 10px;
   height: 100%;
   word-wrap: break-word;
   font-family: 'Capriola', sans-serif;
@@ -63,24 +64,23 @@
 }
 ._MainTitle{
   color: #ff4e22;
-  font-size: 20px;
-  padding: 10px ;
+  padding: 1rem ;
 }
 ._Main{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
   justify-content: center;
 }
 .MainSub{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6.5rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
   justify-content: center;
 }
 .sub{
   border: 1px solid rgb(220, 220, 220);
-  box-shadow: 0 5px 15px rgba(168, 168, 168, 0.25);
-  font-size: 13px;
-  padding: 3px;
+  box-shadow: 0 5px 15px rgba(121, 52, 52, 0.25);
+  font-size: 15px;
+  padding: 5px;
   margin: 3px;
   border-radius: 10px;
   background: #fc6e4a;
@@ -103,19 +103,21 @@
 .semTitle{
   background-color: rgb(75, 75, 75);
   color: whitesmoke;
+  font-size: 19px;
   border-radius: 5px;
-  margin-top: 2px;
-  margin-bottom:5px ;
+  margin: 5px;
+  margin-left: 0;
+  padding: 3px;
   width: 100%;
 }
 .job{
   color: whitesmoke;
   background-color: rgba(63, 55, 55, 0.864);
-  padding: 3px;
+  padding: 5px;
   margin: 5px;
   border-radius: 10px;
   font-family: 'Capriola', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .deg{ 
   font-size: 14px;
@@ -137,12 +139,18 @@
   cursor: pointer; 
   text-decoration: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   .title {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .Subtitle{
     font-size: 12px;
+  }
+  .description{
+    font-size: 15px;
+  }
+  ._MainTitle{
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 400px) {

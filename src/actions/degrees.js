@@ -2,12 +2,13 @@ import { FETCH_ALL, CREATE, UPDATE, DELETE} from '../constants/actionTypes';
 
 import * as api from '../api';
 
-//Action Creaters
 
-export const getColleges = () => async (dispatch) =>{
+//Get all degrees from database
+export const getDegrees = () => async (dispatch) =>{
     try {
         
-        const { data } = await api.fetchColleges();
+        const { data } = await api.fetchDegrees();
+
         dispatch({ type: FETCH_ALL ,payload: data});
 
     } catch (error) {
@@ -17,39 +18,48 @@ export const getColleges = () => async (dispatch) =>{
     }
 }
 
-export const createCollege = (college) => async (dispatch) => {
+//Creat A single Degree 
+
+export const createDegree = (degree) => async (dispatch) => {
     try {
-        
-        const { data } = await api.createCollege(college);
+
+        const { data } = await api.createDegree(degree);
 
         dispatch ({type: CREATE , payload : data});
 
     } catch (error) {
+
         console.log(error.message);
+
     }
 }
 
-//updateCollege
+//updateDegree
 
-export const updateCollege = (id,college) => async (dispatch) => {
+export const updateDegree = (id,degree) => async (dispatch) => {
     try {
-        const { data } = await api.updateCollege(id,college);
+        
+        const { data } = await api.updateDegree(id,degree);
         
         dispatch({type: UPDATE , payload : data});
+
     } catch (error) {
+        
         console.log(error.message);
+    
     }
 }
 
 //deleteCollege
 
-export const deleteCollege = (id) => async (dispatch) => {
+export const deleteDegree = (id) => async (dispatch) => {
     try {
-        await api.deleteCollege(id);
+        await api.deleteDegree(id);
 
         dispatch({type: DELETE , payload : id});
+    
     } catch (error) {
-        
+    
         console.log(error.message);
     
     }

@@ -28,7 +28,7 @@ const Seemore = () => {
           <h2>{final.subName}</h2>
         </div>
         <div className={classes.description}>
-          <p>{final.detail}</p>
+          <p>{Location.state.clgCheck === true ? final.detail : final.description }</p>
         </div>
         {Location.state.clgCheck === true ? (
           <div>
@@ -62,7 +62,7 @@ const Seemore = () => {
         ) : (
           <div>
             {" "}
-            <h3 className={classes._MainTitle}>Subjects</h3>
+            <h1 className={classes._MainTitle}>SUBJECTS</h1>
             <div className={classes._Main}>
               {final.subjects.map((sem, index) => {
                 return (
@@ -72,7 +72,7 @@ const Seemore = () => {
                       {final.degType === "Graduation" ? (
                         
                         <div>
-                          Semester {index + 1}</div>
+                          SEMESTER {index + 1}</div>
                       ) : (
                         <div>Year {index + 1}</div>
                       )}
@@ -91,9 +91,9 @@ const Seemore = () => {
                 );
               })}
             </div>
-            <h1 className={classes._MainTitle}>Jobs</h1>
+            <h1 className={classes._MainTitle}>WHICH CAREERS ARE OPEN TO PURSUING AFTER {final.name}</h1>
             <div className={classes._Main}>
-              {final.Jobs.map((job, index) => {
+              {final.jobs.map((job, index) => {
                 return (
                   <div className={classes.job} key={index}>
                     {job}

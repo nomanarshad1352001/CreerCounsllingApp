@@ -2,7 +2,7 @@ import React from "react";
 import Intro from "../Introduction/Intro.js";
 import classes from "./degree.module.css";
 import { useNavigate } from "react-router-dom";
-import mcom from "../Material/engineering.jpg";
+// import mcom from "../Material/engineering.jpg";
 export default function CheckedDegrees(props) {
   const navigate = useNavigate();
   return (
@@ -25,7 +25,7 @@ export default function CheckedDegrees(props) {
                       state: { selected_name: Deg.name}})}
                   Check={true}
                   key={Deg.id}
-                  image={mcom}
+                  image={Deg.selectedFile}
                   Title={Deg.name}
                   subTitle={Deg.subName}
                   description={Deg.description}
