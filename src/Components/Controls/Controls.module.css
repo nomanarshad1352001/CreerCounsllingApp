@@ -10,7 +10,7 @@
 .item1 .topback{
   box-sizing: border-box;
   width: 100%;
-  height: 45%;
+  height: 350px;
   position: absolute;
   z-index: -1;
   top: 65px;
@@ -26,7 +26,7 @@
 }
 .item2 {
   width: 80%;
-  margin-top: 4rem;
+  margin-top: 2rem;
   padding: 10px 10px 50px 10px;
   border-radius: 10px;
   grid-row: 2;
@@ -52,15 +52,23 @@ body {
 .footerContiner {
   bottom: 0;
 }
+@media (max-width: 1200px) {
+  .item1 .topback{
+    height: 320px;
+    }
+}
 @media (max-width: 980px) {
     .item1 .back{
       width:auto;
       height: 100%;
     }
+    .item1 .topback{
+      height: 280px;
+      }
 }
 @media (max-width: 800px) {
   .item1 .topback{
-    height: 40%;
+    height: 230px;
     }
     .item1 .back{
       width:auto;
@@ -69,21 +77,19 @@ body {
 }
 @media (max-width: 700px) {
   .item1 .topback{
-    height: 35%;
+    height: 200px;
     }
 }
 @media (max-width: 600px) {
-  .Icons {
-    font-size: 30px;
-  }
   .item1 .topback{
-    height: 30%;
+    height: 180px;
     }
 }
 @media (max-width: 500px) {
   .item1 .topback{
-    height: 25%;
+    height: 150px;
     }
+
   .item1 .back{
     width:auto;
     height: 100%;
@@ -91,18 +97,15 @@ body {
 }
 @media (max-width: 400px) {
   .item1 .topback{
-    height: 22%;
+    height: 130px;
     }
     .item2{
       width: 90%;
     }
 }
 @media (max-width: 360px) {
-  .Icons {
-    font-size: 20px;
-  }
   .item1 .topback{
-    height: 18%;
+    height: 100px;
     }
     .item2{
       width: 95%;

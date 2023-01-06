@@ -96,7 +96,7 @@
 }
 @media screen and (max-width: 550px) {
   .signup {
-    margin: 2.5rem;
+    margin: 1.5rem;
     font-size: 16px;
   }
   .login {
@@ -106,7 +106,7 @@
 }
 @media screen and (max-width: 410px) {
   .signup {
-    margin: 2rem;
+    margin: 1rem;
     font-size: 14px;
   }
   .innercont {

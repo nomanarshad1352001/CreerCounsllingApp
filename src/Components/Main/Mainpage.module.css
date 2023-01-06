@@ -1,16 +1,10 @@
-.Maincontainer {
-  /* border: 2px solid blue; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .topTitle{
-  margin: 3rem 0 12rem 0;
+  margin: 3rem 0 15rem 0;
   color: whitesmoke;
   font-family: "Capriola", sans-serif;
   font-weight: bold;
   font-size: 25px;
+  text-align: center;
 }
 .Title {
   color: #ff4e22;
@@ -21,132 +15,67 @@
   font-weight: 800;
 }
 .mainImage {
-  width: 95%;
+  width: 390px;
   z-index: 0;
   padding: 0;
-  margin: 0;
+  margin: 20px;
   overflow: hidden;
-  text-align: center;
 }
 .mainImage img {
   width: 100%;
-  padding: 25px;
+  padding: 10px;
 }
-.flex_row {
-  justify-content: center;
+ .container {
   display: flex;
-  font-size: 30px;
-  gap: 10px;
-  height: 10%;
-  cursor: pointer;
-}
-.swiper {
-  display: inline;
-}
-.swiper h1 {
-  cursor: pointer;
-  color: #ff4e22;
-  font-size: 50px;
-  font-weight: bold;
-  display: inline;
-  margin: 0px 5px 0px 5px;
-}
-.main .container {
-  margin: 5px 5px 20px 5px;
-  padding: 1.5rem 1.5rem 0 1.5rem;
-  word-wrap: break-word;
-  font-family: "Capriola", sans-serif;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
   align-items: center;
-  grid-gap: 5px;
-  height: 30%;
-}
-.innerContent {
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-}
-.container p {
-  color: rgb(43, 46, 46);
+  font-family: "Capriola", sans-serif;
   font-size: 16px;
-  margin: 0;
 }
-.container h3 {
-  color: #ff4e22;
-  padding: 10px 0;
-  font-size: 30px;
+.innerText{
+  width: 400px;
+  text-align: center;
 }
-.container .btn {
-  padding: 19px 0;
-  text-align: right;
-}
-.inner{
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 870px) {
-  .mainImage {
-    width: 110%;
-  }
-  .innerContent {
-    height: 35vh;
-  }
-  .inner{
-    margin-bottom: 6rem;
-  }
-}
-@media screen and (max-width: 700px) {
-  .main .container {
-    grid-template-columns: 1fr;
-    height: 70%;
-    text-align: center;
-    padding: 0.8rem 1.3rem 0 1.3rem;
-  }
-  .innerContent {
-    height: 22vh;
-  }
-  .inner{
-    margin-bottom: 5rem;
+@media screen and (max-width: 850px) {
+  .container {
+  flex-direction: column;
+  font-size: 14px;
   }
   .topTitle{
-    margin: 3rem 0 5rem 0;
+    margin: 3rem 0 10rem 0;
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .topTitle{
+    margin: 3rem 0 7rem 0;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 590px) {
-  .main .container {
-    height: 60%;
-
+  .topTitle{
+    margin: 3rem 0 5rem 0;
+    font-size: 18px;
   }
-  .innerContent {
-    height: 25vh;
+.container {
+  font-size: 12px;
   }
-  .mainImage img {
-    padding: 18px;
+  .mainImage {
+    width: 300px;
   }
-  .inner{
-    margin-bottom: 5rem;
+  .innerText{
+    width: 350px;
   }
 }
 @media screen and (max-width: 490px) {
-  .main .container {
-    height: 50%;
-    padding: 0.6rem 1.2rem 0 1.2rem;
+ .container {
+  font-size: 11px;
   }
-  .container p {
-    font-size: 14px;
+  .mainImage {
+    width: 280px;
   }
-  .container h3 {
-    font-size: 20px;
-  }
-  .innerContent {
-    height: 25vh;
-  }
-  .mainImage img {
-    padding: 12px;
+  .innerText{
+    width: 300px;
   }
   .topTitle{
     margin: 2rem 0 3.5rem 0;
@@ -154,43 +83,31 @@
   }
 }
 @media screen and (max-width: 390px) {
-  .main .container {
-    height: 25%;
-    padding: 0.4rem 1.1rem 0 1.1rem;
+  .innerText{
+    width: 250px;
   }
-  .container p {
-    font-size: 12px;
+  .mainImage {
+    width: 250px;
   }
-  .container h3 {
-    font-size: 20px;
-  }
-  .innerContent {
-    height: 30vh;
-  }
-  .mainImage img {
-    padding: 10px;
+  .topTitle{
+    margin: 1rem 0 2rem 0;
+    font-size: 13px;
   }
 }
 @media screen and (max-width: 310px) {
-  .main .container {
-    height: 22%;
-    padding: 0.2rem 1rem 0 1rem;
+  .innerText{
+    width: 200px;
   }
-  .container p {
-    font-size: 10px;
-  }
-  .container h3 {
-    font-size: 14px;
-  }
-  .innerContent {
-    height: 25vh;
-  }
-  .mainImage img {
-    padding: 6px;
+  .mainImage{
+    width: 230px;
   }
 }
 @media screen and (max-width: 250px) {
-  .innerContent {
-    height: 28vh;
+  .innerText{
+    width: 150px;
   }
+  .mainImage{
+    width: 180px;
+  }
+ 
 }
